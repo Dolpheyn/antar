@@ -93,10 +93,6 @@ nav:
     - AI Capabilities:
       - User Context: we-and-ai/user-context.md
       - Initiative Context: we-and-ai/initiative-context.md
-    - Context Web:
-      - Overview: we-and-ai/context-web/index.md
-      - Semantic Index: we-and-ai/context-web/semantic.md
-      - Market Context: we-and-ai/context-web/market/index.md
 
 plugins:
   - search
