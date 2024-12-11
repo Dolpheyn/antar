@@ -67,22 +67,111 @@ Connects with delivery providers:
 
 ## Key Features
 
-!!! tip "Smart Features"
-    - Smart Categorization
-        - Quick delivery options ⚡
-        - Budget-friendly choices 💰
-        - Premium/secure services 🔒
-        - Balanced recommendations ⚖️
-    - Easy Preferences
-        - One-click selection
-        - Dynamic adjustments
-        - Visual trade-offs
-        - Remembers your choices
-    - Provider Support
-        - Grab Express
-        - Lalamove
-        - J&T Express
-        - Delyva
+!!! abstract "Platform Overview"
+    Antar's intelligent platform combines AI-powered optimization with seamless integration to revolutionize delivery management for Southeast Asian businesses.
+
+## Core Features
+
+### 1. Smart Order Management
+
+!!! tip "Streamlined Operations"
+    Transform complex delivery operations into simple, automated workflows.
+
+```mermaid
+graph LR
+    A[Order Input] --> B[Validation]
+    B --> C[Priority Assignment]
+    C --> D[Route Planning]
+    D --> E[Provider Selection]
+    E --> F[Execution]
+```
+
+- Bulk order processing
+- Smart validation rules
+- Priority handling
+- Real-time tracking
+- Status notifications
+
+### 2. Intelligent Route Optimization
+
+!!! tip "Maximum Efficiency"
+    AI-powered route planning that considers multiple factors for optimal delivery paths.
+
+```mermaid
+graph TD
+    A[Orders] --> B[Geographic Clustering]
+    B --> C[Time Window Analysis]
+    C --> D[Vehicle Capacity]
+    D --> E[Priority Routing]
+    E --> F[Optimized Routes]
+```
+
+- Multi-stop optimization
+- Time window consideration
+- Load balancing
+- Dynamic rerouting
+- Cost optimization
+
+### 3. Provider Network
+
+!!! tip "Unified Access"
+    Connect with multiple delivery providers through a single, intelligent interface.
+
+- Real-time availability
+- Automated selection
+- Performance tracking
+- Cost comparison
+- Service matching
+
+### 4. Analytics Dashboard
+
+!!! tip "Data-Driven Insights"
+    Make informed decisions with comprehensive delivery analytics.
+
+- Cost analysis
+- Performance metrics
+- Delivery patterns
+- Provider insights
+- Optimization suggestions
+
+## Advanced Capabilities
+
+### Smart Automation
+- Rule-based routing
+- Auto-retry logic
+- Failure handling
+- Priority queuing
+- Load balancing
+
+### Integration Options
+- RESTful API
+- Webhook support
+- Bulk operations
+- Real-time events
+- Custom workflows
+
+### Security Features
+- Role-based access
+- Audit logging
+- Data encryption
+- API authentication
+- Secure file handling
+
+## Technology Stack
+
+### Frontend
+- Modern web interface
+- Mobile responsive
+- Real-time updates
+- Interactive maps
+- Rich analytics
+
+### Backend
+- Scalable architecture
+- High availability
+- Fast processing
+- Secure storage
+- API-first design
 
 ## How It Helps Merchants
 
@@ -110,6 +199,17 @@ Connects with delivery providers:
 - Smart provider selection
 - Better delivery time estimates
 - Merchant-specific optimizations
+
+## Coming Soon
+
+!!! note "Future Features"
+    - Machine learning predictions
+    - Advanced route optimization
+    - Enhanced provider integrations
+    - Mobile application
+    - Custom reporting
+
+[Explore Our Roadmap →](roadmap/index.md)
 
 ## Measuring Success 📊
 

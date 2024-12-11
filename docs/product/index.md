@@ -1,21 +1,74 @@
-# Antar: Smart Delivery Platform
+# Antar: Transforming Deliveries in Southeast Asia
 
-## Overview
-Antar is a smart delivery platform that connects Southeast Asian merchants with multiple delivery services through an intelligent, unified interface.
+> "Empowering merchants with intelligent delivery solutions"
 
-## Key Features
-- AI-powered provider selection
-- Real-time tracking and analytics
-- Cost optimization engine
-- Multi-provider integration
-- Smart merchant dashboard
+<div class="grid cards" markdown>
 
-## Target Users
-1. Small and Medium Enterprises (SMEs)
-2. Online retailers and e-commerce
-3. Food and beverage businesses
-4. Local merchants and artisans
-5. Digital-first businesses
+-   :material-rocket-launch:{ .lg .middle } __Platform Overview__
 
-## Value Proposition
-Empower Southeast Asian businesses with smart, efficient, and cost-effective delivery solutions through a single, intelligent platform.
+    ---
+
+    Discover how Antar revolutionizes delivery management.
+
+    [:octicons-arrow-right-24: Learn More](overview.md)
+
+-   :material-lightbulb:{ .lg .middle } __Key Features__
+
+    ---
+
+    Explore our intelligent delivery solutions.
+
+    [:octicons-arrow-right-24: View Features](features.md)
+
+-   :material-account-group:{ .lg .middle } __Success Stories__
+
+    ---
+
+    Read how businesses thrive with Antar.
+
+    [:octicons-arrow-right-24: Read Stories](stories.md)
+
+-   :material-map-marker-path:{ .lg .middle } __Roadmap__
+
+    ---
+
+    See what's next for Antar.
+
+    [:octicons-arrow-right-24: View Roadmap](roadmap/index.md)
+
+</div>
+
+## Why Choose Antar?
+
+### 🎯 Simplified Operations
+- Single dashboard for all deliveries
+- Automated provider selection
+- Bulk order processing
+- Real-time tracking
+
+### 💡 Intelligent Optimization
+- AI-powered route planning
+- Smart cost optimization
+- Predictive analytics
+- Performance insights
+
+### 🤝 Seamless Integration
+- Multiple provider support
+- Easy API integration
+- Flexible deployment
+- Scalable solutions
+
+## Target Markets
+
+### Primary Focus
+- Small and Medium Enterprises (SMEs)
+- Online retailers and e-commerce
+- Food and beverage businesses
+- Local merchants and artisans
+
+### Industries
+- Retail
+- F&B
+- E-commerce
+- Local services
+- Digital-first businesses

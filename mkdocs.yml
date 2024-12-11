@@ -58,6 +58,9 @@ nav:
   - Home: index.md
   - Product:
     - product/index.md
+    - Overview: product/overview.md
+    - Features: product/features.md
+    - Success Stories: product/stories.md
     - Roadmap:
       - product/roadmap/index.md
       - Phase 1 Foundation: product/roadmap/phase-1-foundation.md
