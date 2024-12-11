@@ -1,6 +1,6 @@
 # Antar
 
-[![Documentation Status](https://github.com/Dolpheyn/the-project/actions/workflows/docs.yml/badge.svg)](https://dolpheyn.github.io/the-project/)
+[![Documentation Status](https://github.com/Dolpheyn/antar/actions/workflows/docs.yml/badge.svg)](https://dolpheyn.github.io/antar/)
 
 > Delivering Southeast Asia, Intelligently
 
@@ -19,7 +19,7 @@ To empower Southeast Asian businesses with smart, efficient, and cost-effective 
 
 ## 📚 Documentation
 
-Our comprehensive documentation is available at [dolpheyn.github.io/the-project](https://dolpheyn.github.io/the-project/). It covers:
+Our comprehensive documentation is available at [dolpheyn.github.io/antar](https://dolpheyn.github.io/antar/). It covers:
 
 - Story Idea and Vision
 - Technical Specifications
@@ -61,8 +61,8 @@ Our comprehensive documentation is available at [dolpheyn.github.io/the-project]
 ### Development Setup
 ```bash
 # Clone the repository
-git clone https://github.com/Dolpheyn/the-project.git
-cd the-project
+git clone https://github.com/Dolpheyn/antar.git
+cd antar
 
 # Install dependencies
 pip install -r requirements.txt
@@ -114,7 +114,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🌏 Support
 
 - Website: [antar.my](https://antar.my)
-- Documentation: [dolpheyn.github.io/the-project](https://dolpheyn.github.io/the-project/)
+- Documentation: [dolpheyn.github.io/antar](https://dolpheyn.github.io/antar/)
 - Email: [hello@antar.my](mailto:hello@antar.my)
 
 ---

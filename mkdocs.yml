@@ -1,8 +1,9 @@
 site_name: Antar
-site_description: Smart delivery platform connecting Southeast Asian merchants with multiple delivery services
+site_description: Smart delivery platform for Southeast Asian merchants
 site_author: Antar Team
-repo_url: https://github.com/Dolpheyn/the-project
-repo_name: Dolpheyn/the-project
+copyright: Copyright &copy; 2024 Antar
+repo_url: https://github.com/Dolpheyn/antar
+repo_name: Dolpheyn/antar
 edit_uri: edit/main/docs/
 
 theme:
