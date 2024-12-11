@@ -7,11 +7,11 @@
 Malaysian merchants struggle with delivery services because:
 
 !!! danger "Pain Points"
-    1. **Too Many Choices**: Multiple delivery providers with different pricing
-    2. **Time Waste**: Hours spent comparing different options
-    3. **Hard Decisions**: Balancing speed, cost, and reliability
-    4. **Management Headache**: No single place to handle all deliveries
-    5. **Complex Process**: Difficult to pick the best option for each delivery
+    - Too Many Choices: Multiple delivery providers with different pricing
+    - Time Waste: Hours spent comparing different options
+    - Hard Decisions: Balancing speed, cost, and reliability
+    - Management Headache: No single place to handle all deliveries
+    - Complex Process: Difficult to pick the best option for each delivery
 
 ## Our Solution
 We're building a smart platform with three main parts:
@@ -68,32 +68,30 @@ Connects with delivery providers:
 ## Key Features
 
 !!! tip "Smart Features"
-    1. **Smart Categorization**
-       - Quick delivery options ⚡
-       - Budget-friendly choices 💰
-       - Premium/secure services 🔒
-       - Balanced recommendations ⚖️
-
-    2. **Easy Preferences**
-       - One-click selection
-       - Dynamic adjustments
-       - Visual trade-offs
-       - Remembers your choices
-
-    3. **Provider Support**
-       - Grab Express
-       - Lalamove
-       - J&T Express
-       - Delyva
+    - Smart Categorization
+    - Quick delivery options ⚡
+    - Budget-friendly choices 💰
+    - Premium/secure services 🔒
+    - Balanced recommendations ⚖️
+    - Easy Preferences
+    - One-click selection
+    - Dynamic adjustments
+    - Visual trade-offs
+    - Remembers your choices
+    - Provider Support
+        - Grab Express
+        - Lalamove
+        - J&T Express
+        - Delyva
 
 ## How It Helps Merchants
 
 !!! example "Real Use Cases"
-    1. "I want to see all delivery options when I enter pickup and delivery locations"
-    2. "Show me the best option based on what I care about (speed/cost/security)"
-    3. "Let me easily change my preferences and see what changes"
-    4. "Help me understand what I'm gaining or losing with each option"
-    5. "Let me track all my deliveries in one place"
+    - "I want to see all delivery options when I enter pickup and delivery locations"
+    - "Show me the best option based on what I care about (speed/cost/security)"
+    - "Let me easily change my preferences and see what changes"
+    - "Help me understand what I'm gaining or losing with each option"
+    - "Let me track all my deliveries in one place"
 
 ## Future Growth 🚀
 
