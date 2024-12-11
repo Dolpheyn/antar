@@ -121,9 +121,10 @@ nav:
     - User Stories: story-idea/delivery-aggregator/user-stories.md
   - User Personas: user-personas/index.md
   - Project Roadmap:
-    - project-roadmap/index.md
+    - Overview: project-roadmap/index.md
     - Initiatives:
       - Documentation System: project-roadmap/initiatives/documentation-system.md
+      - Visual Testing: project-roadmap/initiatives/visual-testing.md
   - Technical Specifications:
     - technical-specifications/index.md
     - System Architecture: technical-specifications/system-architecture.md
