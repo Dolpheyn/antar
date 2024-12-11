@@ -2,11 +2,11 @@
 import asyncio
 import subprocess
 import sys
+import typer
 from pathlib import Path
 from typing import Optional, List, Dict, Any
 from playwright.async_api import async_playwright, Page
-
-from .base import register_docs_command
+from scripts.core.cli import console
 
 class VisualTester:
     """Visual testing toolkit for documentation."""
@@ -19,10 +19,10 @@ class VisualTester:
     
     async def setup(self) -> None:
         """Set up the testing environment."""
-        print("[Visual Test] Building documentation site...")
+        console.print("[Visual Test] Building documentation site...")
         subprocess.check_call([sys.executable, "-m", "mkdocs", "build"])
         
-        print("\n[Visual Test] Starting local server...")
+        console.print("\n[Visual Test] Starting local server...")
         self.server_process = subprocess.Popen(
             [sys.executable, "-m", "http.server", "8000"],
             cwd="site",
@@ -33,7 +33,7 @@ class VisualTester:
     async def teardown(self) -> None:
         """Clean up the testing environment."""
         if self.server_process:
-            print("\n[Visual Test] Shutting down server...")
+            console.print("\n[Visual Test] Shutting down server...")
             self.server_process.terminate()
             try:
                 self.server_process.wait(timeout=5)
@@ -49,9 +49,9 @@ class VisualTester:
             
             output_path = self.output_dir / f"{name}.png"
             await page.screenshot(path=str(output_path))
-            print(f"✅ Captured {url} -> {output_path}")
+            console.print(f"✅ Captured {url} -> {output_path}")
         except Exception as e:
-            print(f"❌ Error capturing {url}: {e}")
+            console.print(f"❌ Error capturing {url}: {e}")
     
     async def test_navigation(self, page: Page) -> Dict[str, Any]:
         """Test navigation menu functionality."""
@@ -100,57 +100,70 @@ class VisualTester:
 
 async def print_nav_results(results: Dict[str, Any]) -> None:
     """Print navigation test results."""
-    print("\n📊 Navigation Menu Test Results:")
-    print("-" * 40)
-    print(f"Container height: {results['container_height']}px")
-    print(f"List height: {results['list_height']}px")
-    print(f"Scroll height: {results['scroll_height']}px")
-    print(f"Scrolling enabled: {'✅' if results['is_scrollable'] else '❌'}")
+    console.print("\n📊 Navigation Menu Test Results:")
+    console.print("-" * 40)
+    console.print(f"Container height: {results['container_height']}px")
+    console.print(f"List height: {results['list_height']}px")
+    console.print(f"Scroll height: {results['scroll_height']}px")
+    console.print(f"Scrolling enabled: {'✅' if results['is_scrollable'] else '❌'}")
     
     if results['list_height'] > results['container_height']:
-        print("\n⚠️  Issue: List is taller than container")
-        print(f"Overflow: {results['list_height'] - results['container_height']}px")
+        console.print("\n⚠️  Issue: List is taller than container")
+        console.print(f"Overflow: {results['list_height'] - results['container_height']}px")
     
-    print(f"\n📸 Navigation screenshot: {results['screenshot']}")
+    console.print(f"\n📸 Navigation screenshot: {results['screenshot']}")
 
-@register_docs_command("visual", "Visual testing toolkit for documentation")
-async def visual(ctx, component: Optional[str] = None) -> None:
-    """Run visual tests on documentation.
-    
-    Args:
-        component: Component to test ('nav' for navigation, 'pages' for full pages,
-                 or None for all tests)
-    """
-    tester = VisualTester()
-    await tester.setup()
-    
+def visual(
+    output_dir: Path = typer.Option(
+        Path(".cascade/visual-test"),
+        "--output-dir",
+        "-o",
+        help="Output directory for screenshots",
+    ),
+    width: int = typer.Option(1280, "--width", help="Viewport width"),
+    height: int = typer.Option(720, "--height", help="Viewport height"),
+    component: Optional[str] = typer.Option(
+        None,
+        "--component",
+        "-c",
+        help="Component to test ('nav' for navigation, 'pages' for full pages)",
+    ),
+) -> None:
+    """Run visual tests on documentation."""
     try:
-        async with async_playwright() as p:
-            browser = await p.chromium.launch()
-            page = await browser.new_page(viewport={"width": 1280, "height": 720})
+        async def run_tests():
+            tester = VisualTester()
+            await tester.setup()
             
-            if component in (None, "nav"):
-                nav_results = await tester.test_navigation(page)
-                await print_nav_results(nav_results)
+            try:
+                async with async_playwright() as p:
+                    browser = await p.chromium.launch()
+                    page = await browser.new_page(viewport={"width": width, "height": height})
+                    
+                    if component in (None, "nav"):
+                        nav_results = await tester.test_navigation(page)
+                        await print_nav_results(nav_results)
+                    
+                    if component in (None, "pages"):
+                        console.print("\n📄 Capturing Pages:")
+                        console.print("-" * 40)
+                        pages = [
+                            ("index.html", "home"),
+                            ("story-idea/delivery-aggregator/index.html", "story"),
+                            ("story-idea/delivery-aggregator/feature-concept.html", "features"),
+                            ("user-personas/index.html", "personas")
+                        ]
+                        for path, name in pages:
+                            await tester.capture_page(page, path, name)
+                    
+                    await browser.close()
+            finally:
+                await tester.teardown()
             
-            if component in (None, "pages"):
-                print("\n📄 Capturing Pages:")
-                print("-" * 40)
-                pages = [
-                    ("index.html", "home"),
-                    ("story-idea/delivery-aggregator/index.html", "story"),
-                    ("story-idea/delivery-aggregator/feature-concept.html", "features"),
-                    ("user-personas/index.html", "personas")
-                ]
-                for path, name in pages:
-                    await tester.capture_page(page, path, name)
-            
-            await browser.close()
-    finally:
-        await tester.teardown()
-    
-    print("\n✨ Visual tests completed!")
-    print(f"📁 Results saved in: {tester.output_dir}/")
-
-if __name__ == "__main__":
-    asyncio.run(visual(None))
+            console.print("\n✨ Visual tests completed!")
+            console.print(f"📁 Results saved in: {tester.output_dir}/")
+        
+        asyncio.run(run_tests())
+    except Exception as e:
+        console.print(f"[red]Error:[/red] {str(e)}")
+        raise typer.Exit(1)
