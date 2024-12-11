@@ -61,14 +61,13 @@ theme:
 
 plugins:
   - search
-  - tags
-  - mermaid2:
-      version: 10.4.0
-      arguments:
-        securityLevel: loose
-        theme: |
-          ^(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'default'
   - include-markdown
+  - mermaid2:
+      version: 10.6.1
+      arguments:
+        securityLevel: 'loose'
+        theme: default
+  - tags
 
 markdown_extensions:
   - pymdownx.highlight:

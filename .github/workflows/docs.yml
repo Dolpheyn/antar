@@ -51,15 +51,6 @@ jobs:
           pip install mkdocs-mermaid2-plugin
           pip install mkdocs-include-markdown-plugin
 
-      - name: Setup Node.js for Mermaid
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
-      - name: Install Mermaid CLI
-        run: |
-          npm install -g @mermaid-js/mermaid-cli
-
       - name: Build documentation
         run: mkdocs build
 
