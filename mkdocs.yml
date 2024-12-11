@@ -84,12 +84,19 @@ nav:
   - We & AI:
     - we-and-ai/index.md
     - Development Process: we-and-ai/process.md
+    - Context:
+      - we-and-ai/context/index.md
+      - Project Areas: we-and-ai/context/project-areas.md
+      - Initiative: we-and-ai/context/initiative.md
+      - Research: we-and-ai/context/research.md
     - About Us: we-and-ai/about.md
     - AI Capabilities:
-      - Project Areas: we-and-ai/project-areas-context.md
       - User Context: we-and-ai/user-context.md
       - Initiative Context: we-and-ai/initiative-context.md
-    - Research: we-and-ai/creating-contexts.md
+    - Context Web:
+      - Overview: we-and-ai/context-web/index.md
+      - Semantic Index: we-and-ai/context-web/semantic.md
+      - Market Context: we-and-ai/context-web/market/index.md
 
 plugins:
   - search
