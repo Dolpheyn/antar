@@ -78,7 +78,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements-docs.txt
       - name: Build documentation
-        run: mkdocs build
+        run: |
+          source .venv/bin/activate
+          mkdocs build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
