@@ -82,6 +82,8 @@ nav:
       - Guides: tech/implementation/guides/index.md
       - Examples: tech/implementation/examples/index.md
   - We & AI:
+    - we-and-ai/index.md
+    - Development Process: we-and-ai/process.md
     - About Us: we-and-ai/about.md
     - AI Capabilities:
       - Project Areas: we-and-ai/project-areas-context.md
