@@ -108,6 +108,73 @@ AI Knowledge Contexts serve as foundational understanding frameworks that help A
 *Last Updated: [Timestamp]*
 ```
 
+## Research Context
+
+## Purpose
+This context provides insights into our technical research findings, market analysis, and best practices that inform our development decisions. It serves as a knowledge base for making informed technical and product choices.
+
+## Core Areas
+
+### Technical Research
+
+#### Technology Stack
+- Current stack evaluation
+- Emerging technologies assessment
+- Performance benchmarks
+- Security considerations
+
+#### Best Practices
+- Development patterns
+- Code organization
+- Testing strategies
+- Deployment approaches
+
+#### Industry Standards
+- Compliance requirements
+- Technical specifications
+- Protocol standards
+- Integration patterns
+
+### Market Research
+
+#### Industry Analysis
+- Market trends
+- Competitor landscape
+- Technology adoption
+- Growth opportunities
+
+#### User Research
+- Usage patterns
+- Pain points
+- Feature requests
+- Satisfaction metrics
+
+#### Performance Metrics
+- System performance
+- User engagement
+- Business impact
+- Technical debt
+
+## Application Guidelines
+
+### When to Use
+1. Making technical decisions
+2. Planning new features
+3. Evaluating technologies
+4. Assessing market fit
+
+### How to Apply
+1. Review relevant research areas
+2. Consider current context
+3. Apply findings to decision
+4. Document outcomes
+
+## Version History
+- v1.0.0 (2024-12-11): Initial version
+- Research areas defined
+- Best practices documented
+- Market analysis included
+
 ## Validation Checklist
 - [ ] Clear purpose and scope defined
 - [ ] Core concepts explained

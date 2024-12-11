@@ -43,7 +43,7 @@ theme:
     - navigation.top     # Back to top button
     - toc.follow         # Follow TOC while scrolling
     - navigation.expand
-    - toc.integrate
+    # - toc.integrate <-- DO NOT EVER TURN THIS ON OR ADD IT AGAIN!!! I HATE ITTT
     # Search
     - search.suggest     # Search suggestions
     - search.highlight   # Search highlighting
@@ -81,19 +81,22 @@ nav:
     - Implementation:
       - Guides: tech/implementation/guides/index.md
       - Examples: tech/implementation/examples/index.md
+    - Additional Resources:
+      - CI/CD: tech/ci-cd.md
+      - Performance: tech/performance-requirements.md
+      - System Architecture: tech/system-architecture.md
+      - Integration Guidelines: tech/integration-guidelines.md
   - We & AI:
     - we-and-ai/index.md
     - Development Process: we-and-ai/process.md
     - Context Web:
       - Index: we-and-ai/context-web/index.md
       - Contexts:
-        - Project Areas: we-and-ai/context/project-areas.md
-        - Initiative: we-and-ai/context/initiative.md
-        - Research: we-and-ai/context/research.md
-    - About Us: we-and-ai/about.md
-    - AI Capabilities:
-      - User Context: we-and-ai/user-context.md
-      - Initiative Context: we-and-ai/initiative-context.md
+        - Project Areas: we-and-ai/context-web/contexts/project-areas.md
+        - Initiative: we-and-ai/context-web/contexts/initiative.md
+        - Research: we-and-ai/context-web/contexts/research.md
+        - Users: we-and-ai/context-web/contexts/users.md
+        - Documentation: we-and-ai/context-web/contexts/documentation.md
 
 plugins:
   - search

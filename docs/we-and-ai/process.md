@@ -84,6 +84,30 @@ mindmap
 - Automated testing
 - Continuous feedback
 
+## Creating Contexts
+
+When working with AI, contexts are crucial for ensuring consistent and well-informed decisions. Follow these guidelines when creating new contexts:
+
+### Context Structure
+1. **Clear Purpose**
+   - What problem does this context solve?
+   - Who will use it?
+   - When should it be used?
+
+2. **Core Components**
+   - Header with title and purpose
+   - Key concepts and definitions
+   - Relationship mappings
+   - Implementation guidelines
+
+3. **Writing Style**
+   - Clear, unambiguous language
+   - Consistent terminology
+   - Practical examples
+   - Progressive disclosure
+
+[View full context creation guide →](context-web/creating-contexts.md)
+
 ## Semantic Discovery
 
 ### Information Categories

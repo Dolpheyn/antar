@@ -2,7 +2,29 @@
 
 > "Your guide to finding the right context for any task"
 
-## How to Use This Index
+## Available Contexts
+
+### Project Areas
+Understanding system scope, architecture, and relationships
+[View Context →](contexts/project-areas.md)
+
+### Initiative
+Current goals, constraints, and timelines
+[View Context →](contexts/initiative.md)
+
+### Research
+Technical decisions and market understanding
+[View Context →](contexts/research.md)
+
+### Users
+User needs, behaviors, and expectations
+[View Context →](contexts/users.md)
+
+### Documentation
+Documentation structure and organization principles
+[View Context →](contexts/documentation.md)
+
+## How to Use Contexts
 
 1. **Identify Task Type**: Determine what kind of task you're working on
 2. **Find Related Contexts**: Use the maps below to find relevant contexts
@@ -77,26 +99,6 @@ mindmap
         Industry Trends
 ```
 
-## Context Quick Reference
-
-### Project Areas Context
-- **Use for**: Understanding system scope, architecture, and relationships
-- **Key aspects**: System design, integration points, user needs
-- **When to load**: Starting new features, planning architecture
-- [Go to Context →](../context/project-areas.md)
-
-### Initiative Context
-- **Use for**: Current goals, constraints, and timelines
-- **Key aspects**: Business objectives, technical requirements, resources
-- **When to load**: Planning sprints, implementing features
-- [Go to Context →](../context/initiative.md)
-
-### Research Context
-- **Use for**: Technical decisions, market understanding
-- **Key aspects**: Technical stack, best practices, market analysis
-- **When to load**: Making technical choices, analyzing market
-- [Go to Context →](../context/research.md)
-
 ## Common Task Patterns
 
 ### Starting New Feature
@@ -114,13 +116,6 @@ mindmap
 2. Load Project Areas Context → Check system capabilities
 3. Load Research Context → Consider market trends
 
-## Context Loading Rules
-
-1. **Always Start Fresh**: Reload contexts for each new task
-2. **Load in Order**: Follow the sequence in task patterns
-3. **Keep Updated**: Check for context updates regularly
-4. **Cross-Reference**: Use multiple contexts when needed
-
 ## Tips for Effective Use
 
 1. **Start Broad**: Begin with high-level context
@@ -128,4 +123,12 @@ mindmap
 3. **Stay Current**: Keep contexts in mind throughout task
 4. **Update When Needed**: Contribute new insights back to contexts
 
-[View Contexts →](../context/project-areas.md)
+## Automated Context Scanning
+
+I automatically scan this Context Web index for every interaction to ensure relevant contexts are loaded. This process includes:
+
+1. **Task Analysis**: Identifying the type of task from user input
+2. **Context Loading**: Loading primary and supporting contexts
+3. **Application**: Applying context insights to responses
+
+[Need to create a new context? Check the process guide →](../process.md#creating-contexts)
