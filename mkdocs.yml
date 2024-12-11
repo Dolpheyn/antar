@@ -1,4 +1,4 @@
-site_name: Antar
+site_name: Antar Platform Documentation
 site_description: Smart delivery platform for Southeast Asian merchants
 site_author: Antar Team
 copyright: Copyright &copy; 2024 Antar
@@ -12,16 +12,16 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: deep purple
-      accent: deep purple
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: deep purple
-      accent: deep purple
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -42,6 +42,8 @@ theme:
     - navigation.tabs.sticky
     - navigation.top     # Back to top button
     - toc.follow         # Follow TOC while scrolling
+    - navigation.expand
+    - toc.integrate
     # Search
     - search.suggest     # Search suggestions
     - search.highlight   # Search highlighting
@@ -55,23 +57,27 @@ theme:
 nav:
   - Home: index.md
   - Product:
-    - Overview: product/overview.md
-    - Features: product/feature-concept.md
-    - Use Cases: product/user-stories.md
-    - Roadmap: 
-      - Overview: product/roadmap/index.md
-  - Tech:
-    - Overview: tech/index.md
-    - Architecture:
-      - System Design: tech/system-architecture.md
-      - Data Models: tech/data-models.md
-    - Integration:
-      - API Reference: tech/api-specifications.md
-      - Guidelines: tech/integration-guidelines.md
-    - Operations:
-      - Security: tech/security-requirements.md
-      - Performance: tech/performance-requirements.md
-      - CI/CD: tech/ci-cd.md
+    - product/index.md
+    - Roadmap:
+      - product/roadmap/index.md
+      - Phase 1 Foundation: product/roadmap/phase-1-foundation.md
+  - Technical:
+    - tech/index.md
+    - Story:
+      - Vision: tech/story/vision.md
+      - Core Concepts: tech/story/concepts.md
+    - Roadmap:
+      - tech/roadmap/index.md
+      - Phase 1:
+        - Architecture: tech/roadmap/phase-1/architecture.md
+        - Integration: tech/roadmap/phase-1/integration.md
+    - Specifications:
+      - API: tech/specs/api/index.md
+      - Data Models: tech/specs/data/index.md
+      - Security: tech/specs/security/index.md
+    - Implementation:
+      - Guides: tech/implementation/guides/index.md
+      - Examples: tech/implementation/examples/index.md
   - We & AI:
     - About Us: we-and-ai/about.md
     - AI Capabilities:
@@ -118,6 +124,8 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
   - toc:
       permalink: true
       toc_depth: 3
