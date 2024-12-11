@@ -9,66 +9,27 @@
     --nav-item-hover-bg: #EBECF0;
 }
 
-/* Navigation and TOC Improvements */
-
-/* Make navigation more flexible */
+/* Navigation panel */
 .md-nav {
-    flex-shrink: 0;
-    font-size: 0.8rem;
+    font-size: 14px;
+    line-height: 1.3;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-}
-
-/* Improve sidebar container */
-.md-sidebar {
-    width: 12.1rem;
-    padding: 1.2rem 0;
-}
-
-.md-sidebar--primary {
-    border-right: 1px solid var(--md-default-fg-color--lightest);
-}
-
-/* Table of Contents container */
-.md-sidebar__scrollwrap {
-    margin: 0;
-}
-
-.md-nav__list {
-    margin: 0;
-    padding: 0 0.6rem;
 }
 
 /* Navigation items */
 .md-nav__item {
     padding: 0;
-    margin: 0.4em 0;
+    margin: 0;
 }
 
 .md-nav__link {
-    margin: 0.4rem 0;
-    padding: 0.4rem 0.6rem;
-    border-radius: 0.2rem;
-    transition: all 0.2s ease;
+    margin: 0;
+    padding: 4px 8px;
     color: var(--nav-item-color);
+    border-radius: 3px;
+    transition: background-color 0.1s ease;
     display: flex;
     align-items: center;
-}
-
-.md-nav__link:hover {
-    background-color: var(--md-default-fg-color--lightest);
-    color: var(--nav-item-color);
-    text-decoration: none;
-}
-
-.md-nav__link--active {
-    font-weight: bold;
-    color: var(--md-primary-fg-color);
-    background-color: var(--nav-item-hover-bg);
-}
-
-/* Nested navigation */
-.md-nav__item .md-nav__item {
-    padding-left: 0.8rem;
 }
 
 /* Section headers */
@@ -114,6 +75,19 @@
     height: 1.5px;
     background: #DFE1E6;
     border-radius: 1px;
+}
+
+/* Active and hover states */
+.md-nav__link:hover {
+    background-color: var(--nav-item-hover-bg);
+    color: var(--nav-item-color);
+    text-decoration: none;
+}
+
+.md-nav__link--active {
+    color: var(--md-primary-fg-color);
+    font-weight: 500;
+    background-color: var(--nav-item-hover-bg);
 }
 
 /* Expand/collapse indicators */
@@ -163,32 +137,11 @@
 
 /* Mobile adjustments */
 @media screen and (max-width: 76.1875em) {
-    .md-sidebar {
-        width: 12.1rem;
-    }
     .md-nav--primary .md-nav__title {
         background-color: var(--md-default-bg-color);
         color: var(--nav-item-color);
         font-weight: 500;
         height: auto;
         padding: 8px;
-    }
-}
-
-@media screen and (max-width: 60em) {
-    .md-sidebar {
-        width: 100%;
-        padding: 1rem;
-    }
-}
-
-/* Improve readability on mobile */
-@media screen and (max-width: 44.9375em) {
-    .md-nav {
-        font-size: 0.7rem;
-    }
-    
-    .md-nav__link {
-        padding: 0.3rem 0.4rem;
     }
 }
