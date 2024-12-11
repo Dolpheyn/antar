@@ -5,7 +5,7 @@ from .build import build
 from .clean import clean
 from .render import render_diagrams
 from .setup import setup
-from .test_visual import test_visual
+from .visual import visual
 
 __all__ = [
     'register_docs_command',
@@ -14,5 +14,5 @@ __all__ = [
     'clean',
     'render_diagrams',
     'setup',
-    'test_visual'
+    'visual'
 ]

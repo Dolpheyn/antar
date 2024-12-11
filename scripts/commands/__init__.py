@@ -8,7 +8,7 @@ from .docs import (
     clean,
     render_diagrams,
     setup,
-    test_visual
+    visual
 )
 
 __all__ = [
@@ -19,5 +19,5 @@ __all__ = [
     'clean',
     'render_diagrams',
     'setup',
-    'test_visual'
+    'visual'
 ]

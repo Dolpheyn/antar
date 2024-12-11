@@ -15,7 +15,7 @@ from scripts.commands import (
     clean,
     render_diagrams,
     setup,
-    test_visual
+    visual
 )
 
 # Create Typer app instances
@@ -147,7 +147,7 @@ def docs_test_visual(
     """Run visual tests on documentation."""
     try:
         with console.status("[bold green]Running visual tests..."):
-            test_visual([
+            visual([
                 "--output-dir", str(output_dir),
                 "--width", str(width),
                 "--height", str(height)

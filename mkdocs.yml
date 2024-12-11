@@ -33,19 +33,20 @@ theme:
   features:
     # Navigation
     - navigation.instant  # Instant loading
+    - navigation.instant.prefetch # Prefetch when user hovers
+    - navigation.instant.progress
     - navigation.tracking  # URL tracking
     - navigation.sections  # Sections fold
-    - navigation.expand   # Expand all sections
     - navigation.indexes  # Section index pages
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.top     # Back to top button
     - toc.follow         # Follow TOC while scrolling
-    - toc.integrate      # Integrate TOC into navigation
     # Search
     - search.suggest     # Search suggestions
     - search.highlight   # Search highlighting
     - search.share       # Search sharing
     # UI/UX
-    - header.autohide    # Hide header on scroll
     - announce.dismiss   # Dismissable announcements
     - content.tabs.link  # Content tabs link
     - content.code.annotation  # Content code annotation
