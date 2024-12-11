@@ -1,0 +1,54 @@
+%% Delivery Aggregator Platform Architecture
+%% Shows the three main components and their interactions
+
+%%{init: {
+    'theme': 'base',
+    'themeVariables': {
+        'primaryColor': '#326CE5',
+        'primaryTextColor': '#fff',
+        'primaryBorderColor': '#114BB7',
+        'lineColor': '#114BB7',
+        'secondaryColor': '#6C8EBF',
+        'tertiaryColor': '#82B366',
+        'fontFamily': 'arial',
+        'fontSize': '16px'
+    }
+}}%%
+
+graph TB
+    %% Core Services
+    subgraph CS[Core Services]
+        IC[Intelligence Core]
+        OC[Order Core]
+        IG[Information Gateway]
+    end
+
+    %% Provider Integration
+    subgraph PS[Provider Shims]
+        GS[Grab Shim]
+        LS[Lalamove Shim]
+        JS[J&T Shim]
+        DS[Delyva Shim]
+    end
+
+    %% User Interface
+    subgraph UI[User Interface]
+        MI[Merchant Interface]
+        PP[Preference Panel]
+    end
+
+    %% Connections
+    MI --> OC
+    PP --> IC
+    OC --> IC
+    IC --> IG
+    IG --> GS & LS & JS & DS
+
+    %% Styling
+    classDef core fill:#f5f5f5,stroke:#326CE5,stroke-width:2px
+    classDef shim fill:#f5f5f5,stroke:#6C8EBF,stroke-width:2px
+    classDef ui fill:#f5f5f5,stroke:#82B366,stroke-width:2px
+
+    class CS,IC,OC,IG core
+    class PS,GS,LS,JS,DS shim
+    class UI,MI,PP ui
