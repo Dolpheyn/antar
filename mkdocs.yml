@@ -129,6 +129,10 @@ nav:
       - story-idea/delivery-aggregator/index.md
       - Feature Concept: story-idea/delivery-aggregator/feature-concept.md
   - User Personas: user-personas/index.md
+  - Project Roadmap:
+    - project-roadmap/index.md
+    - Initiatives:
+      - Documentation System: project-roadmap/initiatives/documentation-system.md
   - Technical Specifications:
     - technical-specifications/index.md
     - System Architecture: technical-specifications/system-architecture.md
@@ -138,11 +142,7 @@ nav:
     - Performance Requirements: technical-specifications/performance-requirements.md
     - Integration Guidelines: technical-specifications/integration-guidelines.md
     - CI/CD Pipeline: technical-specifications/ci-cd.md
-  - Project Roadmap: project-roadmap/index.md
-  - Technical Roadmap: technical-roadmap/index.md
-  - Task Management:
-    - task-management/index.md
-    - Templates:
-      - task-management/templates/index.md
-      - Sprint Plan: task-management/templates/sprint-plan.md
-      - Task Template: task-management/templates/task-template.md
+  - AI Knowledge:
+    - Project Areas: ai-knowledge/project-areas-context.md
+    - User Context: ai-knowledge/user-context.md
+    - Initiative Context: ai-knowledge/initiative-context.md
