@@ -21,11 +21,29 @@ To empower Southeast Asian businesses with smart, efficient, and cost-effective 
 
 Our comprehensive documentation is available at [dolpheyn.github.io/antar](https://dolpheyn.github.io/antar/). It covers:
 
-- Story Idea and Vision
-- Technical Specifications
-- API Documentation
-- Integration Guides
-- Project Roadmap
+### 1. Home
+- Landing page with high-level overview
+- Quick links to key sections
+- Getting started guide
+
+### 2. Product
+- Platform overview
+- Feature descriptions
+- Use cases and success stories
+- Product roadmap
+
+### 3. Tech
+- System architecture
+- API reference
+- Integration guides
+- Security documentation
+- Performance metrics
+
+### 4. We & AI
+- About our team
+- AI capabilities
+- Vision and mission
+- Research and innovation
 
 ## 🛠️ Current Initiatives
 

@@ -52,6 +52,34 @@ theme:
     - content.code.annotation  # Content code annotation
     - content.code.copy  # Content code copy
 
+nav:
+  - Home: index.md
+  - Product:
+    - Overview: product/overview.md
+    - Features: product/feature-concept.md
+    - Use Cases: product/user-stories.md
+    - Roadmap: 
+      - Overview: product/roadmap/index.md
+  - Tech:
+    - Overview: tech/index.md
+    - Architecture:
+      - System Design: tech/system-architecture.md
+      - Data Models: tech/data-models.md
+    - Integration:
+      - API Reference: tech/api-specifications.md
+      - Guidelines: tech/integration-guidelines.md
+    - Operations:
+      - Security: tech/security-requirements.md
+      - Performance: tech/performance-requirements.md
+      - CI/CD: tech/ci-cd.md
+  - We & AI:
+    - About Us: we-and-ai/about.md
+    - AI Capabilities:
+      - Project Areas: we-and-ai/project-areas-context.md
+      - User Context: we-and-ai/user-context.md
+      - Initiative Context: we-and-ai/initiative-context.md
+    - Research: we-and-ai/creating-contexts.md
+
 plugins:
   - search
   - include-markdown
@@ -113,29 +141,3 @@ extra:
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
-
-nav:
-  - Home: index.md
-  - Story Idea:
-    - story-idea/delivery-aggregator/index.md
-    - Features: story-idea/delivery-aggregator/feature-concept.md
-    - User Stories: story-idea/delivery-aggregator/user-stories.md
-  - User Personas: user-personas/index.md
-  - Project Roadmap:
-    - Overview: project-roadmap/index.md
-    - Initiatives:
-      - Documentation System: project-roadmap/initiatives/documentation-system.md
-      - Visual Testing: project-roadmap/initiatives/visual-testing.md
-  - Technical Specifications:
-    - technical-specifications/index.md
-    - System Architecture: technical-specifications/system-architecture.md
-    - Data Models: technical-specifications/data-models.md
-    - API Specifications: technical-specifications/api-specifications.md
-    - Security Requirements: technical-specifications/security-requirements.md
-    - Performance Requirements: technical-specifications/performance-requirements.md
-    - Integration Guidelines: technical-specifications/integration-guidelines.md
-    - CI/CD Pipeline: technical-specifications/ci-cd.md
-  - AI Knowledge:
-    - Project Areas: ai-knowledge/project-areas-context.md
-    - User Context: ai-knowledge/user-context.md
-    - Initiative Context: ai-knowledge/initiative-context.md

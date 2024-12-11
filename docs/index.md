@@ -2,11 +2,37 @@
 
 Antar is a smart delivery platform that connects Southeast Asian merchants with multiple delivery services through a single, intelligent interface.
 
-## Our Vision
+## Quick Access
 
-To empower Southeast Asian businesses with smart, efficient, and cost-effective delivery solutions.
+<div class="grid cards" markdown>
 
-## What We Offer
+-   :material-rocket-launch:{ .lg .middle } __Product__
+
+    ---
+
+    Discover how Antar can transform your delivery operations.
+
+    [:octicons-arrow-right-24: Learn More](product/overview.md)
+
+-   :material-code-braces:{ .lg .middle } __Tech__
+
+    ---
+
+    Explore our API and integration options.
+
+    [:octicons-arrow-right-24: View Docs](tech/architecture.md)
+
+-   :material-brain:{ .lg .middle } __We & AI__
+
+    ---
+
+    Learn about our team and AI capabilities.
+
+    [:octicons-arrow-right-24: About Us](we-and-ai/about.md)
+
+</div>
+
+## Why Choose Antar?
 
 ### 🌟 Smart Routing
 Our AI-powered system automatically selects the best delivery service based on:
@@ -30,35 +56,6 @@ Make data-driven decisions with our comprehensive analytics:
 - Performance metrics
 - Delivery patterns
 - Customer satisfaction
-
-### 🎯 Local Focus
-Built specifically for Southeast Asian markets:
-- Local language support
-- Regional delivery knowledge
-- Cultural understanding
-- Local business practices
-
-## Why Choose Antar?
-
-1. **Simplified Operations**
-   - One platform, multiple services
-   - Automated provider selection
-   - Unified billing and reporting
-
-2. **Cost Optimization**
-   - Smart price comparison
-   - Volume-based discounts
-   - Route optimization
-
-3. **Local Expertise**
-   - Southeast Asian market focus
-   - Regional support team
-   - Local business understanding
-
-4. **Advanced Technology**
-   - AI-powered decisions
-   - Real-time tracking
-   - Predictive analytics
 
 ## Get Started
 
