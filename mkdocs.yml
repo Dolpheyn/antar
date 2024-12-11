@@ -116,10 +116,9 @@ extra:
 nav:
   - Home: index.md
   - Story Idea:
-    - story-idea/index.md
-    - Delivery Aggregator:
-      - story-idea/delivery-aggregator/index.md
-      - Feature Concept: story-idea/delivery-aggregator/feature-concept.md
+    - story-idea/delivery-aggregator/index.md
+    - Features: story-idea/delivery-aggregator/feature-concept.md
+    - User Stories: story-idea/delivery-aggregator/user-stories.md
   - User Personas: user-personas/index.md
   - Project Roadmap:
     - project-roadmap/index.md
