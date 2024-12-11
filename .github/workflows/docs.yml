@@ -59,7 +59,8 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            ${{ steps.pip-cache.outputs.dir }}
+            ${{ steps.pip-cache.outputs.dir }}/*.whl
+            ${{ steps.pip-cache.outputs.dir }}/*.tar.gz
           key: ${{ runner.os }}-pip-${{ hashFiles('requirements-docs.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
@@ -68,10 +69,13 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            .venv
-            !.venv/lib/python*/site-packages/pip*
-            !.venv/lib/python*/site-packages/setuptools*
-            !.venv/lib/python*/site-packages/wheel*
+            .venv/**/site-packages
+            !.venv/**/site-packages/pip*
+            !.venv/**/site-packages/setuptools*
+            !.venv/**/site-packages/wheel*
+            !.venv/**/site-packages/*.dist-info
+            !.venv/**/site-packages/*.egg-info
+            !.venv/**/site-packages/__pycache__
           key: ${{ runner.os }}-venv-${{ hashFiles('requirements-docs.txt') }}
           restore-keys: |
             ${{ runner.os }}-venv-
