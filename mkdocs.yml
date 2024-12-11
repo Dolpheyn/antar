@@ -1,7 +1,8 @@
 site_name: Delivery Aggregator Platform
 site_description: Intelligent delivery service aggregation platform for Malaysian merchants
 site_author: Your Team
-repo_url: https://github.com/yourusername/delivery-aggregator
+repo_url: https://github.com/Dolpheyn/the-project
+repo_name: Dolpheyn/the-project
 edit_uri: edit/main/docs/
 
 theme:
@@ -108,7 +109,7 @@ extra_css:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/yourusername
+      link: https://github.com/Dolpheyn
   analytics:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_KEY
