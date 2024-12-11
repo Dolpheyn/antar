@@ -22,7 +22,7 @@ Antar is a smart delivery platform that connects Southeast Asian merchants with 
 
     Explore our API and integration options.
 
-    [:octicons-arrow-right-24: View Docs](tech/architecture.md)
+    [:octicons-arrow-right-24: View Docs](tech/index.md)
 
 -   :material-brain:{ .lg .middle } __We & AI__
 
