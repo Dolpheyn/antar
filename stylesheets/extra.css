@@ -1,0 +1,194 @@
+/* Navigation styling to match Confluence */
+:root {
+    --md-primary-fg-color: #0052CC;
+    --md-primary-fg-color--light: #4C9AFF;
+    --md-primary-fg-color--dark: #0747A6;
+    --md-text-color: #172B4D;
+    --md-default-bg-color: #F4F5F7;
+    --nav-item-color: #42526E;
+    --nav-item-hover-bg: #EBECF0;
+}
+
+/* Navigation and TOC Improvements */
+
+/* Make navigation more flexible */
+.md-nav {
+    flex-shrink: 0;
+    font-size: 0.8rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Improve sidebar container */
+.md-sidebar {
+    width: 12.1rem;
+    padding: 1.2rem 0;
+}
+
+.md-sidebar--primary {
+    border-right: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Table of Contents container */
+.md-sidebar__scrollwrap {
+    margin: 0;
+}
+
+.md-nav__list {
+    margin: 0;
+    padding: 0 0.6rem;
+}
+
+/* Navigation items */
+.md-nav__item {
+    padding: 0;
+    margin: 0.4em 0;
+}
+
+.md-nav__link {
+    margin: 0.4rem 0;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.2rem;
+    transition: all 0.2s ease;
+    color: var(--nav-item-color);
+    display: flex;
+    align-items: center;
+}
+
+.md-nav__link:hover {
+    background-color: var(--md-default-fg-color--lightest);
+    color: var(--nav-item-color);
+    text-decoration: none;
+}
+
+.md-nav__link--active {
+    font-weight: bold;
+    color: var(--md-primary-fg-color);
+    background-color: var(--nav-item-hover-bg);
+}
+
+/* Nested navigation */
+.md-nav__item .md-nav__item {
+    padding-left: 0.8rem;
+}
+
+/* Section headers */
+.md-nav__item--section {
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+.md-nav__item--section > .md-nav__link {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--nav-item-color);
+    padding: 4px 8px;
+}
+
+/* Tree structure */
+.md-nav__list .md-nav__list {
+    margin-left: 1.1rem;
+    position: relative;
+}
+
+.md-nav__list .md-nav__list::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 0;
+    bottom: 0;
+    width: 1.5px;
+    background: #DFE1E6;
+    border-radius: 1px;
+}
+
+.md-nav__list .md-nav__list .md-nav__link {
+    position: relative;
+}
+
+.md-nav__list .md-nav__list .md-nav__link::before {
+    content: "";
+    position: absolute;
+    left: -1.1rem;
+    top: 50%;
+    width: 6px;
+    height: 1.5px;
+    background: #DFE1E6;
+    border-radius: 1px;
+}
+
+/* Expand/collapse indicators */
+.md-nav__toggle {
+    margin-right: 2px;
+    color: var(--nav-item-color);
+}
+
+.md-nav__toggle::before {
+    content: "›";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
+    transition: transform 0.15s ease;
+}
+
+.md-nav__toggle:checked::before {
+    transform: rotate(90deg);
+}
+
+/* Hide nested items by default */
+.md-nav__list .md-nav {
+    display: none;
+}
+
+.md-nav__toggle:checked ~ .md-nav {
+    display: block;
+}
+
+/* Space tools section */
+.md-nav__title {
+    padding: 4px 8px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--nav-item-color);
+    display: flex;
+    align-items: center;
+}
+
+/* Top section styling */
+.md-nav--primary > .md-nav__list > .md-nav__item:first-child {
+    margin-top: 0;
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 76.1875em) {
+    .md-sidebar {
+        width: 12.1rem;
+    }
+    .md-nav--primary .md-nav__title {
+        background-color: var(--md-default-bg-color);
+        color: var(--nav-item-color);
+        font-weight: 500;
+        height: auto;
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 60em) {
+    .md-sidebar {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+/* Improve readability on mobile */
+@media screen and (max-width: 44.9375em) {
+    .md-nav {
+        font-size: 0.7rem;
+    }
+    
+    .md-nav__link {
+        padding: 0.3rem 0.4rem;
+    }
+}
