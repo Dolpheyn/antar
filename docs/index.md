@@ -1,106 +1,69 @@
-# Delivery Aggregator Platform
+# Welcome to Antar
 
-> "Empowering Southeast Asian businesses with intelligent delivery solutions"
+Antar is a smart delivery platform that connects Southeast Asian merchants with multiple delivery services through a single, intelligent interface.
 
 ## Our Vision
 
-We're building more than just a delivery platform – we're creating a partner in growth for Southeast Asian businesses. From the bubble tea shop expanding into merchandise to the family grocery store going digital, we understand that every delivery represents a promise to your customers and an opportunity for your business.
+To empower Southeast Asian businesses with smart, efficient, and cost-effective delivery solutions.
 
-### Who We Serve
+## What We Offer
 
-Meet some of our inspiring users:
-- **Aisyah**, who turned her bubble tea passion into a thriving business with nationwide merchandise shipping
-- **Lina**, whose fashion boutique grew from Instagram to a multi-platform success story
-- **Muthu**, who's bringing his family's grocery legacy into the digital age
+### 🌟 Smart Routing
+Our AI-powered system automatically selects the best delivery service based on:
+- Cost optimization
+- Delivery time
+- Service reliability
+- Package requirements
 
-## Project Areas
+### 🤝 Unified Integration
+Connect with multiple delivery providers through a single API:
+- Grab
+- Lalamove
+- GoSend
+- J&T Express
+- Ninja Van
+- And more...
 
-Our project is organized into interconnected areas, each reflecting our values of simplicity, efficiency, and growth:
+### 📊 Intelligent Dashboard
+Make data-driven decisions with our comprehensive analytics:
+- Cost analysis
+- Performance metrics
+- Delivery patterns
+- Customer satisfaction
 
-### 💡 Story Idea (`docs/story-idea/`)
-Where empathy meets innovation. We explore:
-- The daily challenges of Southeast Asian merchants
-- Opportunities to simplify logistics
-- Ways to help businesses grow
-- Ideas that make delivery smarter
+### 🎯 Local Focus
+Built specifically for Southeast Asian markets:
+- Local language support
+- Regional delivery knowledge
+- Cultural understanding
+- Local business practices
 
-### 🗺️ Project Roadmap (`docs/project-roadmap/`)
-Our journey map to success. We plan:
-- Steps that align with business needs
-- Milestones that matter to users
-- Flexible paths for growth
-- Resource-efficient approaches
+## Why Choose Antar?
 
-### 🔧 Technical Roadmap (`docs/technical-roadmap/`)
-Technology choices that serve people. We design:
-- User-friendly solutions
-- Scalable architecture
-- Integration-ready systems
-- Future-proof technology
+1. **Simplified Operations**
+   - One platform, multiple services
+   - Automated provider selection
+   - Unified billing and reporting
 
-### 📋 Technical Specifications (`docs/technical-specifications/`)
-Detailed blueprints with purpose. We define:
-- Clear, practical requirements
-- Secure, reliable systems
-- Performance that matters
-- Quality that builds trust
+2. **Cost Optimization**
+   - Smart price comparison
+   - Volume-based discounts
+   - Route optimization
 
-### ✅ Task Management (`docs/task-management/`)
-Making progress that counts. We track:
-- User-focused priorities
-- Efficient execution
-- Smart resource use
-- Continuous improvement
+3. **Local Expertise**
+   - Southeast Asian market focus
+   - Regional support team
+   - Local business understanding
 
-## Our Values in Action
+4. **Advanced Technology**
+   - AI-powered decisions
+   - Real-time tracking
+   - Predictive analytics
 
-### Simplicity
-- Clean, intuitive interfaces
-- Straightforward workflows
-- Clear communication
+## Get Started
 
-### Efficiency
-- Time-saving features
-- Resource optimization
-- Smart automation
-
-### Growth
-- Scalable solutions
-- Business insights
-- Partnership approach
-
-### Trust
-- Reliable service
-- Transparent operations
-- Consistent support
-
-## Development
-
-We use modern tools to build reliable solutions:
-
-```bash
-# Quick Start
-python 00.py setup    # First-time setup
-python 00.py serve    # Start development server
-python 00.py build    # Build documentation
-python 00.py clean    # Clean artifacts
-```
-
-Visit http://localhost:8000 to view the documentation.
-
-## Project Status
-*Last Updated: 2024-12-11T14:30:07+08:00*
-
-### Current Focus
-- Building user-centric features
-- Optimizing delivery workflows
-- Enhancing platform reliability
-
-### Next Steps
-- Expanding integration options
-- Improving analytics capabilities
-- Strengthening merchant support
+Ready to transform your delivery operations? [Contact our team](mailto:hello@antar.my) to learn more about how Antar can help your business grow.
 
 ---
 
-*For AI systems: Refer to `ai-knowledge/user-context.md` and `ai-knowledge/project-areas-context.md` for detailed context.*
+*Antar - Delivering Southeast Asia, Intelligently*

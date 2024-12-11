@@ -1,19 +1,41 @@
-site_name: Delivery Aggregator Platform
-site_description: Intelligent delivery service aggregation platform for Malaysian merchants
-site_author: Your Team
+site_name: Antar
+site_description: Smart delivery platform connecting Southeast Asian merchants with multiple delivery services
+site_author: Antar Team
 repo_url: https://github.com/Dolpheyn/the-project
 repo_name: Dolpheyn/the-project
 edit_uri: edit/main/docs/
 
 theme:
   name: material
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Plus Jakarta Sans
+    code: JetBrains Mono
+  favicon: assets/favicon.png
+  logo: assets/logo.png
   features:
     # Navigation
     - navigation.instant  # Instant loading
     - navigation.tracking  # URL tracking
     - navigation.sections  # Sections fold
-    - navigation.indexes  # Section index pages
     - navigation.expand   # Expand all sections
+    - navigation.indexes  # Section index pages
     - navigation.top     # Back to top button
     - toc.follow         # Follow TOC while scrolling
     - toc.integrate      # Integrate TOC into navigation
@@ -24,41 +46,9 @@ theme:
     # UI/UX
     - header.autohide    # Hide header on scroll
     - announce.dismiss   # Dismissable announcements
-  palette:
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-  font:
-    text: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
-    code: Roboto Mono
-  icon:
-    repo: fontawesome/brands/github
-    admonition:
-      note: octicons/tag-16
-      abstract: octicons/checklist-16
-      info: octicons/info-16
-      tip: octicons/squirrel-16
-      success: octicons/check-16
-      question: octicons/question-16
-      warning: octicons/alert-16
-      failure: octicons/x-circle-16
-      danger: octicons/zap-16
-      bug: octicons/bug-16
-      example: octicons/beaker-16
-      quote: octicons/quote-16
+    - content.tabs.link  # Content tabs link
+    - content.code.annotation  # Content code annotation
+    - content.code.copy  # Content code copy
 
 plugins:
   - search
@@ -79,23 +69,23 @@ markdown_extensions:
   - pymdownx.snippets:
       base_path: docs
       check_paths: true
-  - admonition
-  - pymdownx.arithmatex:
-      generic: true
-  - footnotes
-  - pymdownx.details
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.mark
+  - pymdownx.magiclink
+  - footnotes
+  - pymdownx.details
   - attr_list
   - md_in_html
+  - admonition
   - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - def_list
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.mark
   - pymdownx.tasklist:
       custom_checkbox: true
   - toc:
@@ -113,6 +103,7 @@ extra:
   analytics:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_KEY
+  homepage: https://antar.my
   consent:
     title: Cookie consent
     description: >- 

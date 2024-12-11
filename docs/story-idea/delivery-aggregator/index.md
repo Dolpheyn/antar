@@ -1,20 +1,21 @@
-# Delivery Aggregator Platform
+# Antar: Smart Delivery Platform
 
 ## Overview
-An intelligent delivery service aggregator platform tailored for Malaysian merchants, integrating various delivery service providers.
+Antar is a smart delivery platform that connects Southeast Asian merchants with multiple delivery services through an intelligent, unified interface.
 
 ## Key Features
-- Smart provider selection
-- Real-time tracking
-- Cost optimization
+- AI-powered provider selection
+- Real-time tracking and analytics
+- Cost optimization engine
 - Multi-provider integration
-- Merchant dashboard
+- Smart merchant dashboard
 
 ## Target Users
 1. Small and Medium Enterprises (SMEs)
-2. Online retailers
+2. Online retailers and e-commerce
 3. Food and beverage businesses
-4. Local merchants
+4. Local merchants and artisans
+5. Digital-first businesses
 
 ## Value Proposition
-Simplify delivery management by providing a single interface to multiple delivery services, optimized for cost and efficiency.
+Empower Southeast Asian businesses with smart, efficient, and cost-effective delivery solutions through a single, intelligent platform.
