@@ -1,3 +1,24 @@
+# Documentation Deployment Workflow
+#
+# This workflow automatically builds and deploys our documentation to GitHub Pages.
+# It runs on:
+# - Every push to main (builds and deploys)
+# - Every pull request (builds only)
+#
+# Features:
+# - Automatic deployment to GitHub Pages
+# - Preview builds for pull requests
+# - Mermaid diagram support
+# - Dependency caching for faster builds
+#
+# Setup Required:
+# 1. Go to repository Settings > Pages
+# 2. Under "Build and deployment":
+#    - Source: Select "GitHub Actions"
+#
+# The documentation will be available at:
+# https://[username].github.io/the-project/
+
 name: Deploy Documentation
 
 on:

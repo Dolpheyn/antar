@@ -75,6 +75,31 @@ We use modern tools to ensure quality and efficiency:
 - **Typer**: CLI interface
 - **Rich**: Beautiful terminal output
 - **Playwright**: Visual testing
+- **GitHub Actions**: Continuous Integration and Deployment
+
+## 📚 Documentation
+
+Our documentation is automatically built and deployed to GitHub Pages:
+
+- **Live Site**: [https://dolpheyn.github.io/the-project/](https://dolpheyn.github.io/the-project/)
+- **Build Status**: [![Deploy Documentation](https://github.com/Dolpheyn/the-project/actions/workflows/docs.yml/badge.svg)](https://github.com/Dolpheyn/the-project/actions/workflows/docs.yml)
+
+### Local Development
+Our `00.py` script is your Swiss Army knife:
+
+```bash
+python 00.py setup           # First-time setup
+python 00.py serve           # Start docs server
+python 00.py build           # Build documentation
+python 00.py clean           # Clean artifacts
+python 00.py docs test-visual # Run visual tests
+```
+
+### Continuous Integration
+- Documentation is automatically built on every push
+- Pull requests get preview builds
+- Main branch updates are deployed to GitHub Pages
+- Includes support for Mermaid diagrams
 
 ## 🎯 Key Commands
 

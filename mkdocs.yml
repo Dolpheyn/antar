@@ -137,6 +137,7 @@ nav:
     - Security Requirements: technical-specifications/security-requirements.md
     - Performance Requirements: technical-specifications/performance-requirements.md
     - Integration Guidelines: technical-specifications/integration-guidelines.md
+    - CI/CD Pipeline: technical-specifications/ci-cd.md
   - Project Roadmap: project-roadmap/index.md
   - Technical Roadmap: technical-roadmap/index.md
   - Task Management:
