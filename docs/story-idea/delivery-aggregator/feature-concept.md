@@ -69,15 +69,15 @@ Connects with delivery providers:
 
 !!! tip "Smart Features"
     - Smart Categorization
-    - Quick delivery options ⚡
-    - Budget-friendly choices 💰
-    - Premium/secure services 🔒
-    - Balanced recommendations ⚖️
+        - Quick delivery options ⚡
+        - Budget-friendly choices 💰
+        - Premium/secure services 🔒
+        - Balanced recommendations ⚖️
     - Easy Preferences
-    - One-click selection
-    - Dynamic adjustments
-    - Visual trade-offs
-    - Remembers your choices
+        - One-click selection
+        - Dynamic adjustments
+        - Visual trade-offs
+        - Remembers your choices
     - Provider Support
         - Grab Express
         - Lalamove
