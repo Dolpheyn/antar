@@ -38,3 +38,19 @@ site/
 .cascade/
 .uv/
 .venv/
+
+# Frontend specific
+frontend/.next/
+frontend/out/
+frontend/.env*.local
+frontend/.vercel/
+frontend/coverage/
+frontend/.env
+frontend/build/
+frontend/.turbo
+frontend/.pnpm-debug.log*
+frontend/bun.lockb
+
+# Keep in frontend
+!frontend/package.json
+!frontend/package-lock.json

@@ -31,133 +31,157 @@ theme:
   favicon: assets/favicon.png
   logo: assets/logo.png
   features:
-    # Navigation
-    - navigation.instant  # Instant loading
-    - navigation.instant.prefetch # Prefetch when user hovers
+    - navigation.instant
+    - navigation.instant.prefetch
     - navigation.instant.progress
-    - navigation.tracking  # URL tracking
-    - navigation.sections  # Sections fold
-    - navigation.indexes  # Section index pages
+    - navigation.tracking
+    - navigation.sections
+    - navigation.indexes
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.top     # Back to top button
-    - toc.follow         # Follow TOC while scrolling
+    - navigation.top
+    - toc.follow
     - navigation.expand
-    # - toc.integrate <-- DO NOT EVER TURN THIS ON OR ADD IT AGAIN!!! I HATE ITTT
-    # Search
-    - search.suggest     # Search suggestions
-    - search.highlight   # Search highlighting
-    - search.share       # Search sharing
-    # UI/UX
-    - announce.dismiss   # Dismissable announcements
-    - content.tabs.link  # Content tabs link
-    - content.code.annotation  # Content code annotation
-    - content.code.copy  # Content code copy
+    - search.suggest
+    - search.highlight
+    - search.share
+    - announce.dismiss
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
 
 nav:
   - Home: index.md
+  - Notebook:
+    - Overview: notebook/index.md
+    - Features:
+      - Bulk Upload:
+        - Overview: notebook/features/bulk-upload/index.md
+        - Context: notebook/features/bulk-upload/context.md
+        - Technical: notebook/features/bulk-upload/technical.md
+        - Implementation:
+          - Overview: notebook/features/bulk-upload/implementation/index.md
+          - Engineering Specifications: notebook/features/bulk-upload/implementation/engineering-specifications.md
+        - UI:
+          - Overview: notebook/features/bulk-upload/ui/index.md
+          - Components: notebook/features/bulk-upload/ui/components.md
+          - Animations: notebook/features/bulk-upload/ui/animations.md
+          - Responsive: notebook/features/bulk-upload/ui/responsive.md
+        - UX:
+          - Overview: notebook/features/bulk-upload/ux/index.md
+          - Flow: notebook/features/bulk-upload/ux/flow.md
+          - Components: notebook/features/bulk-upload/ux/components.md
+          - Interactions: notebook/features/bulk-upload/ux/interactions.md
+    - Process:
+      - Decisions: notebook/process/decisions.md
+      - Self Agency: notebook/process/self-agency.md
+    - Tech:
+      - Architecture:
+        - Overview: notebook/tech/architecture/index.md
+      - Decisions:
+        - Frontend Framework: notebook/tech/decisions/frontend-framework.md
+      - Frontend:
+        - Overview: notebook/tech/frontend/index.md
+      - Implementation:
+        - Overview: notebook/tech/implementation/index.md
+        - Development Environment: notebook/tech/implementation/development-environment.md
+        - Project Setup: notebook/tech/implementation/project-setup.md
   - Product:
-    - product/index.md
-    - Overview: product/overview.md
+    - Overview: product/index.md
     - Features: product/features.md
-    - Success Stories: product/stories.md
+    - Stories: product/stories.md
     - Roadmap:
-      - product/roadmap/index.md
+      - Overview: product/roadmap/index.md
       - Phase 1 Foundation: product/roadmap/phase-1-foundation.md
-  - Technical:
-    - tech/index.md
-    - Story:
-      - Vision: tech/story/vision.md
-      - Core Concepts: tech/story/concepts.md
+      - Initiatives:
+        - Documentation System: product/roadmap/initiatives/documentation-system.md
+        - Visual Testing: product/roadmap/initiatives/visual-testing.md
+      - Templates:
+        - Milestone Plan: product/roadmap/templates/milestone-plan.md
+  - Tech:
+    - Overview: tech/index.md
+    - Architecture: tech/architecture.md
+    - CI/CD: tech/ci-cd.md
+    - Frontend Notes: tech/frontend-notes.md
+    - Integration Guidelines: tech/integration-guidelines.md
+    - Performance Requirements: tech/performance-requirements.md
     - Roadmap:
-      - tech/roadmap/index.md
+      - Overview: tech/roadmap/index.md
       - Phase 1:
+        - Overview: tech/roadmap/phase-1/index.md
         - Architecture: tech/roadmap/phase-1/architecture.md
         - Integration: tech/roadmap/phase-1/integration.md
-    - Specifications:
-      - API: tech/specs/api/index.md
-      - Data Models: tech/specs/data/index.md
-      - Security: tech/specs/security/index.md
-    - Implementation:
-      - Guides: tech/implementation/guides/index.md
-      - Examples: tech/implementation/examples/index.md
-    - Additional Resources:
-      - CI/CD: tech/ci-cd.md
-      - Performance: tech/performance-requirements.md
-      - System Architecture: tech/system-architecture.md
-      - Integration Guidelines: tech/integration-guidelines.md
-  - We & AI:
-    - we-and-ai/index.md
-    - Development Process: we-and-ai/process.md
+    - Specs:
+      - API:
+        - Overview: tech/specs/api/index.md
+      - Data:
+        - Overview: tech/specs/data/index.md
+      - Security:
+        - Overview: tech/specs/security/index.md
+    - Story:
+      - Concepts: tech/story/concepts.md
+      - Vision: tech/story/vision.md
+    - System Architecture: tech/system-architecture.md
+    - Templates:
+      - API Spec: tech/templates/api-spec.md
+  - We and AI:
+    - Overview: we-and-ai/index.md
+    - Process: we-and-ai/process.md
     - Context Web:
-      - Index: we-and-ai/context-web/index.md
+      - Overview: we-and-ai/context-web/index.md
+      - Creating Contexts: we-and-ai/context-web/creating-contexts.md
+      - Scanning: we-and-ai/context-web/scanning.md
       - Contexts:
-        - Project Areas: we-and-ai/context-web/contexts/project-areas.md
+        - Overview: we-and-ai/context-web/contexts/index.md
+        - Documentation: we-and-ai/context-web/contexts/documentation.md
         - Initiative: we-and-ai/context-web/contexts/initiative.md
+        - Project Areas: we-and-ai/context-web/contexts/project-areas.md
         - Research: we-and-ai/context-web/contexts/research.md
         - Users: we-and-ai/context-web/contexts/users.md
-        - Documentation: we-and-ai/context-web/contexts/documentation.md
 
 plugins:
   - search
   - include-markdown
   - mermaid2:
       version: 10.6.1
-      arguments:
-        securityLevel: 'loose'
-        theme: default
-  - tags
 
 markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
-  - pymdownx.snippets:
-      base_path: docs
-      check_paths: true
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.magiclink
-  - footnotes
-  - pymdownx.details
-  - attr_list
-  - md_in_html
-  - admonition
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.mark
-  - pymdownx.tasklist:
-      custom_checkbox: true
   - pymdownx.tabbed:
       alternate_style: true
-  - toc:
-      permalink: true
-      toc_depth: 3
-      slugify: !!python/name:pymdownx.slugs.uslugify
-
-extra_css:
-  - stylesheets/extra.css
-
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/Dolpheyn
-  analytics:
-    provider: google
-    property: !ENV GOOGLE_ANALYTICS_KEY
-  homepage: https://antar.my
-  consent:
-    title: Cookie consent
-    description: >- 
-      We use cookies to recognize your repeated visits and preferences, as well
-      as to measure the effectiveness of our documentation and whether users
-      find what they're searching for. With your consent, you're helping us to
-      make our documentation better.
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde

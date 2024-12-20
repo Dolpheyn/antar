@@ -1,5 +1,7 @@
 %% Delivery Aggregator Platform Architecture
-%% Shows the three main components and their interactions
+%% This diagram illustrates the high-level architecture of our delivery aggregation platform,
+%% showcasing how different components work together to provide a seamless delivery experience.
+%% The architecture is designed with scalability, reliability, and ease of integration in mind.
 
 %%{init: {
     'theme': 'base',
@@ -15,15 +17,21 @@
     }
 }}%%
 
+%% Overview:
+%% The architecture consists of three main layers:
+%% 1. User Interface: Where merchants interact with the system
+%% 2. Core Services: The brain of our platform, handling business logic and decisions
+%% 3. Provider Shims: Adapters that integrate with various delivery providers
+
 graph TB
-    %% Core Services
+    %% Core Services - The central nervous system of our platform
     subgraph CS[Core Services]
         IC[Intelligence Core]
         OC[Order Core]
         IG[Information Gateway]
     end
 
-    %% Provider Integration
+    %% Provider Integration - Flexible adapters for different delivery services
     subgraph PS[Provider Shims]
         GS[Grab Shim]
         LS[Lalamove Shim]
@@ -31,20 +39,28 @@ graph TB
         DS[Delyva Shim]
     end
 
-    %% User Interface
+    %% User Interface - Clean and intuitive merchant interaction points
     subgraph UI[User Interface]
         MI[Merchant Interface]
         PP[Preference Panel]
     end
 
-    %% Connections
-    MI --> OC
-    PP --> IC
-    OC --> IC
-    IC --> IG
-    IG --> GS & LS & JS & DS
+    %% Data Flow and Component Interactions
+    MI -->|"Submit Orders"| OC
+    PP -->|"Set Preferences"| IC
+    OC -->|"Order Details"| IC
+    IC -->|"Provider Selection"| IG
+    IG -->|"Route Orders"| GS & LS & JS & DS
 
-    %% Styling
+    %% Component Descriptions (as comments for documentation)
+    %% Intelligence Core: Handles provider selection, optimization, and business rules
+    %% Order Core: Manages order lifecycle, validation, and tracking
+    %% Information Gateway: Routes requests to appropriate providers
+    %% Shims: Provider-specific adapters handling API translations
+    %% Merchant Interface: Main dashboard for order management
+    %% Preference Panel: Configuration interface for delivery preferences
+
+    %% Visual Styling
     classDef core fill:#f5f5f5,stroke:#326CE5,stroke-width:2px
     classDef shim fill:#f5f5f5,stroke:#6C8EBF,stroke-width:2px
     classDef ui fill:#f5f5f5,stroke:#82B366,stroke-width:2px
@@ -52,3 +68,15 @@ graph TB
     class CS,IC,OC,IG core
     class PS,GS,LS,JS,DS shim
     class UI,MI,PP ui
+
+%% Notes on Component Responsibilities:
+%% 1. Core Services:
+%%    - Intelligence Core: Smart routing and optimization
+%%    - Order Core: Order management and tracking
+%%    - Information Gateway: Provider communication
+%% 2. Provider Shims:
+%%    - Standardized interfaces for each provider
+%%    - Handle provider-specific API requirements
+%% 3. User Interface:
+%%    - Merchant Interface: Order management dashboard
+%%    - Preference Panel: Delivery configuration

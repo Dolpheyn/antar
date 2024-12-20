@@ -67,7 +67,7 @@ jobs:
 ### Access and Monitoring
 
 1. **Documentation Access**
-   - Live site: [https://dolpheyn.github.io/the-project/](https://dolpheyn.github.io/the-project/)
+   - Live site: [https://dolpheyn.github.io/antar/](https://dolpheyn.github.io/antar/)
    - Build status: Check GitHub Actions tab
    - PR previews: Available in PR comments
 

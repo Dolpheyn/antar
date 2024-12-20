@@ -1,75 +1,192 @@
 # Welcome to Antar
 
-Antar is a smart delivery platform that connects Southeast Asian merchants with multiple delivery services through a single, intelligent interface.
+## Overview
+Antar is transforming delivery operations across Southeast Asia through intelligent route optimization and seamless provider integration. Our platform empowers merchants to handle deliveries at scale, combining sophisticated processing capabilities with an intuitive interface that makes complex operations feel simple.
 
-> "Transforming bulk deliveries through AI-powered route optimization"
+## Our Vision
 
-## Quick Access
+Our platform creates a seamless connection between merchants and delivery providers:
 
-<div class="grid cards" markdown>
+```mermaid
+graph TD
+    subgraph "Merchant Operations"
+    A[Bulk Orders] -->|CSV Upload| B[Data Processing]
+    B -->|Validation| C[Route Planning]
+    end
+    
+    subgraph "Intelligence Layer"
+    C -->|Optimization| D[Smart Routes]
+    D -->|Analysis| E[Provider Matching]
+    end
+    
+    subgraph "Execution Layer"
+    E -->|Integration| F[Provider Network]
+    F -->|Tracking| G[Delivery Status]
+    end
+    
+    G -->|Feedback| H[Analytics]
+    H -->|Insights| A
+    
+    style A fill:#9cf,stroke:#333,stroke-width:2px
+    style D fill:#9cf,stroke:#333,stroke-width:2px
+    style F fill:#9cf,stroke:#333,stroke-width:2px
+    style H fill:#9cf,stroke:#333,stroke-width:2px
+```
 
--   :material-rocket-launch:{ .lg .middle } __Product__
+## Platform Architecture
 
-    --
+Our system is built on three core layers that work together seamlessly:
 
-    Discover how Antar can transform your delivery operations.
+```mermaid
+graph LR
+    subgraph "Client Layer"
+    A[Order Management] --> B[Route Visualization]
+    B --> C[Provider Selection]
+    end
+    
+    subgraph "Processing Layer"
+    D[Data Validation] --> E[Route Optimization]
+    E --> F[Provider Matching]
+    end
+    
+    subgraph "Integration Layer"
+    G[Provider APIs] --> H[Status Tracking]
+    H --> I[Analytics Engine]
+    end
+    
+    C --> D
+    F --> G
+    
+    style A fill:#f96,stroke:#333,stroke-width:2px
+    style D fill:#f96,stroke:#333,stroke-width:2px
+    style G fill:#f96,stroke:#333,stroke-width:2px
+```
 
-    [:octicons-arrow-right-24: Learn More](product/overview.md)
+## Core Capabilities
 
--   :material-code-braces:{ .lg .middle } __Tech__
+### Intelligent Route Optimization
 
-    ---
+Our sophisticated routing system transforms complex delivery scenarios into efficient routes:
 
-    Explore our API and integration options.
+```mermaid
+graph TD
+    subgraph "Input Processing"
+    A[CSV Upload] -->|Validation| B[Data Cleaning]
+    B -->|Analysis| C[Initial Groups]
+    end
+    
+    subgraph "Optimization"
+    C -->|Algorithm| D[Route Formation]
+    D -->|Refinement| E[Final Routes]
+    end
+    
+    subgraph "Execution"
+    E -->|Assignment| F[Provider Dispatch]
+    F -->|Monitoring| G[Status Updates]
+    end
+    
+    style A fill:#bbf,stroke:#333,stroke-width:2px
+    style D fill:#bbf,stroke:#333,stroke-width:2px
+    style F fill:#bbf,stroke:#333,stroke-width:2px
+```
 
-    [:octicons-arrow-right-24: View Docs](tech/index.md)
+Key features include:
+- Advanced grouping algorithms for optimal route formation
+- Real-time distance and time window calculations
+- Interactive map visualization for route review
+- Manual adjustment capabilities for fine-tuning
 
--   :material-brain:{ .lg .middle } __We & AI__
+### Unified Provider Integration
 
-    ---
+Connect with Southeast Asia's leading delivery providers through our intelligent integration layer:
 
-    Learn about our team and AI capabilities.
+```mermaid
+graph LR
+    subgraph "Provider Network"
+    A[Provider 1] --> D[Integration Layer]
+    B[Provider 2] --> D
+    C[Provider 3] --> D
+    end
+    
+    subgraph "Smart Matching"
+    D -->|Analysis| E[Cost Optimization]
+    D -->|Routing| F[Time Windows]
+    D -->|Coverage| G[Service Areas]
+    end
+    
+    style A fill:#9f9,stroke:#333,stroke-width:2px
+    style D fill:#9f9,stroke:#333,stroke-width:2px
+    style E fill:#9f9,stroke:#333,stroke-width:2px
+```
 
-    [:octicons-arrow-right-24: About Us](we-and-ai/about.md)
+Benefits include:
+- Single integration for multiple providers
+- Intelligent provider selection
+- Automated cost optimization
+- Comprehensive status tracking
 
-</div>
+### Business Intelligence
 
-## Why Choose Antar?
+Make data-driven decisions with our comprehensive analytics suite:
 
-### 🌟 Intelligent Route Optimization
-Our AI-powered system transforms bulk deliveries into efficient routes:
-- Multi-stop route optimization
-- Priority-based routing
-- Time window optimization
-- Cost efficiency
+```mermaid
+mindmap
+  root((Analytics))
+    Delivery Metrics
+      Success Rate
+      Time Performance
+      Cost Efficiency
+    Route Analysis
+      Distance Optimization
+      Time Window Compliance
+      Group Efficiency
+    Provider Insights
+      Performance Comparison
+      Cost Analysis
+      Coverage Maps
+```
 
-### 🤝 Unified Integration
-Connect with multiple delivery providers through a single platform:
-- Bulk order processing
-- Real-time quotes
-- Automated provider matching
-- Performance tracking
+## Development Status
 
-### 📊 Business Intelligence
-Make data-driven decisions with our analytics:
-- Cost optimization insights
-- Performance metrics
-- Delivery success rates
-- Volume analytics
+Our current development focus reflects our commitment to building a robust foundation:
 
-### 🚀 Current Focus
-We're building our foundation with Phase 1, focusing on:
-- Bulk order management
-- Intelligent route batching
-- Dynamic pricing
-- Real-time optimization
+```mermaid
+gantt
+    title Q1 2024 Development Plan
+    dateFormat  YYYY-MM-DD
+    section Core Features
+    Bulk Upload     :active,  des1, 2024-12-01, 2024-12-20
+    Route Optimization :       des2, 2024-12-15, 2024-01-15
+    Provider Integration :     des3, 2024-01-10, 2024-02-10
+    section Enhancement
+    Analytics Dashboard :      des4, 2024-02-01, 2024-02-28
+    Mobile Support :          des5, 2024-02-15, 2024-03-15
+```
 
-[Learn more about our roadmap →](product/roadmap/index.md)
+## Documentation
+
+Explore our comprehensive documentation:
+
+### Development Resources
+- [Development Notebook](./notebook/index.md) - Detailed technical documentation
+- [Feature Documentation](./notebook/features/bulk-upload/index.md) - Current feature implementations
+- [Technical Architecture](./tech/index.md) - System design and architecture
+
+### Business Context
+- [Product Vision](./product/index.md) - Our product strategy and roadmap
+- [Market Analysis](./product/market.md) - Understanding the delivery landscape
+- [User Stories](./product/users.md) - Real merchant experiences
 
 ## Get Started
 
-Ready to transform your delivery operations? [Contact our team](mailto:hello@antar.my) to learn more about how Antar can help your business grow.
+Transform your delivery operations with Antar. Our platform helps you:
+- Process hundreds of orders efficiently
+- Optimize routes automatically
+- Connect with multiple providers seamlessly
+- Track and analyze performance
 
----
+Contact our team at hello@antar.my to learn how we can help your business grow.
 
 *Antar - Delivering Southeast Asia, Intelligently*
+
+*Last Updated: 2024-12-20T06:52:21+08:00*
