@@ -3,7 +3,7 @@
 import typer
 import shutil
 from pathlib import Path
-from scripts.core.cli import console
+from scripts.core.console import console
 
 
 def clean() -> None:

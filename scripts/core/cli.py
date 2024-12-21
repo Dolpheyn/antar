@@ -1,8 +1,8 @@
 """Core CLI utilities and components."""
 
 import typer
-from rich.console import Console
 from typing import Optional
+from .console import console  # Updated import
 
 
 def create_app(
@@ -20,7 +20,6 @@ def create_app(
     Returns:
         Configured Typer app
     """
-    console = Console()
     app = typer.Typer(help=help_text, no_args_is_help=True,
                       add_completion=False)
 

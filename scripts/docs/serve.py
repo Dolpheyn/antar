@@ -2,7 +2,7 @@
 
 import subprocess
 import typer
-from scripts.core.cli import console
+from scripts.core.console import console
 
 
 def serve(
