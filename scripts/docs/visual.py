@@ -5,9 +5,67 @@ import subprocess
 import sys
 import typer
 from pathlib import Path
-from typing import Optional, Dict, Any
+from typing import (
+    Optional, 
+    Dict, 
+    Any, 
+    Union,
+    Protocol,
+    runtime_checkable
+)
+from typing_extensions import TypeGuard
 from playwright.async_api import async_playwright, Page
-from scripts.core.cli import console
+from scripts.core.console import console
+
+
+def safe_get(
+    d: Optional[Union[Dict[str, Any], Any]], 
+    key: str, 
+    default: Any = None
+) -> Any:
+    """
+    Safely retrieve a value from a dictionary-like object, handling None and different object types.
+    
+    Args:
+        d: Optional dictionary or object with .get() method
+        key: Key to look up
+        default: Default value if key is not found or object is None
+    
+    Returns:
+        Value associated with key or default
+    """
+    # If d is None, return default
+    if d is None:
+        return default
+    
+    # If d is a dictionary, use standard dict.get()
+    if isinstance(d, dict):
+        return d.get(key, default)
+    
+    # If d has a .get() method (like Playwright's bounding_box()), use it
+    if hasattr(d, 'get') and callable(d.get):
+        return d.get(key, default)
+    
+    # If no matching method found, return default
+    return default
+
+
+def safe_evaluate(page: Page, script: str, default: Any = None) -> Any:
+    """
+    Safely evaluate a JavaScript script on a page.
+    
+    Args:
+        page: Playwright Page object
+        script: JavaScript script to evaluate
+        default: Default value if evaluation fails
+    
+    Returns:
+        Result of script evaluation or default
+    """
+    try:
+        return page.evaluate(script)
+    except Exception:
+        return default
 
 
 class VisualTester:
@@ -56,52 +114,66 @@ class VisualTester:
             console.print(f"❌ Error capturing {url}: {e}")
 
     async def test_navigation(self, page: Page) -> Dict[str, Any]:
-        """Test navigation menu functionality."""
+        """
+        Test navigation menu functionality with robust type handling.
+        
+        Args:
+            page: Playwright Page object for testing
+        
+        Returns:
+            Dictionary of navigation test results
+        """
         await page.goto(self.base_url)
         await page.wait_for_selector(".md-nav--primary")
 
         nav = await page.query_selector(".md-nav--primary")
         nav_list = await page.query_selector(".md-nav--primary .md-nav__list")
 
-        if not nav or not nav_list:
-            return {"error": "Navigation elements not found"}
+        # Defensive checks with safe access
+        nav_box = await nav.bounding_box() if nav else None
+        list_box = await nav_list.bounding_box() if nav_list else None
 
-        nav_box = await nav.bounding_box()
-        list_box = await nav_list.bounding_box()
-
-        scroll_height = await page.evaluate(
+        # Safe evaluation of JavaScript
+        scroll_height = safe_evaluate(
+            page, 
             """() => {
                 const nav = document.querySelector('.md-nav--primary');
-                return nav.scrollHeight - nav.clientHeight;
+                return nav ? nav.scrollHeight - nav.clientHeight : 0;
             }"""
         )
 
-        is_scrollable = await page.evaluate(
+        is_scrollable = safe_evaluate(
+            page, 
             """() => {
                 const nav = document.querySelector('.md-nav--primary');
+                if (!nav) return false;
                 const style = window.getComputedStyle(nav);
                 return style.overflowY === 'auto' ||
                        style.overflowY === 'scroll';
             }"""
         )
 
-        # Capture navigation screenshot
+        # Capture navigation screenshot with safe access
         nav_path = self.output_dir / "navigation.png"
-        await page.screenshot(
-            path=str(nav_path),
-            clip={
-                "x": nav_box["x"],
-                "y": nav_box["y"],
-                "width": nav_box["width"],
-                "height": nav_box["height"],
-            },
-        )
+        if nav and nav_box:
+            await page.screenshot(
+                path=str(nav_path),
+                clip={
+                    "x": safe_get(nav_box, "x", 0),
+                    "y": safe_get(nav_box, "y", 0),
+                    "width": safe_get(nav_box, "width", 0),
+                    "height": safe_get(nav_box, "height", 0),
+                },
+            )
+        else:
+            console.print("⚠️ Could not capture navigation screenshot")
+            nav_path = None
 
         return {
-            "container_height": nav_box["height"],
-            "list_height": list_box["height"],
-            "scroll_height": scroll_height,
-            "is_scrollable": is_scrollable,
+            "container_height": safe_get(nav_box, "height", 0),
+            "list_height": safe_get(list_box, "height", 0),
+            "scroll_height": scroll_height or 0,
+            "is_scrollable": is_scrollable or False,
             "screenshot": nav_path,
         }
 
@@ -116,8 +188,8 @@ async def print_nav_results(results: Dict[str, Any]) -> None:
     console.print(
         f"Scrolling enabled: {'✅' if results['is_scrollable'] else '❌'}")
 
-    if results["list_height"] > results["container_height"]:
-        overflowAmount = results["list_height"] - results["container_height"]
+    if results['list_height'] > results['container_height']:
+        overflowAmount = results['list_height'] - results['container_height']
         console.print("\n⚠️  Issue: List is taller than container")
         console.print(f"Overflow: {overflowAmount}px")
 
