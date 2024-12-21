@@ -1,8 +1,7 @@
 """Documentation build command."""
 
-import sys
 import typer
-from typing import Optional, List, Any
+from typing import Optional, Any
 from pathlib import Path
 from scripts.core.console import console
 from .clean import clean
@@ -11,19 +10,19 @@ from .clean import clean
 def validate_output_path(path: Optional[str]) -> Path:
     """
     Validate and convert output path to Path, with sensible defaults.
-    
+
     Args:
         path: Optional output path string
-    
+
     Returns:
         Validated Path object for documentation output
-    
+
     Raises:
         typer.BadParameter: If path is invalid
     """
     if path is None:
         return Path("site")
-    
+
     try:
         output_dir = Path(path).resolve()
         output_dir.mkdir(parents=True, exist_ok=True)
@@ -37,15 +36,15 @@ def build(
         False, "--clean", help="Clean build directory first"
     ),
     output_dir: Optional[str] = typer.Option(
-        None, 
-        "--output", 
-        "-o", 
+        None,
+        "--output",
+        "-o",
         help="Custom output directory for documentation"
     ),
     config_file: Optional[str] = typer.Option(
-        None, 
-        "--config", 
-        "-c", 
+        None,
+        "--config",
+        "-c",
         help="Path to custom MkDocs configuration file"
     )
 ) -> None:
@@ -69,26 +68,27 @@ def build(
             # Import mkdocs dynamically to handle potential import errors
             try:
                 from mkdocs.commands.build import build as mkdocs_build
-                from mkdocs.config.base import Config
-                from mkdocs.config.defaults import MkDocsConfig
             except ImportError as import_err:
                 console.print(f"[red]MkDocs import error: {import_err}[/red]")
                 raise typer.Exit(1)
 
             # Prepare MkDocs configuration
             config_kwargs: dict[str, Any] = {}
-            
+
             # Add custom config file if provided
             if config_file:
                 config_kwargs['config_file'] = config_file
-            
+
             # Add custom site directory
             config_kwargs['site_dir'] = str(site_dir)
 
             # Build documentation
             try:
                 mkdocs_build(**config_kwargs)
-                console.print(f"[green]Documentation built successfully in {site_dir}![/green]")
+                console.print(
+                    f"[green]Documentation built successfully in "
+                    f"{site_dir}![/green]"
+                )
             except Exception as build_err:
                 console.print(f"[red]MkDocs build error: {build_err}[/red]")
                 raise typer.Exit(1)

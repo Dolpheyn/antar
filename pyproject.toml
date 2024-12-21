@@ -20,6 +20,7 @@ mkdocs-material = "9.5.2"
 mkdocs-mermaid2-plugin = "1.1.1"
 mkdocs-include-markdown-plugin = "6.0.4"
 playwright = "1.49.1"
+pyyaml = "^6.0.1"
 
 [build-system]
 requires = ["poetry-core"]

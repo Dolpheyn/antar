@@ -12,13 +12,17 @@ console = Console(
 )
 
 # Optional: Add custom print methods if needed
+
+
 def print_success(message: str):
     """Print a success message."""
     console.print(f"[bold green]✓[/] {message}")
 
+
 def print_error(message: str):
     """Print an error message."""
     console.print(f"[bold red]✗[/] {message}")
+
 
 def print_warning(message: str):
     """Print a warning message."""
