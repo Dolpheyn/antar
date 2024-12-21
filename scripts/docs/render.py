@@ -1,7 +1,9 @@
 """Render diagrams command."""
+
 import typer
 from pathlib import Path
 from scripts.core.cli import console
+
 
 def render_diagrams(
     output_dir: Path = typer.Option(
@@ -9,9 +11,13 @@ def render_diagrams(
         "--output-dir",
         "-o",
         help="Output directory for rendered diagrams",
-    ),
-):
-    """Render all Mermaid diagrams."""
+    )
+) -> None:
+    """Render all Mermaid diagrams.
+
+    Args:
+        output_dir: Directory to output rendered diagrams.
+    """
     try:
         with console.status("[bold green]Rendering diagrams..."):
             # TODO: Implement diagram rendering

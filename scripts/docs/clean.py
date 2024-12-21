@@ -1,11 +1,14 @@
 """Documentation clean command."""
+
 import typer
 import shutil
 from pathlib import Path
 from scripts.core.cli import console
 
-def clean():
+
+def clean() -> None:
     """Clean built documentation."""
+
     try:
         with console.status("[bold yellow]Cleaning documentation build..."):
             # Remove site directory

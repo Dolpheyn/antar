@@ -1,30 +1,33 @@
-"""Documentation server command."""
+"""Documentation serving command."""
+
+import subprocess
 import typer
-from typing import Optional, List
 from scripts.core.cli import console
 
+
 def serve(
-    host: str = typer.Option("127.0.0.1", "--host", "-h", help="Host to bind to"),
-    port: int = typer.Option(8000, "--port", "-p", help="Port to bind to"),
-    dev_addr: str = typer.Option(None, "--dev-addr", help="Development server address (host:port)"),
-):
-    """Start the documentation development server."""
+    port: int = typer.Option(8000, "--port", "-p",
+                             help="Port to serve documentation"),
+    live_reload: bool = typer.Option(
+        True,
+        "--live-reload/--no-live-reload",
+        help="Enable/disable live reload",
+    ),
+) -> None:
+    """Serve documentation locally.
+
+    Args:
+        port: Port number to serve documentation.
+        live_reload: Whether to enable live reload.
+    """
     try:
         with console.status("[bold green]Starting documentation server..."):
-            # Build command arguments
-            args = [
-                "--dev-addr", dev_addr or f"{host}:{port}",
-                "--watch", "docs",
-                "--watch", "mkdocs.yml",
-                "--livereload"
-            ]
-            
-            # Import mkdocs and run server
-            from mkdocs.commands.serve import serve as mkdocs_serve
-            mkdocs_serve(args)
-            
-    except KeyboardInterrupt:
-        console.print("\n[yellow]Server stopped by user[/yellow]")
-    except Exception as e:
-        console.print(f"[red]Error:[/red] {str(e)}")
+            cmd = ["mkdocs", "serve", f"--dev-addr=localhost:{port}"]
+
+            if not live_reload:
+                cmd.append("--no-reload")
+
+            subprocess.check_call(cmd)
+    except subprocess.CalledProcessError as e:
+        console.print(f"[red]Error serving documentation:[/red] {e}")
         raise typer.Exit(1)
