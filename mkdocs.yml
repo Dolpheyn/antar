@@ -51,53 +51,21 @@ theme:
 
 nav:
   - Home: index.md
-  - Notebook:
-    - Overview: notebook/index.md
-    - Features:
-      - Bulk Upload:
-        - Overview: notebook/features/bulk-upload/index.md
-        - Context: notebook/features/bulk-upload/context.md
-        - Technical: notebook/features/bulk-upload/technical.md
-        - Implementation:
-          - Overview: notebook/features/bulk-upload/implementation/index.md
-          - Engineering Specifications: notebook/features/bulk-upload/implementation/engineering-specifications.md
-        - UI:
-          - Overview: notebook/features/bulk-upload/ui/index.md
-          - Components: notebook/features/bulk-upload/ui/components.md
-          - Animations: notebook/features/bulk-upload/ui/animations.md
-          - Responsive: notebook/features/bulk-upload/ui/responsive.md
-        - UX:
-          - Overview: notebook/features/bulk-upload/ux/index.md
-          - Flow: notebook/features/bulk-upload/ux/flow.md
-          - Components: notebook/features/bulk-upload/ux/components.md
-          - Interactions: notebook/features/bulk-upload/ux/interactions.md
-    - Process:
-      - Decisions: notebook/process/decisions.md
-      - Self Agency: notebook/process/self-agency.md
-    - Tech:
-      - Architecture:
-        - Overview: notebook/tech/architecture/index.md
-      - Decisions:
-        - Frontend Framework: notebook/tech/decisions/frontend-framework.md
-      - Frontend:
-        - Overview: notebook/tech/frontend/README.md
-        - Development:
-          - Workflow: notebook/tech/frontend/development/workflow.md
-          - Technology Stack: notebook/tech/frontend/development/technology-stack.md
-        - Setup:
-          - Installation: notebook/tech/frontend/setup/installation.md
-          - Dependencies: notebook/tech/frontend/setup/dependencies.md
-          - Configuration: notebook/tech/frontend/setup/configuration.md
-        - Testing:
-          - Strategy: notebook/tech/frontend/testing/strategy.md
-          - Tools: notebook/tech/frontend/testing/tools.md
-          - Examples: notebook/tech/frontend/testing/examples.md
-        - Maintenance:
-          - Tasks: notebook/tech/frontend/maintenance/tasks.md
-      - Implementation:
-        - Overview: notebook/tech/implementation/index.md
-        - Development Environment: notebook/tech/implementation/development-environment.md
-        - Project Setup: notebook/tech/implementation/project-setup.md
+  - Features:
+    - Bulk Upload:
+      - Overview: notebook/features/bulk-upload/README.md
+      - Business Context: notebook/features/bulk-upload/overview/business-context.md
+      - Technical:
+        - Architecture: notebook/features/bulk-upload/technical/architecture.md
+        - Components:
+          - File Upload: notebook/features/bulk-upload/technical/components/file-upload.md
+          - Route Grouping: notebook/features/bulk-upload/technical/components/route-grouping.md
+          - Map Visualization: notebook/features/bulk-upload/technical/components/map-visualization.md
+        - Performance: notebook/features/bulk-upload/technical/performance.md
+      - User Experience:
+        - Interface Guidelines: notebook/features/bulk-upload/ux/interface-guidelines.md
+        - Error Handling: notebook/features/bulk-upload/ux/error-handling.md
+      - Implementation: notebook/features/bulk-upload/implementation/README.md
   - Product:
     - Overview: product/index.md
     - Features: product/features.md
