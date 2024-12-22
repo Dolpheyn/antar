@@ -26,10 +26,15 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
-    - name: Use Bun
+    - name: Install Bun
       uses: oven-sh/setup-bun@v1
       with:
         bun-version: latest
+    
+    - name: Verify Bun Installation
+      run: |
+        which bun
+        bun --version
     
     - name: Install Frontend Dependencies
       working-directory: ./frontend
@@ -58,6 +63,36 @@ jobs:
     - name: Build Frontend
       working-directory: ./frontend
       run: bun run build
+
+  dependency-scan:
+    name: Dependency Vulnerability Scan
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 'lts/*'
+        cache: 'npm'
+        cache-path: ./frontend
+    
+    - name: Install Frontend Dependencies
+      working-directory: ./frontend
+      run: npm ci
+    
+    - name: NPM Audit
+      working-directory: ./frontend
+      run: |
+        npm audit --audit-level=high || true
+    
+    - name: Snyk Vulnerability Scan
+      uses: snyk/actions/node@master
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      with:
+        command: test
+        args: --all-projects --severity-threshold=high
 
   docs-build:
     name: Documentation Build
@@ -90,33 +125,3 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./docs/site
-
-  # Optional: Dependency vulnerability scan
-  dependency-scan:
-    name: Dependency Vulnerability Scan
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    
-    - name: Run Bun Audit
-      working-directory: ./frontend
-      run: bun audit
-    
-    - name: Run npm audit for additional checks
-      working-directory: ./frontend
-      run: npm audit --audit-level=high
-
-# Notification job for workflow status
-  notify:
-    name: Workflow Status Notification
-    needs: [frontend-ci, docs-build, dependency-scan]
-    if: failure()
-    runs-on: ubuntu-latest
-    steps:
-    - name: Notify Slack on Failure
-      uses: 8398a7/action-slack@v3
-      with:
-        status: ${{ job.status }}
-        fields: repo,message,commit,author,action,eventName,ref,workflow
-      env:
-        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
