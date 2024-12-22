@@ -1,112 +1,63 @@
-# INSTRUCTION: Semantic Git Commit Generation Workflow
+# How to Create Meaningful Git Commits: A Step-by-Step Guide
 
-## 🚨 IMPORTANT: This is a Procedural Instruction Set
+## Your Mission
+You're going to transform your code changes into clear, meaningful git commits that tell a story about what you've done.
 
-**Purpose**: Provide explicit, step-by-step instructions for generating semantic git commits using an AI system.
+## Before You Start: Understanding Commit Types
+Think of commits like chapters in a book. Each type describes a different kind of change:
+- `feat`: You've added something new (like a cool feature)
+- `fix`: You've repaired a bug
+- `docs`: You've updated documentation
+- `style`: You've made formatting changes
+- `refactor`: You've restructured code without changing its behavior
+- `test`: You've modified or added tests
+- `chore`: You've done maintenance work
 
-**Audience**: Large Language Models (LLMs) and AI Coding Assistants
-
-**Execution Context**: Automated git commit generation process
-
-## Workflow Interpretation Guidelines
-- This document is NOT a description, but a DIRECT INSTRUCTION
-- Each section represents a mandatory processing step
-- Strict adherence to the outlined algorithm is required
-- Deviation from these instructions is prohibited
-
-## Objective
-Transform raw code changes into meaningful, structured, and intelligent git commits through a systematic, deterministic process.
-
-## Prerequisite Tools
-- Git
-- LLM with advanced code understanding capabilities
-- Terminal/Command Line Interface
-
-## Workflow Steps
-
-### 1. Initial Repository State Assessment
-```bash
-git status
+## The Commit Message Formula
+Your commit message should look like this:
 ```
-**Mandatory LLM Analysis Procedure:**
-1. PARSE `git status` output COMPLETELY
-2. CATEGORIZE files into STRICT semantic groups:
-   - Untracked files
-   - Modified files
-   - Deleted files
-3. CREATE a comprehensive, ordered change inventory
+<type>(<optional area>): Short, clear description
 
-### 2. Mandatory Change Classification Algorithm
-FOR EACH file in change inventory:
-1. PERFORM deep semantic analysis:
-   - READ entire file contents
-   - IDENTIFY precise change type:
-     * Feature addition
-     * Bug fix
-     * Refactoring
-     * Documentation update
-     * Configuration change
-2. ASSIGN semantic tags
-3. CALCULATE complexity score (0.0 - 1.0)
-4. DETERMINE architectural impact coefficient
-
-### 3. Semantic Staging Strategy
-**REQUIRED Commit Grouping Process:**
-1. PRIORITIZE changes by:
-   - Architectural impact
-   - Change complexity
-   - Logical dependency
-2. GROUP files with RELATED semantic tags
-3. STAGE files in logical, minimal commit units
-
-#### Staging Sub-Algorithm
-```bash
-# MANDATORY: Commit each semantic group
-git add [files_in_semantic_group]
-git commit -m "[Precise Semantic Commit Message]"
+(Optional longer explanation if needed)
 ```
 
-### 4. Commit Message Generation PROTOCOL
-**STRICT Conventional Commits Structure:**
-```
-<type>(<optional scope>): <description>
+## The Workflow: From Changes to Commits
 
-<optional body>
+### Step 1: Check What's Changed
+- Look at your git status
+- Identify different types of changes:
+  * Staged changes (ready to commit)
+  * Unstaged changes (modified but not added)
+  * Untracked files (brand new files)
 
-<optional footer>
-```
+### Step 2: Examine the Entire Difference
+- Generate a comprehensive diff
+- If you have staged changes, look at staged diff
+- If you have unstaged changes, look at unstaged diff
+- Handle mixed changes carefully
 
-**REQUIRED Message Generation Criteria:**
-1. CAPTURE complete change essence
-2. PROVIDE clear, concise explanation
-3. LINK to broader system context
-4. REFERENCE related issues if applicable
+### Step 3: Understand the Changes Deeply
+- Group your changes logically
+- Ask yourself:
+  * What type of change is this?
+  * Are these changes related?
+  * Do they belong in the same commit?
 
-### 5. Iteration Termination CONDITION
-```bash
-# CONTINUE until NO files remain in git status
-while [[ $(git status --porcelain) ]]; do
-    # EXECUTE semantic commit process
-done
-```
+### Step 4: Stage and Commit
+- Stage the first logical group of changes
+- Write a commit message that explains:
+  * What changed
+  * Why it changed
+  * Any important details
 
-### 6. Mandatory Post-Commit Validation
-1. VERIFY commit message quality
-2. CHECK semantic coherence score
-3. ENSURE no unintended changes committed
+### Step 5: Repeat
+- Keep doing this until ALL changes are committed
+- Stop when `git status` shows nothing left to commit
 
-## Ethical and Quality Constraints
-- PRESERVE code integrity
-- RESPECT project conventions
-- ENABLE collaborative understanding
+## Pro Tips
+- Keep commits small and focused
+- Tell a clear story with your commits
+- Think about how another developer would understand your changes
 
-## Dimensional Metrics (MANDATORY CALCULATION)
-1. **Change Complexity Index** (0.0 - 1.0)
-   - MEASURE depth of systemic modification
-2. **Semantic Coherence Score** (0.0 - 1.0)
-   - MEASURE commit message clarity
-3. **Architectural Impact Coefficient** (0.0 - 1.0)
-   - MEASURE system-wide change implications
-
-## Philosophical DIRECTIVE
-Each commit is a narrative of systemic intelligence evolution, NOT merely a code change.
+## The Big Picture
+Each commit is more than code - it's a communication about your project's evolution. Make it count!
