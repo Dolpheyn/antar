@@ -178,11 +178,15 @@ graph LR
 
 This system categorizes errors into three main types and provides appropriate recovery paths for each. Validation errors receive immediate feedback with correction guidance, processing errors trigger automatic recovery attempts, and system errors offer manual override options when necessary. This layered approach ensures users can always progress with their tasks.
 
-## Related Documentation
-For more detailed information about specific aspects of the system, please refer to:
-- [CSV Upload Implementation](./implementation/csv-upload.md) - Detailed processing logic
-- [Route Grouping Logic](./implementation/route-grouping.md) - Optimization algorithms
-- [UX Guidelines](./ux.md) - Interface design principles
-- [Feature Context](./context.md) - Business requirements and goals
+## Implementation Details
+
+### CSV Upload
+Detailed information about CSV processing and validation.
+
+### Route Grouping
+Overview of route optimization strategies.
+
+### User Experience
+Brief notes on UX considerations.
 
 *Last Updated: 2024-12-20T06:45:46+08:00*

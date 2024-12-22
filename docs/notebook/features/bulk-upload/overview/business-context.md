@@ -91,8 +91,9 @@ xychart-beta
 
 ## Related Documentation
 
-- [Technical Implementation](/technical/architecture.md)
-- [User Experience Guidelines](/ux/interface-guidelines.md)
-- [Performance Optimization](/technical/performance.md)
+### Technical Resources
+- [System Architecture](../technical/architecture.md)
+- [Interface Guidelines](../ux/interface-guidelines.md)
+- [Performance Metrics](../technical/performance.md)
 
 *Last Updated: 2024-12-22*

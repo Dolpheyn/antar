@@ -1,4 +1,4 @@
-# Bulk Upload Feature: Transforming Delivery Operations 🚚
+# Bulk Upload Feature: Transforming Delivery Operations 
 
 ## Quick Overview
 
@@ -6,10 +6,10 @@ Our Bulk Upload feature is a powerful solution designed to revolutionize how mer
 
 ## Core Capabilities
 
-- 📤 **Instant CSV Upload**
-- 🗺️ **Smart Route Optimization**
-- 🔍 **Automatic Address Validation**
-- 📊 **Batch Processing**
+- **Instant CSV Upload**
+- **Smart Route Optimization**
+- **Automatic Address Validation**
+- **Batch Processing**
 
 ## Key Benefits
 
@@ -26,12 +26,12 @@ graph TD
     E --> |Optimized Routes| I[Lower Operational Costs]
 ```
 
-## Documentation Navigation
+## Bulk Upload Feature Documentation
 
-- [Business Context](/overview/business-context.md)
-- [Technical Architecture](/technical/architecture.md)
-- [User Experience](/ux/interface-guidelines.md)
-- [Implementation Details](/implementation/README.md)
+### Key Resources
+- Business Context Overview
+- Technical Architecture Summary
+- User Experience Guidelines
 
 ## Quick Start
 

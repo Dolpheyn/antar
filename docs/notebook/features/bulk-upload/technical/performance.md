@@ -51,7 +51,7 @@ xychart-beta
 - Browser storage utilization
 
 ## Related Documentation
-- [Technical Architecture](/technical/architecture.md)
-- [Route Grouping](/technical/components/route-grouping.md)
+- [Technical Architecture](./architecture.md)
+- [Route Grouping](./components/route-grouping.md)
 
 *Last Updated: 2024-12-22*

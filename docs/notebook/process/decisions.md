@@ -97,8 +97,11 @@ graph TD
 
 Through these decisions, we're building a foundation that balances immediate needs with future scalability. Our choices prioritize user experience while maintaining technical excellence.
 
-## Related Documentation
-- [Technical Implementation](../features/bulk-upload/technical.md)
-- [Architecture Overview](../tech/architecture/index.md)
+## Technical Architecture References
+
+### Bulk Upload Feature
+- Implementation Overview
+- Technical Considerations
+- Performance Metrics
 
 *Last Updated: 2024-12-20T06:40:39+08:00*

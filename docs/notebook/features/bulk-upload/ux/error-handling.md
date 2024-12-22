@@ -71,7 +71,10 @@ interface ErrorReportProps {
 ```
 
 ## Related Documentation
-- [UX Guidelines](/ux/interface-guidelines.md)
-- [Technical Architecture](/technical/architecture.md)
+### UX Guidelines
+- [Interface Guidelines](./interface-guidelines.md)
+
+### Technical References
+- [System Architecture](../technical/architecture.md)
 
 *Last Updated: 2024-12-22*

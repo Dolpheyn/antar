@@ -331,8 +331,19 @@ graph TB
 - Playwright
 
 ### Documentation
-- [Technical Specification](../technical-specifications/ci-cd.md)
-- [GitHub Actions Workflow](../../.github/workflows/docs.yml)
-- [Setup Guide](../README.md)
+- Technical Specification Overview
+- GitHub Actions Workflow
+- Setup Guide
 
 *Last Updated: 2024-12-20T07:06:09+08:00*
+
+## Related Documentation
+
+### Technical Specifications
+- CI/CD Configuration Overview
+
+### Workflows
+- Documentation Build Process
+
+### Project Setup
+- Project Overview Summary

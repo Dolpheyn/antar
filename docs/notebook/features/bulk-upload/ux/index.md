@@ -274,13 +274,11 @@ graph LR
     style A fill:#f9f,stroke:#333,stroke-width:2px
 ```
 
-## Related Documentation
-For more detailed information about specific aspects:
-- [Component Specifications](./components.md) - Detailed component documentation
-- [User Flow](./flow.md) - Complete user flow documentation
-- [Interaction Design](./interactions.md) - Interaction patterns and behaviors
-- [Technical Implementation](../technical.md) - Implementation details
-- [Feature Context](../context.md) - Business context and decisions
-- [Mobile Design](./mobile.md) - Mobile-specific considerations
+## Documentation Links
+
+### Related Documentation
+- Technical Implementation Overview
+- Business Context
+- Interaction Patterns
 
 *Last Updated: 2024-12-20T07:43:43+08:00*

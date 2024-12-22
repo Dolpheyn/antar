@@ -21,7 +21,7 @@ graph TD
 
 Our initial implementation will serve a strategic retail partner in Malaysia, validating both our technology and business model while setting the stage for broader market adoption.
 
-[View Technical Vision →](/tech/story/vision)
+[View Technical Vision →](../../tech/story/vision.md)
 
 ## Technical Architecture Vision
 
@@ -87,7 +87,7 @@ graph TB
     - Auth services
     - Rate management
 
-[View Technical Architecture →](/tech/roadmap/phase-1/architecture)
+[View Technical Architecture →](../../tech/roadmap/phase-1/architecture.md)
 
 ## Core Platform Capabilities
 
@@ -116,7 +116,7 @@ graph LR
     - Time window handling
     - Special requirements
 
-[View API Specifications →](/tech/specs/api)
+[View API Specifications →](../../tech/specs/api/index.md)
 
 ### Route Optimization Engine
 ```mermaid
@@ -143,7 +143,7 @@ graph TD
     - Priority routing
     - Multi-stop optimization
 
-[View Data Models →](/tech/specs/data)
+[View Data Models →](../../tech/specs/data/index.md)
 
 ### Dynamic Pricing System
 ```mermaid
@@ -168,7 +168,7 @@ graph LR
     - Special handling
     - Peak pricing
 
-[View Integration Details →](/tech/roadmap/phase-1/integration)
+[View Integration Details →](../../tech/roadmap/phase-1/integration.md)
 
 ## Implementation Strategy
 
@@ -319,7 +319,7 @@ graph TD
     - Quality assurance
     - Continuous monitoring
 
-[View Security Requirements →](/tech/specs/security)
+[View Security Requirements →](../../tech/specs/security/index.md)
 
 ## Next Steps
 

@@ -4,22 +4,9 @@
 
 ### 1. Performance Targets
 
-```mermaid
-mindmap
-  root((Performance))
-    File Processing
-      5MB max file size
-      1000 orders per batch
-      < 2s parse time
-    Route Optimization
-      < 5s for 100 orders
-      < 30s for 1000 orders
-      95% optimal routes
-    User Interface
-      < 100ms response
-      60fps animations
-      Responsive design
-```
+- Scalable CSV processing
+- Efficient route optimization
+- Responsive user interface
 
 ### 2. Technical Requirements
 
@@ -276,8 +263,8 @@ interface MemoryConfig {
 
 ## Next Steps
 
-1. Review [Implementation Guide](./index.md)
-2. Study [CSV Upload](./csv-upload.md)
-3. Explore [Route Optimization](./route-grouping.md)
+1. Review placeholder content
+2. Study placeholder content
+3. Explore placeholder content
 
 *Last Updated: 2024-12-20T08:05:42+08:00*

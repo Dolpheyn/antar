@@ -476,7 +476,7 @@ bun run test:coverage
 ```
 
 ### Detailed Testing Strategy
-For a comprehensive guide to our testing approach, refer to our [Frontend Testing Strategy](/docs/notebook/tech/frontend/testing-strategy.md).
+For a comprehensive guide to our testing approach, refer to our [Frontend Testing Strategy](./testing-strategy.md).
 
 *Last Updated: 2024-02-20*
 *Setup Guide Version*: 1.1.0

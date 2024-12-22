@@ -65,8 +65,8 @@ graph LR
 - Progressive Loading
 
 ## Related Documentation
-- [File Upload Component](/technical/components/file-upload.md)
-- [Route Grouping](/technical/components/route-grouping.md)
-- [Performance Optimization](/technical/performance.md)
+- [File Upload Component](./components/file-upload.md)
+- [Route Grouping](./components/route-grouping.md)
+- [Performance Optimization](./performance.md)
 
 *Last Updated: 2024-12-22*

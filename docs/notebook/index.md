@@ -178,19 +178,16 @@ graph TD
    - Browser-based CSV parsing
    - Real-time validation
    - Memory optimization
-   - [View Details](./tech/implementation/client.md)
 
 2. **Route Optimization**
    - Advanced algorithms
    - Distance calculations
    - Time constraints
-   - [View Details](./tech/implementation/routes.md)
 
 3. **User Interface**
    - Interactive maps
    - Group management
    - Error handling
-   - [View Details](./tech/implementation/ui.md)
 
 ## Development Timeline
 
@@ -213,34 +210,34 @@ gantt
 ## Documentation Structure
 
 ### Feature Documentation
-- [Bulk Upload](./features/bulk-upload/index.md)
-  - [Context & Requirements](./features/bulk-upload/context.md)
-  - [Technical Implementation](./features/bulk-upload/technical.md)
-  - [User Experience](./features/bulk-upload/ux/index.md)
-  - [Development Guide](./features/bulk-upload/development.md)
+- Bulk Upload Overview
+  - Context & Requirements
+  - Technical Implementation
+  - User Experience
+  - Development Guide
 
 ### Technical Documentation
-- [Architecture](./tech/architecture/index.md)
-  - [System Design](./tech/architecture/system.md)
-  - [Data Flow](./tech/architecture/data-flow.md)
-  - [Integration](./tech/architecture/integration.md)
+- System Architecture
+  - System Design
+  - Data Flow
+  - Integration Approach
 
 ### Process Documentation
-- [Development Process](./process/index.md)
-  - [Coding Standards](./process/standards.md)
-  - [Review Process](./process/review.md)
-  - [Deployment](./process/deployment.md)
+- Development Process
+  - Coding Standards
+  - Review Workflow
+  - Deployment Strategies
 
 ### Guidelines & Resources
-- [Best Practices](./tech/best-practices.md)
-- [Performance Guidelines](./tech/performance.md)
-- [Security Standards](./tech/security.md)
-- [API Documentation](./tech/api/index.md)
+- Best Practices
+- Performance Guidelines
+- Security Standards
+- API Insights
 
 ## Contributing
 
 To contribute to this documentation:
-1. Follow the [documentation standards](./process/documentation.md)
+1. Follow the documentation standards
 2. Update relevant sections
 3. Keep diagrams and examples current
 4. Maintain cross-references

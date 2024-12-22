@@ -51,23 +51,80 @@ theme:
 
 nav:
   - Home: index.md
-  - Features:
-    - Bulk Upload:
-      - Overview: notebook/features/bulk-upload/README.md
-      - Business Context: notebook/features/bulk-upload/overview/business-context.md
-      - Technical:
-        - Architecture: notebook/features/bulk-upload/technical/architecture.md
-        - Components:
-          - File Upload: notebook/features/bulk-upload/technical/components/file-upload.md
-          - Route Grouping: notebook/features/bulk-upload/technical/components/route-grouping.md
-          - Map Visualization: notebook/features/bulk-upload/technical/components/map-visualization.md
-        - Performance: notebook/features/bulk-upload/technical/performance.md
-      - User Experience:
-        - Interface Guidelines: notebook/features/bulk-upload/ux/interface-guidelines.md
-        - Error Handling: notebook/features/bulk-upload/ux/error-handling.md
-      - Implementation: notebook/features/bulk-upload/implementation/README.md
+  - Notebook:
+    - Overview: notebook/index.md
+    - AI Workspace:
+      - 2024-12-21:
+        - Pyright Analysis: notebook/ai-workspace/2024-12-21/pyright_analysis.md
+        - Visual Testing Refactoring: notebook/ai-workspace/2024-12-21/visual_testing_refactoring.md
+        - Visual Testing Strategy: notebook/ai-workspace/2024-12-21/visual_testing_strategy.md
+        - Floatrect Type Safety: notebook/ai-workspace/2024-12-21/floatrect_type_safety.md
+        - Console Investigation: notebook/ai-workspace/2024-12-21/console_investigation.md
+        - Type Safety Plan: notebook/ai-workspace/2024-12-21/type_safety_plan.md
+        - Visual Testing Diagnostic: notebook/ai-workspace/2024-12-21/visual_testing_diagnostic.md
+      - 2024-12-22:
+        - Refined Visual Testing Network Challenges: notebook/ai-workspace/2024-12-22/refined-visual-testing-network-challenges.md
+        - Pyright Visual Script Fixes: notebook/ai-workspace/2024-12-22/2024-12-22-pyright-visual-script-fixes.md
+        - Visual Testing Network Challenges: notebook/ai-workspace/2024-12-22/2024-12-22-visual-testing-network-challenges.md
+        - Flake8 Visual Script Fixes: notebook/ai-workspace/2024-12-22/2024-12-22-flake8-visual-script-fixes.md
+    - Process:
+      - Decisions: notebook/process/decisions.md
+      - Self Agency: notebook/process/self-agency.md
+    - Features:
+      - Bulk Upload:
+        - Overview: notebook/features/bulk-upload/README.md
+        - Business Context: notebook/features/bulk-upload/overview/business-context.md
+        - Technical:
+          - Architecture: notebook/features/bulk-upload/technical/architecture.md
+          - Performance: notebook/features/bulk-upload/technical/performance.md
+          - Components:
+            - File Upload: notebook/features/bulk-upload/technical/components/file-upload.md
+            - Route Grouping: notebook/features/bulk-upload/technical/components/route-grouping.md
+            - Map Visualization: notebook/features/bulk-upload/technical/components/map-visualization.md
+        - User Experience:
+          - Index: notebook/features/bulk-upload/ux/index.md
+          - Interface Guidelines: notebook/features/bulk-upload/ux/interface-guidelines.md
+          - Error Handling: notebook/features/bulk-upload/ux/error-handling.md
+          - Interactions: notebook/features/bulk-upload/ux/interactions.md
+          - Flow: notebook/features/bulk-upload/ux/flow.md
+          - Components: notebook/features/bulk-upload/ux/components.md
+        - Implementation:
+          - Index: notebook/features/bulk-upload/implementation/index.md
+          - Engineering Specifications: notebook/features/bulk-upload/implementation/engineering-specifications.md
+        - UI:
+          - Index: notebook/features/bulk-upload/ui/index.md
+          - Responsive: notebook/features/bulk-upload/ui/responsive.md
+          - Animations: notebook/features/bulk-upload/ui/animations.md
+          - Components: notebook/features/bulk-upload/ui/components.md
+        - Archive:
+          - Index: notebook/features/bulk-upload/archive/index.md
+          - Context: notebook/features/bulk-upload/archive/context.md
+          - Technical: notebook/features/bulk-upload/archive/technical.md
+    - Tech:
+      - Frontend:
+        - Overview: notebook/tech/frontend/README.md
+        - Development:
+          - Workflow: notebook/tech/frontend/development/workflow.md
+          - Technology Stack: notebook/tech/frontend/development/technology-stack.md
+        - Maintenance:
+          - Tasks: notebook/tech/frontend/maintenance/tasks.md
+        - Setup:
+          - Configuration: notebook/tech/frontend/setup/configuration.md
+          - Installation: notebook/tech/frontend/setup/installation.md
+          - Dependencies: notebook/tech/frontend/setup/dependencies.md
+        - Testing:
+          - Strategy: notebook/tech/frontend/testing/strategy.md
+          - Tools: notebook/tech/frontend/testing/tools.md
+          - Examples: notebook/tech/frontend/testing/examples.md
+        - Archive:
+          - Testing Strategy: notebook/tech/frontend/_archive/testing-strategy.md
+          - Frontend Development Journey: notebook/tech/frontend/_archive/frontend-development-journey.md
+        - Implementation:
+          - Client Processing: notebook/tech/implementation/client.md
+          - Route Optimization: notebook/tech/implementation/routes.md
+          - User Interface: notebook/tech/implementation/ui.md
   - Product:
-    - Overview: product/index.md
+    - Overview: product/overview.md
     - Features: product/features.md
     - Stories: product/stories.md
     - Roadmap:
@@ -78,7 +135,7 @@ nav:
         - Visual Testing: product/roadmap/initiatives/visual-testing.md
       - Templates:
         - Milestone Plan: product/roadmap/templates/milestone-plan.md
-  - Tech:
+  - Tech Overview:
     - Overview: tech/index.md
     - Architecture: tech/architecture.md
     - CI/CD: tech/ci-cd.md

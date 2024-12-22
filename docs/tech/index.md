@@ -6,12 +6,12 @@ This section contains detailed technical specifications for the project. Each sp
 
 ## Contents
 
-1. [System Architecture](./system-architecture.md)
-2. [Data Models](./data-models.md)
-3. [API Specifications](./api-specifications.md)
-4. [Security Requirements](./security-requirements.md)
-5. [Performance Requirements](./performance-requirements.md)
-6. [Integration Guidelines](./integration-guidelines.md)
+1. System Architecture Overview
+2. Data Modeling Principles
+3. API Design Guidelines
+4. Security Framework
+5. Performance Optimization
+6. Integration Strategies
 
 ## System Architecture
 - Component Breakdown
@@ -40,6 +40,6 @@ Each specification document follows a standard template that includes:
 - Dependencies
 - Deployment Considerations
 
-When adding new specifications or updating existing ones, please follow the templates provided in the [templates](../task-management/templates/) directory.
+When adding new specifications or updating existing ones, please follow the templates provided.
 
 *Last Updated:* 2024-12-11T12:06:42+08:00

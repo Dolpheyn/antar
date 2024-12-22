@@ -379,26 +379,12 @@ To add new visual tests:
 3. Update documentation
 4. Submit PR with test results
 
-## Related Resources
+## Related Documentation
 
-### Integration Points
-```mermaid
-graph TD
-    subgraph "Related Systems"
-        A[Docs] -->|"Use"| B[CI/CD]
-        B -->|"Enable"| C[Testing]
-        C -->|"Support"| D[Quality]
-    end
-    
-    style A fill:#326CE5,color:#fff
-    style B fill:#6C8EBF,color:#fff
-    style C fill:#82B366,color:#fff
-    style D fill:#326CE5,color:#fff
-```
-
-- [Documentation System](../documentation-system.md)
-- [CI/CD Pipeline](../../technical-specifications/ci-cd.md)
-- [Testing Strategy](../../technical-specifications/testing.md)
+### Technical Specifications
+- Continuous Integration
+- Testing Strategies
+- Performance Benchmarks
 
 ---
 

@@ -146,36 +146,14 @@ mindmap
       Coverage Maps
 ```
 
-## Development Status
+## Documentation Overview
 
-Our current development focus reflects our commitment to building a robust foundation:
+### Project Features
+- [Bulk Upload Overview](./notebook/features/bulk-upload/README.md)
 
-```mermaid
-gantt
-    title Q1 2024 Development Plan
-    dateFormat  YYYY-MM-DD
-    section Core Features
-    Bulk Upload     :active,  des1, 2024-12-01, 2024-12-20
-    Route Optimization :       des2, 2024-12-15, 2024-01-15
-    Provider Integration :     des3, 2024-01-10, 2024-02-10
-    section Enhancement
-    Analytics Dashboard :      des4, 2024-02-01, 2024-02-28
-    Mobile Support :          des5, 2024-02-15, 2024-03-15
-```
-
-## Documentation
-
-Explore our comprehensive documentation:
-
-### Development Resources
-- [Development Notebook](./notebook/index.md) - Detailed technical documentation
-- [Feature Documentation](./notebook/features/bulk-upload/index.md) - Current feature implementations
-- [Technical Architecture](./tech/index.md) - System design and architecture
-
-### Business Context
-- [Product Vision](./product/index.md) - Our product strategy and roadmap
-- [Market Analysis](./product/market.md) - Understanding the delivery landscape
-- [User Stories](./product/users.md) - Real merchant experiences
+### Product Strategy
+- Product Market Overview
+- User Experience Insights
 
 ## Get Started
 

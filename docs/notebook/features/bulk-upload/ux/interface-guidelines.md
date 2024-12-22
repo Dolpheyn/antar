@@ -52,7 +52,10 @@ graph TD
 - Internationalization support
 
 ## Related Documentation
-- [Technical Architecture](/technical/architecture.md)
-- [Error Handling](/ux/error-handling.md)
+### Technical References
+- [System Architecture](../technical/architecture.md)
+
+### UX Guidelines
+- [Error Handling](./error-handling.md)
 
 *Last Updated: 2024-12-22*

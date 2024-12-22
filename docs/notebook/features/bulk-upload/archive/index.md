@@ -199,55 +199,34 @@ Upcoming features and improvements:
 graph LR
     subgraph "Q1 2024"
         A[Performance] -->|Optimization| B[Caching]
-        C[Mobile] -->|Enhancement| D[Responsive]
-    end
-    
-    subgraph "Q2 2024"
-        E[Analytics] -->|Integration| F[Insights]
-        G[API] -->|Extension| H[Partners]
-    end
-    
-    style A fill:#9f9,stroke:#333,stroke-width:2px
-    style E fill:#9f9,stroke:#333,stroke-width:2px
 ```
-
-1. **Q1 2024**
-   - Performance optimization
-   - Mobile interface enhancement
-   - Advanced route algorithms
-   - [View Details](./roadmap.md#q1-2024)
-
-2. **Q2 2024**
-   - Analytics integration
-   - Partner API expansion
-   - Machine learning features
-   - [View Details](./roadmap.md#q2-2024)
 
 ## Documentation Index 📚
 
 ### Core Documentation
-- [Business Context](./context.md) - Understanding merchant needs and impact
-- [Technical Architecture](./technical.md) - System design and implementation
-- [User Experience](./ux/index.md) - Interface design and user flow
+- Business Context
+- Technical Architecture
+- User Experience
+- Implementation
 
 ### Implementation Details
-- [CSV Processing](./implementation/csv.md) - File handling and validation
-- [Route Optimization](./implementation/routes.md) - Grouping and optimization
-- [Map Integration](./implementation/map.md) - Interactive map features
+- CSV Processing
+- Route Optimization
+- Map Integration
 
 ### User Interface
-- [Components](./ux/components.md) - UI component specifications
-- [Interactions](./ux/interactions.md) - User interaction patterns
-- [Flow](./ux/flow.md) - User journey and workflows
+- Components
+- Interactions
+- Flow
 
 ### Development
-- [API Reference](./api/index.md) - API documentation
-- [Best Practices](./development/best-practices.md) - Development guidelines
-- [Testing](./development/testing.md) - Testing strategies
+- API Reference
+- Best Practices
+- Testing
 
 ### Resources
-- [Examples](./examples/index.md) - Code examples and demos
-- [Troubleshooting](./support/troubleshooting.md) - Common issues and solutions
-- [FAQ](./support/faq.md) - Frequently asked questions
+- Examples
+- Troubleshooting
+- FAQ
 
 *Last Updated: 2024-12-20T07:43:43+08:00*

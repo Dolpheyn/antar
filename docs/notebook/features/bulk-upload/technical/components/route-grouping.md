@@ -54,8 +54,10 @@ interface RouteGroupProps {
 - Grouping computation time
 - Constraint satisfaction rate
 
-## Related Documentation
-- [Technical Architecture](/technical/architecture.md)
-- [Performance Optimization](/technical/performance.md)
+## Related Technical Documentation
+
+### Architecture References
+- [System Architecture](../architecture.md)
+- [Performance Metrics](../performance.md)
 
 *Last Updated: 2024-12-22*

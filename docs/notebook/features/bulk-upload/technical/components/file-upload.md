@@ -49,8 +49,10 @@ interface FileUploadProps {
 - Guided user correction
 - Fallback mechanisms
 
-## Related Documentation
-- [Technical Architecture](/technical/architecture.md)
-- [Route Grouping](/technical/components/route-grouping.md)
+## Related Technical Documentation
+
+### Architecture References
+- [System Architecture](../architecture.md)
+- [Route Grouping Component](./route-grouping.md)
 
 *Last Updated: 2024-12-22*

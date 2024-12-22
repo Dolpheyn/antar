@@ -1,8 +1,8 @@
 # Frontend Testing Strategy for Antar Delivery Management System
 
 ## Related Documentation
-- [Project Setup Guide](/docs/notebook/tech/frontend/project-setup.md): Comprehensive project initialization instructions
-- For a comprehensive overview of our technology ecosystem, please refer to the [Frontend README](README.md).
+- [Project Setup Guide](./project-setup.md): Comprehensive project initialization instructions
+- For a comprehensive overview of our technology ecosystem, please refer to the [Frontend README](../README.md).
 
 ## Version Information
 - **Version**: 1.1.0
@@ -81,7 +81,7 @@ bunx playwright install
 
 ## Project Structure
 
-For detailed project setup instructions, visit the [Project Setup Guide](project-setup.md).
+For detailed project setup instructions, visit the [Project Setup Guide](./project-setup.md).
 
 ```plaintext
 antar/
@@ -202,7 +202,7 @@ jobs:
 
 ## Best Practices
 
-For the latest tasks and improvements, check the [Tasks Document](tasks.md).
+For the latest tasks and improvements, check the [Tasks Document](./tasks.md).
 
 1. **Coverage Targets**
    - Aim for 80%+ test coverage
