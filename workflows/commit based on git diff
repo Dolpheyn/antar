@@ -50,6 +50,48 @@ Design and execute a precise, intelligent git commit workflow that ensures high-
 - Group logically related changes
 - Avoid mixing unrelated modifications in a single commit
 
+## Staged Changes Processing Workflow
+1. **Semantic Clustering**
+   - Comprehensive staged changes analysis
+   - Group changes by:
+     * Affected system components
+     * Change taxonomies (refactor/feat/fix)
+     * Logical and architectural dependencies
+     * Potential system-wide impacts
+
+2. **Commit Storyline Engineering**
+   - Construct change narrative through:
+     * Dependency resolution graphs
+     * Minimal system disruption strategy
+     * Logical progression of modifications
+     * Preservation of system invariants
+
+3. **Staged Area Transformation Protocol**
+   - Systematic staged file management:
+     a. Identify semantic change clusters
+     b. Determine precise commit boundaries
+     c. Strategically stage/unstage files
+     d. Craft contextually rich commit messages
+     e. Execute atomic, focused commits
+
+4. **Iterative Staging Clearance**
+   - Recursive workflow until staging area is empty:
+     * Analyze remaining staged changes
+     * Re-cluster and re-plan
+     * Commit with surgical precision
+     * Validate complete transformation
+
+5. **Comprehensive Validation**
+   - Post-commit checks:
+     * Verify no unintended changes remain
+     * Ensure commit sequence maintains system integrity
+     * Cross-reference with project conventions
+
+## Adaptive Commit Intelligence
+- Dynamic adjustment of clustering strategies
+- Learn from commit pattern feedback
+- Continuously refine semantic analysis capabilities
+
 ## Quality Assurance Checklist
 - [ ] Changes are logically grouped
 - [ ] Commit message follows conventional commit rules
