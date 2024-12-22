@@ -6,7 +6,7 @@ This guide covers the complete setup of the Antar delivery management system, fo
 
 ```mermaid
 graph TD
-    A[Project Setup] --> B[Base Configuration]
+    A[Project Setup] --> B[Bun Installation]
     B --> C[TypeScript Setup]
     C --> D[UI Framework]
     D --> E[Styling System]
@@ -14,32 +14,49 @@ graph TD
     F --> G[shadcn/ui Integration]
     
     style A fill:#f9f,stroke:#333
+    style B fill:#4CAF50,stroke:#333
     style D fill:#bbf,stroke:#333
     style F fill:#bfb,stroke:#333
     style G fill:#fbf,stroke:#333
+```
+
+## Prerequisites
+
+### Bun Installation
+```bash
+# Install Bun (macOS, Linux, WSL)
+curl -fsSL https://bun.sh/install | bash
+
+# Verify installation
+bun --version
 ```
 
 ## Initial Setup
 
 ### 1. Create Next.js Project
 ```bash
-npx create-next-app@latest antar --typescript --tailwind --eslint
+bunx create-next-app@latest antar \
+  --typescript \
+  --tailwind \
+  --eslint \
+  --app \
+  --src-dir
 cd antar
 ```
 
 ### 2. Additional Dependencies
 ```bash
 # Core dependencies
-npm install @headlessui/react @heroicons/react
-npm install @tanstack/react-query
-npm install zustand immer
+bun add @headlessui/react @heroicons/react
+bun add @tanstack/react-query
+bun add zustand immer
 
 # Development dependencies
-npm install -D @typescript-eslint/parser
-npm install -D @typescript-eslint/eslint-plugin
-npm install -D prettier prettier-plugin-tailwindcss
+bun add -D @typescript-eslint/parser
+bun add -D @typescript-eslint/eslint-plugin
+bun add -D prettier prettier-plugin-tailwindcss
 
-# shadcn/ui setup
+# shadcn/ui setup (uses npx as it's a one-time setup)
 npx shadcn-ui@latest init
 ```
 
@@ -56,6 +73,40 @@ Where is your tailwind.config.js located? › tailwind.config.js
 Configure the import alias for components: › @/components
 Configure the import alias for utils: › @/lib/utils
 Are you using React Server Components? › yes
+```
+
+### 4. Additional Bun-specific Configuration
+
+Create a `bunfig.toml` in the project root:
+```toml
+[install]
+# Prefer workspace dependencies
+prefer-workspace-packages = true
+
+[test]
+# Default test runner configuration
+runner = "vitest"
+
+[lint]
+# ESLint configuration
+enabled = true
+```
+
+## Development Workflow
+
+### Running the Project
+```bash
+# Start development server
+bun dev
+
+# Build for production
+bun run build
+
+# Run tests
+bun test
+
+# Lint the project
+bun lint
 ```
 
 ## Project Structure
@@ -78,8 +129,21 @@ antar/
 │   └── types/
 ├── public/
 ├── components.json       # shadcn/ui config
+├── bunfig.toml          # Bun configuration
 └── tests/
 ```
+
+## Troubleshooting Bun Adoption
+
+### Common Challenges
+1. Ensure all team members install Bun
+2. Update CI/CD pipelines to use `bun` instead of `npm`
+3. Check package compatibility
+4. Migrate existing scripts to Bun commands
+
+### Recommended Resources
+- [Bun Documentation](https://bun.sh/docs)
+- [Next.js with Bun Guide](https://nextjs.org/docs/getting-started/installation#bun)
 
 ## TypeScript Configuration
 
@@ -385,11 +449,135 @@ export function UploadZone({ onUpload, progress }: UploadZoneProps) {
 }
 ```
 
-## Next Steps
+## Project Setup Principles
 
-1. Review the [UI Components Guide](../../features/bulk-upload/ui/components.md)
-2. Check the [Animations Guide](../../features/bulk-upload/ui/animations.md)
-3. Study the [Responsive Design Guide](../../features/bulk-upload/ui/responsive.md)
-4. Explore [shadcn/ui documentation](https://ui.shadcn.com/) for more components
+Aligned with our [development principles](../principles.md), this guide ensures:
+- Consistent development environment
+- Performance-focused setup
+- User-centric development workflow
 
-*Last Updated: 2024-12-20T08:14:57+08:00*
+## Prerequisites
+
+### Development Environment
+- **Node.js**: v18.x or later
+- **Python**: v3.10 or later
+- **Docker**: Latest stable version
+- **Git**: Latest stable version
+
+### Performance Optimization Tools
+- **Profiling**: Chrome DevTools
+- **Bundle Analysis**: Webpack Bundle Analyzer
+- **Code Quality**: ESLint, Pylint
+- **Type Checking**: TypeScript, mypy
+
+## Local Development Setup
+
+### Frontend Setup
+```bash
+# Clone repository
+git clone https://github.com/your-org/antar.git
+cd antar/frontend
+
+# Install dependencies
+bun install
+
+# Performance optimization
+bun run optimize
+```
+
+### Backend Setup
+```bash
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run development server
+python manage.py runserver
+```
+
+## Docker Development
+
+### Containerized Development
+```bash
+# Build development containers
+docker-compose -f docker-compose.dev.yml up --build
+
+# Performance monitoring
+docker stats
+```
+
+## Development Workflow
+
+### Code Quality
+- Pre-commit hooks for linting
+- Mandatory type checking
+- Performance budget enforcement
+
+### Continuous Integration
+- Automated testing
+- Performance regression detection
+- Accessibility compliance checks
+
+## Performance Monitoring
+
+### Frontend
+- Lighthouse scores tracking
+- Web Vitals monitoring
+- Bundle size alerts
+
+### Backend
+- Request latency tracking
+- Database query optimization
+- Memory usage monitoring
+
+## Collaborative Development
+
+### Best Practices
+- Pair programming
+- Regular code reviews
+- Knowledge sharing sessions
+
+## Testing Strategy
+
+Our comprehensive testing approach covers multiple layers of quality assurance:
+
+- **Unit Testing**: Utilizing Vitest for fast, lightweight testing
+- **Component Testing**: Playwright for isolated React component validation
+- **End-to-End Testing**: Playwright for full application workflow testing
+
+### Quick Test Setup
+```bash
+# Install testing dependencies
+bun add -D vitest 
+bun add -D @testing-library/react 
+bun add -D @testing-library/user-event
+bun add -D @types/vitest 
+bun add -D jsdom 
+bun add -D c8
+bun add -D @playwright/test 
+bun add -D @playwright/experimental-ct-react
+bunx playwright install
+```
+
+### Running Tests
+```bash
+# Run all tests
+bun test
+
+# Run specific test types
+bun test:unit
+bun test:component
+bun test:e2e
+
+# Generate test coverage report
+bun run test:coverage
+```
+
+### Detailed Testing Strategy
+For a comprehensive guide to our testing approach, refer to our [Frontend Testing Strategy](/docs/notebook/tech/frontend/testing-strategy.md).
+
+*Last Updated: 2024-12-22*
+*Setup Guide Version: 1.1.0*

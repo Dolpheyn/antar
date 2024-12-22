@@ -1,0 +1,48 @@
+name: Frontend CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Use Bun
+      uses: oven-sh/setup-bun@v1
+      with:
+        bun-version: latest
+    
+    - name: Install dependencies
+      run: bun install
+    
+    - name: Lint
+      run: bun run lint
+    
+    - name: Run unit tests
+      run: bun run test:unit
+    
+    - name: Run component tests
+      run: bun run test:component
+    
+    - name: Run E2E tests
+      uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+      run: |
+        bunx playwright install
+        bun run test:e2e
+    
+    - name: Build
+      run: bun run build
+    
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: frontend-build
+        path: .next/

@@ -1,0 +1,16 @@
+[install]
+# Prefer workspace dependencies
+prefer-workspace-packages = true
+
+[test]
+# Default test runner configuration
+runner = "vitest"
+
+[lint]
+# ESLint configuration
+enabled = true
+
+[performance]
+# Performance optimizations
+auto-install = true
+cache = true
