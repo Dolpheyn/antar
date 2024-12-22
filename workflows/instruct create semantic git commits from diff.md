@@ -1,99 +1,86 @@
-# The Empathetic Git Commit Narrative: Beyond Technical Tracking
+# Semantic Git Commit Workflow
 
-## Your Deeper Mission
-You're not just recording changes—you're crafting a living story of your project's evolution, where each commit is a meaningful chapter of collective problem-solving.
+## Commit Types
+- `feat`: New feature or enhancement
+- `fix`: Bug fix
+- `docs`: Documentation updates
+- `style`: Code formatting, no logic change
+- `refactor`: Code restructuring
+- `test`: Test-related changes
+- `chore`: Maintenance tasks
 
-## Commit Types: The Emotional Spectrum of Change
-Commits are more than technical markers—they're emotional and intellectual waypoints:
-- `feat` 🌱: Birth of an idea, a moment of creative breakthrough
-- `fix` 🩹: Healing the project, addressing pain points with care
-- `docs` 📖: Sharing knowledge, creating collective understanding
-- `style` 🎨: Refining the aesthetic of our shared codebase
-- `refactor` 🔬: Thoughtful restructuring, honoring code's potential
-- `test` 🕵️: Building trust through rigorous exploration
-- `chore` 🧹: Maintenance as an act of respect for our collaborative space
-
-## The Holistic Commit Message Formula
+## Commit Message Template
 ```
-<type>(<optional area>): Concise, meaningful description
+<type>(<scope>): Short, descriptive summary
 
-[Emotional Context]
-- Why this change matters
-- The human story behind the code
-
-[Problem Narrative]
-- What challenge were you solving?
-- How does this change improve our collective journey?
-
-[Potential Impact]
-- Who benefits from this change?
-- What new possibilities does this open?
+[Detailed explanation]
+- Why this change is necessary
+- What problem it solves
+- Any potential side effects or considerations
 ```
 
-## The Empathetic Commit Workflow
+## Workflow Steps
 
-### Step 0: Emotional Preparation
-- Pause before committing
-- Reflect on the journey of this change
-- Connect with the human intention behind your code
+### 1. Pre-Commit Reflection
+- Understand the change's purpose
+- Identify the problem being solved
+- Consider the broader project context
 
-### Step 1: Comprehensive Change Mapping
-- Beyond git status: 
-  * Understand the emotional landscape of your changes
-  * Map changes to their broader project context
-  * Identify the story these changes are telling
+### 2. Staging Changes
+- Use `git add -p` for granular staging
+- Group logically related changes
+- Ensure each commit is focused and atomic
 
-### Step 2: Narrative Staging
-- Group changes not just logically, but narratively
-- Ask deeper questions:
-  * What story does this change tell?
-  * How does this connect to our project's larger vision?
-  * What human problem are we solving?
+### 3. Crafting the Commit Message
+- Be concise but informative
+- Use present tense
+- Explain the "why", not just the "what"
 
-### Step 3: Commit as Storytelling
-- Stage changes with intention
-- Write a commit message that:
-  * Explains the technical change
-  * Reveals the human motivation
-  * Connects to the project's larger purpose
+### 4. Commit Message Checklist
+✅ Clear type prefix
+✅ Optional scope for context
+✅ Concise summary (50 chars max)
+✅ Detailed explanation
+✅ Connects to project goals
 
-### Step 4: Collaborative Reflection
-- Invite team feedback on commit messages
-- Treat commit messages as a form of communication art
-- Continuously evolve your narrative skills
+## Examples
 
-## Advanced Commit Intelligence
+### Feature Commit
+```
+feat(user-auth): Implement OAuth2 login
 
-### Emotional Resonance Scoring
-- Low Resonance (0-3): Purely technical, lacks context
-- Medium Resonance (4-7): Some human insight
-- High Resonance (8-10): Tells a compelling, meaningful story
+- Adds Google and GitHub OAuth2 providers
+- Enhances user authentication security
+- Reduces friction in user onboarding process
+```
 
-### Commit Message Quality Checklist
-✅ Technical accuracy
-✅ Emotional context
-✅ Problem narrative
-✅ Potential impact
-✅ Clarity and brevity
-✅ Collaborative tone
+### Refactor Commit
+```
+refactor(api): Simplify error handling middleware
 
-## Philosophical Foundations
-- Every line of code is a dialogue
-- Commits are not just changes, but conversations
-- Version control is collective memory
+- Consolidates error handling logic
+- Improves code readability
+- Reduces potential for error propagation
+```
 
-## Pro Wisdom
-- Small, focused commits tell the clearest stories
-- Vulnerability in communication creates stronger teams
-- Your commit messages are your project's autobiography
+### Chore Commit
+```
+chore(deps): Update React and TypeScript versions
 
-## Reflection Prompt
-How can your next commit not just change code, but change understanding?
+- Upgrades to latest stable versions
+- Ensures compatibility with modern ecosystem
+- Potential performance and security improvements
+```
 
-## Learning and Growth
-- Practice empathetic commit writing
-- Review your commit history as a narrative
-- Celebrate the human behind the code
+## Best Practices
+- Commit often
+- Keep commits small and focused
+- Write for future maintainers
+- Treat commit messages as documentation
 
-## Call to Collaborative Action
-Transform your commits from mere technical logs into powerful, meaningful narratives that honor the creativity, challenges, and collective intelligence of your team.
+## Continuous Improvement
+- Regularly review commit history
+- Discuss and refine commit practices
+- Learn from team's commit narratives
+
+*Last Updated*: 2024-12-22

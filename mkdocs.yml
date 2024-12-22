@@ -41,7 +41,6 @@ theme:
     - navigation.tabs.sticky
     - navigation.top
     - toc.follow
-    - navigation.expand
     - search.suggest
     - search.highlight
     - search.share
@@ -81,7 +80,20 @@ nav:
       - Decisions:
         - Frontend Framework: notebook/tech/decisions/frontend-framework.md
       - Frontend:
-        - Overview: notebook/tech/frontend/index.md
+        - Overview: notebook/tech/frontend/README.md
+        - Development:
+          - Workflow: notebook/tech/frontend/development/workflow.md
+          - Technology Stack: notebook/tech/frontend/development/technology-stack.md
+        - Setup:
+          - Installation: notebook/tech/frontend/setup/installation.md
+          - Dependencies: notebook/tech/frontend/setup/dependencies.md
+          - Configuration: notebook/tech/frontend/setup/configuration.md
+        - Testing:
+          - Strategy: notebook/tech/frontend/testing/strategy.md
+          - Tools: notebook/tech/frontend/testing/tools.md
+          - Examples: notebook/tech/frontend/testing/examples.md
+        - Maintenance:
+          - Tasks: notebook/tech/frontend/maintenance/tasks.md
       - Implementation:
         - Overview: notebook/tech/implementation/index.md
         - Development Environment: notebook/tech/implementation/development-environment.md
