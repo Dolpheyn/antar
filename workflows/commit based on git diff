@@ -1,0 +1,92 @@
+# Comprehensive Git Commit Workflow Instruction for AI Assistants
+
+## Objective
+Design and execute a precise, intelligent git commit workflow that ensures high-quality, meaningful commit messages and systematic code change management.
+
+## Core Principles of Commit Intelligence
+1. **Contextual Awareness**
+   - Deeply understand the semantic meaning of code changes
+   - Recognize the broader impact of modifications beyond surface-level differences
+
+2. **Conventional Commit Specification Adherence**
+   - Strictly follow the Conventional Commits 1.0.0 specification
+   - Maintain a structured, predictable commit message format
+
+3. **Comprehensive Change Analysis**
+   - Perform multi-dimensional diff analysis
+   - Categorize changes by type, scope, and potential system impact
+
+## Workflow Stages
+
+### 1. Change Detection and Classification
+- **Input**: Current git repository state
+- **Process**:
+  a. Detect all staged and unstaged changes
+  b. Classify changes into precise categories:
+     - `feat`: New features
+     - `fix`: Bug fixes
+     - `docs`: Documentation updates
+     - `style`: Code formatting
+     - `refactor`: Code restructuring
+     - `test`: Test-related changes
+     - `chore`: Maintenance tasks
+
+### 2. Semantic Diff Analysis
+- Perform deep semantic analysis of changes
+- Identify:
+  - Affected components/modules
+  - Potential side effects
+  - Relationship between changes
+
+### 3. Commit Message Generation
+- **Requirements**:
+  1. Use conventional commit format: `<type>(<scope>): <description>`
+  2. Ensure descriptiveness and conciseness
+  3. Include optional breaking change indicators
+  4. Reference related issues/tickets when applicable
+
+### 4. Commit Execution Strategy
+- Prioritize atomic, focused commits
+- Group logically related changes
+- Avoid mixing unrelated modifications in a single commit
+
+## Quality Assurance Checklist
+- [ ] Changes are logically grouped
+- [ ] Commit message follows conventional commit rules
+- [ ] No unnecessary or redundant changes included
+- [ ] Potential side effects are considered and documented
+- [ ] Commit does not introduce known anti-patterns
+
+## Reliability Guarantees
+- 95% accuracy in change type classification
+- Consistent adherence to commit message conventions
+- Minimal false positives in change detection
+- Transparent reasoning for each commit decision
+
+## Ethical and Professional Considerations
+- Maintain code integrity
+- Respect existing project conventions
+- Provide clear, actionable commit messages
+- Minimize cognitive load for future code reviewers
+
+## Recommended Implementation Approach
+1. Perform comprehensive diff analysis
+2. Generate preliminary commit classification
+3. Validate classification against project-specific rules
+4. Construct commit message with precise semantic mapping
+5. Optional: Request human confirmation for complex changes
+
+## Error Handling and Fallback Mechanisms
+- If unable to confidently classify changes:
+  1. Provide detailed explanation
+  2. Request human intervention
+  3. Offer suggested classification options
+
+## Continuous Improvement
+- Learn from human feedback
+- Adapt to project-specific commit patterns
+- Incrementally improve classification accuracy
+
+---
+
+**Commitment to Excellence**: This workflow is designed to transform commit management from a mundane task to a strategic, intelligent process that enhances code understanding and project collaboration.
