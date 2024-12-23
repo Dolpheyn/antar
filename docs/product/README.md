@@ -1,104 +1,158 @@
-# Antar Documentation
+# Antar: Transforming Deliveries in Southeast Asia
 
-## Documentation Update Notice
-**Date**: 2024-12-22
+> "Empowering merchants with intelligent delivery solutions"
 
-Our product documentation has been refined for improved clarity and readability. 
+<div class="grid cards" markdown>
 
-### Current Documentation
-- [Features](features.md)
-- [Success Stories](stories.md)
+-   :material-rocket-launch:{ .lg .middle } __Platform Overview__
 
-### Previous Documentation
-Historical documentation is preserved in the `archive` directory for reference.
+    ---
 
-## Quick Links
-- [Technical Features](features.md)
-- [Customer Success Stories](stories.md)
+    Discover how Antar revolutionizes delivery management.
 
-## Antar: Intelligent Delivery Solutions for Southeast Asia
+    [:octicons-arrow-right-24: Learn More](overview.md)
 
-### Strategic Vision
-Transforming Southeast Asia's $150B logistics market through AI-powered delivery optimization.
+-   :material-lightbulb:{ .lg .middle } __Key Features__
 
-### Market Challenges
-Merchants in Southeast Asia face critical operational barriers:
+    ---
+
+    Explore our intelligent delivery solutions.
+
+    [:octicons-arrow-right-24: View Features](features.md)
+
+-   :material-account-group:{ .lg .middle } __Success Stories__
+
+    ---
+
+    Read how businesses thrive with Antar.
+
+    [:octicons-arrow-right-24: Read Stories](stories.md)
+
+-   :material-map-marker-path:{ .lg .middle } __Roadmap__
+
+    ---
+
+    See what's next for Antar.
+
+    [:octicons-arrow-right-24: View Roadmap](../roadmap/index.md)
+
+</div>
+
+## The Logistics Challenge in Southeast Asia
+
+### Market Context
+Southeast Asia's $150B logistics market is fragmented, inefficient, and ripe for disruption. Merchants face critical challenges:
 - Platform fragmentation across multiple delivery services
 - Inefficient delivery management
 - Complex provider selection
 - High operational costs
 - Lack of real-time insights
 
-### Our Solution: Unified Delivery Intelligence
+## Our Solution: Unified Delivery Intelligence
 
-#### Core Platform Capabilities
-- **Unified Delivery Platform**
-  - Single dashboard for all delivery needs
-  - Multi-provider integration (Grab, Lalamove, J&T, Delyva)
-  - Automated provider selection
+### Why Antar Matters
 
-- **AI-Powered Optimization**
-  - Intelligent route planning
-  - Real-time traffic and distance analysis
-  - Smart cost optimization
-  - Predictive analytics
+#### For Merchants
+- 🚀 Simplified Operations
+- 💡 Intelligent Decision-Making
+- 💰 Cost Optimization
+- 🔍 Real-Time Insights
 
-- **Advanced Analytics**
-  - Performance tracking
-  - Cost optimization insights
-  - Delivery efficiency metrics
+#### For Investors
+- 📈 Massive Market Potential
+- 🧠 AI-Driven Innovation
+- 🌐 Scalable Platform
+- 💡 Technological Moat
 
-### Technical Architecture
-- Microservices-based infrastructure
-- Cloud-native design
-- Machine learning optimization
-- Scalable and secure data management
+#### For Users
+- 🕒 Faster Deliveries
+- 💯 Reliable Service
+- 🔗 Seamless Experience
+- 🌟 Enhanced Satisfaction
 
-### Market Focus
-- **Region**: Southeast Asia
-- **Initial Market**: Malaysia
-- **Target Sectors**: 
-  - E-commerce
-  - Small and Medium Enterprises (SMEs)
-  - Food and Beverage
-  - Local service providers
+## Key Capabilities
 
-### Development Roadmap
-
-#### Phase 1: Foundation (Q1 2024)
-- Core infrastructure development
-- Bulk order management system
-- Initial provider integrations
-
-#### Phase 2: Intelligence (Q2 2024)
-- Advanced routing algorithms
-- Machine learning enhancements
-- Expanded provider network
-
-#### Phase 3: Market Expansion (Q3-Q4 2024)
-- Geographic scaling
-- Enterprise feature development
-- Advanced analytics implementation
-
-### Impact Metrics
-- 40% operational cost reduction
-- 60% efficiency improvement
-- 4.8/5 customer satisfaction
-
-### Customer Success Stories
-
-#### Aisyah's Bubble Tea Revolution 
-**Business**: Local Bubble Tea Shop, Kuala Lumpur
-- Streamlined delivery operations
-- 30-minute guaranteed delivery
-- 50% reduction in management time
-
-#### Muhammad's E-commerce Expansion 
-**Business**: Online Marketplace, Penang
-- Unified delivery dashboard
-- 35% shipping cost optimization
+### 1. Smart Order Management
+- Unified processing across multiple providers
+- Automated provider selection
+- Intelligent routing optimization
 - Real-time performance tracking
-- Enabled 3x business growth
 
-### Continuous Innovation
-We're committed to empowering merchants with intelligent, data-driven delivery solutions that transform operational capabilities.
+### 2. AI-Powered Intelligence
+- Advanced predictive algorithms
+- Machine learning-driven insights
+- Cost and efficiency optimization
+- Adaptive decision support
+
+### 3. Comprehensive Integration
+- Multi-provider connectivity
+- Standardized data formats
+- Flexible API integration
+- Scalable infrastructure
+
+## Development Roadmap: Our Journey of Transformation
+
+### Phase 1: Foundation
+**Building the Logistics Intelligence Core**
+- Developing robust, scalable infrastructure
+- Creating a unified merchant dashboard
+- Establishing multi-provider integration framework
+- Laying groundwork for intelligent routing
+
+**Strategic Objectives**
+- Transform fragmented delivery processes
+- Create a single source of truth for logistics management
+- Build the technological foundation for future innovation
+
+### Phase 2: Intelligence
+**Empowering Decisions with AI**
+- Implementing advanced predictive routing algorithms
+- Developing real-time performance analytics
+- Creating intelligent provider selection mechanisms
+- Enhancing cost optimization capabilities
+
+**Strategic Objectives**
+- Turn data into actionable business insights
+- Provide merchants with unprecedented operational intelligence
+- Demonstrate the power of AI in logistics management
+
+### Phase 3: Market Expansion
+**Scaling Our Vision**
+- Expanding across Southeast Asian markets
+- Developing industry-specific delivery solutions
+- Building enterprise-grade feature set
+- Creating a comprehensive logistics intelligence ecosystem
+
+**Strategic Objectives**
+- Become the definitive delivery intelligence platform
+- Empower businesses of all sizes across Southeast Asia
+- Prove the transformative potential of intelligent logistics
+
+## Impact Metrics
+
+### Business Performance
+- 40% Cost Reduction
+- 60% Operational Efficiency
+- 4.8/5 Customer Satisfaction
+
+## Customer Success Snapshots
+
+### Aisyah's Bubble Tea Revolution
+**Challenge**: Inefficient delivery management
+**Solution**: Unified Antar platform
+**Result**: 50% reduction in management time, 30-minute guaranteed delivery
+
+### Muhammad's E-commerce Expansion
+**Challenge**: Complex multi-provider logistics
+**Solution**: Intelligent routing and analytics
+**Result**: 35% shipping cost optimization, 3x business growth
+
+## Our Commitment
+
+Antar is more than a technology platform. We are:
+- Solving real-world business challenges
+- Driving continuous innovation
+- Empowering merchants through intelligent solutions
+- Creating tangible economic value
+
+**Vision**: Transform logistics from a cost center to a strategic growth engine.
