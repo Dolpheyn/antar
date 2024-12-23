@@ -23,6 +23,7 @@ jobs:
   frontend-ci:
     name: Frontend Build & Test
     runs-on: ubuntu-latest
+    working-directory: ./frontend
     steps:
     - uses: actions/checkout@v4
     
@@ -37,36 +38,30 @@ jobs:
         bun --version
     
     - name: Install Frontend Dependencies
-      working-directory: ./frontend
       run: bun install
     
     - name: Lint Frontend
-      working-directory: ./frontend
       run: bun run lint
     
     - name: Run Frontend Unit Tests
-      working-directory: ./frontend
       run: bun run test:unit
     
     - name: Run Frontend Component Tests
-      working-directory: ./frontend
       run: bun run test:component
     
     - name: Setup Playwright
-      working-directory: ./frontend
       run: bunx playwright install
     
     - name: Run Frontend E2E Tests
-      working-directory: ./frontend
       run: bun run test:e2e
     
     - name: Build Frontend
-      working-directory: ./frontend
       run: bun run build
 
   dependency-scan:
     name: Dependency Vulnerability Scan
     runs-on: ubuntu-latest
+    working-directory: frontend
     steps:
     - uses: actions/checkout@v4
     
@@ -75,14 +70,11 @@ jobs:
       with:
         node-version: 'lts/*'
         cache: 'npm'
-        cache-path: ./frontend
     
     - name: Install Frontend Dependencies
-      working-directory: ./frontend
       run: npm ci
     
     - name: NPM Audit
-      working-directory: ./frontend
       run: |
         npm audit --audit-level=high || true
     
