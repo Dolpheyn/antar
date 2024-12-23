@@ -1,3 +1,0 @@
-mkdocs-material==9.5.2
-mkdocs-mermaid2-plugin==1.1.1
-mkdocs-include-markdown-plugin==6.0.4
