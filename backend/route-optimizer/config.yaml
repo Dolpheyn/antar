@@ -1,0 +1,13 @@
+server:
+  port: 8080
+  max_upload_size: 5242880  # 5MB in bytes
+
+validation:
+  max_entries: 200
+  strict_mode: true
+
+logging:
+  level: info
+  output_paths:
+    - stdout
+    - /var/log/antar/route-optimizer.log

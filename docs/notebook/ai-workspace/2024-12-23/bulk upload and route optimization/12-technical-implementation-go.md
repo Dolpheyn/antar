@@ -49,13 +49,12 @@ backend/route-optimizer/
 ### Dependency Management
 ```bash
 # Install core dependencies
-go get -u github.com/gofiber/fiber/v2
-go get -u go.uber.org/zap
-go get -u github.com/go-playground/validator/v10
-
-# Development dependencies
-go get -u github.com/stretchr/testify
-go get -u github.com/swaggo/swag/cmd/swag
+go get -u github.com/gin-gonic/gin           # Web framework
+go get -u github.com/spf13/viper              # Configuration management
+go get -u go.uber.org/zap                     # Structured logging
+go get -u github.com/stretchr/testify         # Testing utilities
+go get -u github.com/swaggo/swag              # API documentation
+go get -u github.com/google/uuid              # UUID generation
 ```
 
 ### Configuration Management
@@ -108,10 +107,146 @@ generate-docs:
 
 ### Technology Stack
 - **Language**: Go 1.21+ (with generics and performance optimizations)
-- **Web Framework**: `github.com/gofiber/fiber/v2` (fastest HTTP router)
+- **Web Framework**: `github.com/gin-gonic/gin` (fastest HTTP router)
 - **CSV Parsing**: Custom implementation with `encoding/csv`
 - **Validation**: `github.com/go-playground/validator/v10`
 - **Logging**: `go.uber.org/zap` for structured, performant logging
+
+## 🔧 Core Services & Components
+
+### CSV Processing Service
+The `CSVProcessorService` will be responsible for handling the core logic of processing bulk CSV uploads. Key responsibilities include:
+
+1. **Stream Processing**
+   - Handle large file uploads without loading entire file into memory
+   - Support chunked processing for memory efficiency
+   - Implement streaming validation and parsing
+
+2. **Validation Strategy**
+   - Validate CSV structure and data integrity
+   - Perform type checking and constraint validation
+   - Generate detailed validation error reports
+
+3. **Error Handling**
+   - Provide granular error tracking
+   - Support partial success scenarios
+   - Generate comprehensive error logs
+
+### Validation Approach
+```go
+type ValidationError struct {
+    Row     int      `json:"row"`
+    Field   string   `json:"field"`
+    Message string   `json:"message"`
+}
+
+func validateDeliveryRecord(record DeliveryRecord) []ValidationError {
+    var errors []ValidationError
+
+    // Example validation rules
+    if record.Weight <= 0 {
+        errors = append(errors, ValidationError{
+            Field:   "Weight",
+            Message: "Weight must be positive",
+        })
+    }
+
+    if len(record.DestinationAddress) > 255 {
+        errors = append(errors, ValidationError{
+            Field:   "DestinationAddress", 
+            Message: "Address exceeds maximum length",
+        })
+    }
+
+    return errors
+}
+```
+
+### Performance Considerations
+- Use buffered channels for concurrent processing
+- Implement rate limiting to prevent system overload
+- Use efficient memory management techniques
+
+### Logging & Monitoring
+```go
+type ProcessingMetrics struct {
+    TotalRecords     int
+    ValidRecords     int
+    InvalidRecords   int
+    ProcessingTime   time.Duration
+    MemoryAllocated  uint64
+}
+
+func (s *CSVProcessorService) logProcessingMetrics(metrics ProcessingMetrics) {
+    logger.Info("CSV Processing Completed",
+        zap.Int("total_records", metrics.TotalRecords),
+        zap.Int("valid_records", metrics.ValidRecords),
+        zap.Duration("processing_time", metrics.ProcessingTime),
+    )
+}
+```
+
+## 🚀 API Design Implementation
+
+### Upload Endpoint
+```go
+func (h *DeliveryUploadHandler) UploadCSV(c *gin.Context) {
+    file, err := c.FormFile("csv_file")
+    if err != nil {
+        c.JSON(http.StatusBadRequest, gin.H{
+            "error": "Invalid file upload",
+        })
+        return
+    }
+
+    records, validationErrors := h.processCSVStream(file)
+    
+    if len(validationErrors) > 0 {
+        c.JSON(http.StatusUnprocessableEntity, gin.H{
+            "errors": validationErrors,
+        })
+        return
+    }
+
+    // Process valid records
+    processingResult := h.service.ProcessDeliveries(records)
+    
+    c.JSON(http.StatusOK, processingResult)
+}
+```
+
+## 🔒 Security Considerations
+- Implement file size limits
+- Validate file type and extension
+- Use secure file handling techniques
+- Implement rate limiting on upload endpoint
+
+## 🧪 Testing Strategy
+1. Unit Tests
+   - Validate individual component logic
+   - Test validation rules
+   - Mock external dependencies
+
+2. Integration Tests
+   - Test end-to-end CSV processing
+   - Verify error handling
+   - Performance benchmarking
+
+3. Load Testing
+   - Simulate bulk upload scenarios
+   - Test system resilience under high load
+
+## 📊 Monitoring & Observability
+- Implement Prometheus metrics
+- Create Grafana dashboards
+- Use distributed tracing
+- Set up centralized logging
+
+## 🔮 Future Improvements
+- Support multiple file formats
+- Implement more advanced validation
+- Add machine learning-based data cleaning
+- Create real-time processing dashboard
 
 ## 🔍 Detailed Component Design
 
