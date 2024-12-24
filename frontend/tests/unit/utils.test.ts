@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { cn } from '@/utils/css';
+import { cn } from '../../src/utils/css';
 
 describe('Utility Functions', () => {
   it('merges class names correctly', () => {
