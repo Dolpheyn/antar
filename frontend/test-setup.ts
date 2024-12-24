@@ -14,21 +14,18 @@ if (typeof window === 'undefined') {
 if (typeof document === 'undefined') {
   global.document = {
     body: {
-      appendChild: () => {},
-      removeChild: () => {},
+      appendChild: () => { },
+      removeChild: () => { },
     },
     createElement: () => ({
       style: {},
-      setAttribute: () => {},
-      addEventListener: () => {},
-      removeEventListener: () => {},
+      setAttribute: () => { },
+      addEventListener: () => { },
+      removeEventListener: () => { },
     }),
     createTextNode: () => ({}),
   } as any;
 }
-
-// Add any global test configurations or mocks here
-globalThis.IS_REACT_ACT_ENVIRONMENT = true;
 
 // Extend expect with additional matchers if needed
 expect.extend({
