@@ -44,20 +44,8 @@ jobs:
       run: bun run lint
       working-directory: ./frontend
     
-    - name: Run Frontend Unit Tests
-      run: bun run test:unit
-      working-directory: ./frontend
-    
-    - name: Run Frontend Component Tests
-      run: bun run test:component
-      working-directory: ./frontend
-    
-    - name: Setup Playwright
-      run: bunx playwright install
-      working-directory: ./frontend
-    
-    - name: Run Frontend E2E Tests
-      run: bun run test:e2e
+    - name: Run Frontend Tests
+      run: bun run test
       working-directory: ./frontend
     
     - name: Build Frontend
@@ -93,15 +81,24 @@ jobs:
     
     - name: Build Documentation
       run: poetry run mkdocs build
-    
+
     # - name: Check Documentation Links
     #   run: |
     #     poetry run mkdocs serve &
     #     sleep 5 && pip install linkchecker && linkchecker http://127.0.0.1:8000
     
-    - name: Deploy Documentation
-      if: github.ref == 'refs/heads/main'
-      uses: peaceiris/actions-gh-pages@v3
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v2
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs/site
+        path: ./site
+
+  docs-deploy:
+      if: github.event_name == 'push'
+      needs: build
+      runs-on: ubuntu-latest
+      environment:
+        name: github-pages
+        url: https://dolpheyn.github.io/antar/
+      steps:
+        - name: Deploy to GitHub Pages
+          uses: actions/deploy-pages@v2
