@@ -94,7 +94,7 @@ jobs:
 
   docs-deploy:
       if: github.event_name == 'push'
-      needs: build
+      needs: docs-build
       runs-on: ubuntu-latest
       environment:
         name: github-pages
