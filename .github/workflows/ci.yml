@@ -89,7 +89,7 @@ jobs:
         key: venv-${{ runner.os }}-py3.11-${{ hashFiles('**/poetry.lock') }}
     
     - name: Install dependencies
-      run: poetry install --no-interaction --no-root
+      run: poetry install --with docs --no-interaction --no-root
     
     - name: Build Documentation
       run: poetry run mkdocs build
