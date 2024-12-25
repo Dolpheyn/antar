@@ -4,7 +4,8 @@ prefer-workspace-packages = true
 
 [test]
 # Default test runner configuration
-runner = "vitest"
+runner = "bun"
+preload = ["./happy-dom.ts"]
 
 [lint]
 # ESLint configuration

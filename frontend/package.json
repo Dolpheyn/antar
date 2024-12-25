@@ -6,10 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "test:unit": "vitest",
-    "test": "bun run test:unit",
-    "test:coverage": "vitest run --coverage"
+    "lint": "next lint"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
@@ -27,9 +24,9 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@happy-dom/global-registrator": "^15.11.7",
     "@testing-library/react": "^16.1.0",
     "@testing-library/user-event": "^14.5.2",
-    "@testing-library/jest-dom": "^6.3.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

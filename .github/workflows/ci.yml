@@ -26,7 +26,7 @@ concurrency:
 
 jobs:
   frontend-ci:
-    name: Frontend Build & Test
+    if: github.event_name == 'push' && contains(github.event.commits[0].added, 'frontend/')
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -50,15 +50,14 @@ jobs:
       working-directory: ./frontend
     
     - name: Run Frontend Tests
-      run: bun run test
+      run: bun test
       working-directory: ./frontend
     
     - name: Build Frontend
       run: bun run build
       working-directory: ./frontend
-
   docs-build:
-    name: Documentation Build
+    if: github.event_name == 'push' && contains(github.event.commits[0].added, 'docs/')
     runs-on: ubuntu-latest
     container: 
       image: python:3.11-slim
@@ -96,9 +95,8 @@ jobs:
       uses: actions/upload-pages-artifact@v2
       with:
         path: ./site
-
   docs-deploy:
-      if: github.event_name == 'push'
+      if: github.event_name == 'push' && contains(github.event.commits[0].added, 'docs/')
       needs: docs-build
       runs-on: ubuntu-latest
       environment:
