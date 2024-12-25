@@ -3,6 +3,35 @@
 ## Overview
 Antar is transforming delivery operations across Southeast Asia through intelligent route optimization and seamless provider integration. Our platform empowers merchants to handle deliveries at scale, combining sophisticated processing capabilities with an intuitive interface that makes complex operations feel simple.
 
+## The Hidden Cost of Ignorance
+
+Mark stares at his screen. Another morning, another endless spreadsheet. Columns of delivery data stretch before him like an infinite desert of numbers. He's been doing this for years - manually tracking every shipment, believing this is just "how it's always been done."
+
+What Mark doesn't know could be costing his company millions:
+- Price variations across providers go unnoticed
+- Routing inefficiencies bleed money silently
+- Manual processes consume hours of productive time
+- No real-time insights into delivery performance
+
+In corporate offices across Southeast Asia, hundreds of Marks exist. Diligent workers trapped in a system that mistakes complexity for productivity.
+
+**We don't just move data. We move businesses forward.**
+
+## The Transformation: From Spreadsheets to Strategy
+
+Mark's story isn't unique. It's a universal tale of potential trapped behind rows of data.
+
+What if a spreadsheet could become a strategic weapon? What if those endless columns could whisper insights instead of demanding manual labor?
+
+Antar doesn't just see logistics. We see the human potential buried beneath manual processes.
+
+### How We Liberate Operational Intelligence
+
+Imagine transforming Mark's daily grind:
+- From manual data entry to strategic decision-making
+- From isolated spreadsheets to connected insights
+- From cost center to business accelerator
+
 ## Our Vision
 
 Our platform creates a seamless connection between merchants and delivery providers:
@@ -33,6 +62,17 @@ graph TD
     style H fill:#9cf,stroke:#333,stroke-width:2px
 ```
 
+## Our Vision: Intelligent Delivery Ecosystem
+
+Our platform creates a seamless connection between human potential and technological innovation:
+
+```mermaid
+graph TD
+    A[Manual Processes] -->|Antar Intelligence| B[Strategic Insights]
+    B -->|Optimization| C[Efficient Delivery]
+    C -->|Continuous Learning| A
+```
+
 ## Platform Architecture
 
 Our system is built on three core layers that work together seamlessly:
@@ -61,6 +101,21 @@ graph LR
     style D fill:#f96,stroke:#333,stroke-width:2px
     style G fill:#f96,stroke:#333,stroke-width:2px
 ```
+
+## Platform Architecture: Turning Complexity into Clarity
+
+Our system breaks down operational barriers:
+
+```mermaid
+graph LR
+    A[Human Expertise] --> B[Smart Technology]
+    B --> C[Business Growth]
+```
+
+Key Transformations:
+- Data becomes strategy
+- Complexity yields to simplicity
+- Manual work transforms into strategic thinking
 
 ## Core Capabilities
 
