@@ -1,6 +1,8 @@
 # Antar
 
-[![Documentation Status](https://github.com/Dolpheyn/antar/actions/workflows/ci.yml/badge.svg)](https://dolpheyn.github.io/antar/)
+[![Docs Status](https://github.com/Dolpheyn/antar/actions/workflows/docs.yml/badge.svg)](https://dolpheyn.github.io/antar)
+[![Frontend Status](https://github.com/Dolpheyn/antar/actions/workflows/frontend.yml/badge.svg)](https://github.com/dolpheyn/antar/tree/main/frontend)
+[![Backend Status](https://github.com/Dolpheyn/antar/actions/workflows/backend.yml/badge.svg)](https://github.com/dolpheyn/antar/tree/main/backend)
 
 > Delivering Southeast Asia, Intelligently
 

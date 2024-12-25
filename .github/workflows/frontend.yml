@@ -1,0 +1,50 @@
+name: Frontend CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'frontend/**'
+      - '.github/workflows/**'
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - 'frontend/**'
+      - '.github/workflows/**'
+
+# Allows cancelling in-progress runs of the same workflow
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  frontend-ci:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install Bun
+      uses: oven-sh/setup-bun@v1
+      with:
+        bun-version: latest
+    
+    - name: Verify Bun Installation
+      run: |
+        which bun
+        bun --version
+    
+    - name: Install Frontend Dependencies
+      run: bun install
+      working-directory: ./frontend
+    
+    - name: Lint Frontend
+      run: bun run lint
+      working-directory: ./frontend
+    
+    - name: Run Frontend Tests
+      run: bun test
+      working-directory: ./frontend
+    
+    - name: Build Frontend
+      run: bun run build
+      working-directory: ./frontend

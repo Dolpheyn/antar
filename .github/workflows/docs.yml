@@ -1,16 +1,14 @@
-name: Monorepo CI/CD
+name: Docs CI/CD
 
 on:
   push:
     branches: [ "main" ]
     paths:
-      - 'frontend/**'
       - 'docs/**'
       - '.github/workflows/**'
   pull_request:
     branches: [ "main" ]
     paths:
-      - 'frontend/**'
       - 'docs/**'
       - '.github/workflows/**'
 
@@ -25,39 +23,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  frontend-ci:
-    if: github.event_name == 'push' && contains(github.event.commits[0].added, 'frontend/')
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    
-    - name: Install Bun
-      uses: oven-sh/setup-bun@v1
-      with:
-        bun-version: latest
-    
-    - name: Verify Bun Installation
-      run: |
-        which bun
-        bun --version
-    
-    - name: Install Frontend Dependencies
-      run: bun install
-      working-directory: ./frontend
-    
-    - name: Lint Frontend
-      run: bun run lint
-      working-directory: ./frontend
-    
-    - name: Run Frontend Tests
-      run: bun test
-      working-directory: ./frontend
-    
-    - name: Build Frontend
-      run: bun run build
-      working-directory: ./frontend
   docs-build:
-    if: github.event_name == 'push' && contains(github.event.commits[0].added, 'docs/')
     runs-on: ubuntu-latest
     container: 
       image: python:3.11-slim
@@ -96,7 +62,6 @@ jobs:
       with:
         path: ./site
   docs-deploy:
-      if: github.event_name == 'push' && contains(github.event.commits[0].added, 'docs/')
       needs: docs-build
       runs-on: ubuntu-latest
       environment:
@@ -105,3 +70,4 @@ jobs:
       steps:
         - name: Deploy to GitHub Pages
           uses: actions/deploy-pages@v2
+
