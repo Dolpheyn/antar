@@ -1,6 +1,6 @@
 # Antar
 
-[![Documentation Status](https://github.com/Dolpheyn/antar/actions/workflows/docs.yml/badge.svg)](https://dolpheyn.github.io/antar/)
+[![Documentation Status](https://github.com/Dolpheyn/antar/actions/workflows/ci.yml/badge.svg)](https://dolpheyn.github.io/antar/)
 
 > Delivering Southeast Asia, Intelligently
 
