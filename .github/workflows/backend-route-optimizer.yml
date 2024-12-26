@@ -1,15 +1,15 @@
-name: Monorepo CI/CD
+name: Backend - Route Optimizer CI/CD
 
 on:
   push:
     branches: [ "main" ]
     paths:
-      - 'bcakend/**'
+      - 'backend/route-optimizer/**'
       - '.github/workflows/**'
   pull_request:
     branches: [ "main" ]
     paths:
-      - 'backend/**'
+      - 'backend/route-optimizer/**'
       - '.github/workflows/**'
 
 # Allows cancelling in-progress runs of the same workflow

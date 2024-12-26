@@ -1,0 +1,39 @@
+name: Backend - OSRM SDK CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'backend/osrm-sdk/**'
+      - '.github/workflows/**'
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - 'backend/osrm-sdk/**'
+      - '.github/workflows/**'
+
+# Allows cancelling in-progress runs of the same workflow
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  backend-ci:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Go 1.21.x
+      uses: actions/setup-go@v5
+      with:
+        go-version: '1.22.1'
+        cache-dependency-path: ./backend/osrm-sdk/go.sum
+
+    - name: Build
+      run: go build -v ./...
+      working-directory: ./backend/osrm-sdk
+
+    - name: Test
+      run: go test ./...
+      working-directory: ./backend/osrm-sdk
+
