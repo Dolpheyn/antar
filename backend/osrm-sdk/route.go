@@ -15,13 +15,13 @@ type RouteRequest struct {
 
 	// Optional parameters
 	Bearings         []Bearing
-	Radiuses        []float64
-	GenerateSteps   bool
-	Annotations     bool
-	Geometries      GeometryType
-	Overview        OverviewType
+	Radiuses         []float64
+	GenerateSteps    bool
+	Annotations      bool
+	Geometries       GeometryType
+	Overview         OverviewType
 	ContinueStraight bool
-	Alternatives    bool
+	Alternatives     bool
 }
 
 // Coordinate represents a geographic coordinate
@@ -40,9 +40,9 @@ type Bearing struct {
 type GeometryType string
 
 const (
-	GeometryPolyline   GeometryType = "polyline"
-	GeometryPolyline6  GeometryType = "polyline6"
-	GeometryGeoJSON    GeometryType = "geojson"
+	GeometryPolyline  GeometryType = "polyline"
+	GeometryPolyline6 GeometryType = "polyline6"
+	GeometryGeoJSON   GeometryType = "geojson"
 )
 
 // OverviewType defines the route overview detail
@@ -56,19 +56,19 @@ const (
 
 // RouteResponse represents the OSRM route response
 type RouteResponse struct {
-	Code     string   `json:"code"`
-	Routes   []Route  `json:"routes"`
+	Code      string     `json:"code"`
+	Routes    []Route    `json:"routes"`
 	Waypoints []Waypoint `json:"waypoints"`
 }
 
 // Route represents a single route
 type Route struct {
-	Geometry     string     `json:"geometry"`
-	Legs        []RouteLeg `json:"legs"`
-	WeightName  string     `json:"weight_name"`
-	Weight      float64    `json:"weight"`
-	Duration    float64    `json:"duration"`
-	Distance    float64    `json:"distance"`
+	Geometry   string     `json:"geometry"`
+	Legs       []RouteLeg `json:"legs"`
+	WeightName string     `json:"weight_name"`
+	Weight     float64    `json:"weight"`
+	Duration   float64    `json:"duration"`
+	Distance   float64    `json:"distance"`
 }
 
 // RouteLeg represents a leg of the route
@@ -82,10 +82,10 @@ type RouteLeg struct {
 
 // RouteStep represents a step in the route
 type RouteStep struct {
-	Geometry   string  `json:"geometry"`
-	Mode       string  `json:"mode"`
-	Distance   float64 `json:"distance"`
-	Duration   float64 `json:"duration"`
+	Geometry string  `json:"geometry"`
+	Mode     string  `json:"mode"`
+	Distance float64 `json:"distance"`
+	Duration float64 `json:"duration"`
 }
 
 // Waypoint represents a waypoint in the route
@@ -116,7 +116,7 @@ func (c *Client) Route(ctx context.Context, req RouteRequest) (*RouteResponse, e
 
 	// Add query parameters
 	q := httpReq.URL.Query()
-	
+
 	if req.GenerateSteps {
 		q.Add("steps", "true")
 	}

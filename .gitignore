@@ -57,3 +57,6 @@ frontend/bun.lockb
 
 # OSRM
 osrm-data
+
+# Backend
+backend/route-optimizer/test-data/*
