@@ -10,7 +10,6 @@ python = "^3.10"
 click = ">=8.1.7"
 rich = ">=13.7.0"
 typer = ">=0.9.0"
-polyline = "^2.0.1"
 
 [tool.poetry.group.docs]
 optional = true
@@ -22,6 +21,25 @@ mkdocs-mermaid2-plugin = "1.1.1"
 mkdocs-include-markdown-plugin = "6.0.4"
 playwright = "1.49.1"
 pyyaml = "^6.0.1"
+
+[tool.poetry.group.osrm]
+optional = true
+
+[tool.poetry.group.osrm.dependencies]
+polyline = "^2.0.1" # for scripts/osrm/test-render.py
+
+[tool.poetry.group.map]
+optional = true
+
+[tool.poetry.group.map.dependencies]
+contextily = "1.6.2"
+geopandas = "^0.12.2"
+shapely = "^2.0.1"
+matplotlib = "^3.7.1"
+numpy = "^1.24.3"
+pandas = "^2.0.1"
+fiona = "1.9.6"
+polyline = "^2.0.2"
 
 [build-system]
 requires = ["poetry-core"]

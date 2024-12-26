@@ -7,6 +7,7 @@ from scripts.osrm import (
     download_map, 
     full_setup, 
     process_map, 
+    render_bulk,
     start_server, 
     stop_server, 
     test_render,
@@ -36,6 +37,7 @@ osrm_app.command()(cleanup_containers)
 osrm_app.command()(download_map)
 osrm_app.command()(full_setup)
 osrm_app.command()(process_map)
+osrm_app.command()(render_bulk)
 osrm_app.command()(start_server)
 osrm_app.command()(stop_server)
 osrm_app.command()(test_render)

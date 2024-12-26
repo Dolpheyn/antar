@@ -1,7 +1,6 @@
 import os
 import subprocess
 import typer
-from scripts.app import osrm
 from scripts.core import console
 from .download_map import download_map
 from scripts.core.console import print_success
