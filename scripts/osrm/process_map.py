@@ -1,83 +1,90 @@
-"""Process OpenStreetMap data for OSRM routing."""
 import os
 import subprocess
 import typer
+from scripts.app import osrm
 from scripts.core import console
 from .download_map import download_map
 from scripts.core.console import print_success
 
 def process_map(
     region: str = typer.Option("malaysia-singapore-brunei", help="Region to process"),
-    data_dir: str = typer.Option("osrm-data", help="Directory with map data"),
-    profile: str = typer.Option("car", help="Routing profile (car, foot, bike)"),
-    cleanup: bool = typer.Option(True, help="Cleanup containers after processing")
+    profile: str = typer.Option("car", help="OSRM profile to use"),
+    data_dir: str = typer.Option("osrm-data", help="Directory to store map data"),
+    force: bool = typer.Option(False, help="Force reprocessing of map")
 ):
     """Process OpenStreetMap data for routing using OSRM."""
-    # Ensure data directory exists
+    # Use default data directory if not specified
+    data_dir = os.path.abspath(data_dir)
     os.makedirs(data_dir, exist_ok=True)
 
-    # Construct file paths
-    file_name = f"{region}-latest.osm.pbf"
-    map_file = os.path.join(data_dir, file_name)
+    # Download map if not exists or force flag is set
+    osm_file_name = f"{region}-latest.osm.pbf"
+    osm_file_path = os.path.join(data_dir, osm_file_name)
+    if not os.path.exists(osm_file_path) or force == True:
+        confirm = typer.confirm(f"Download map for {region}? This will overwrite existing map data in {data_dir}.")
+        if confirm:
+            download_map(region=region, data_dir=data_dir)
+        else:
+            console.print(f"[yellow]Skipping map download for {region}.[/yellow]")
+            typer.Exit(0)
 
-    # Check if map file exists, download if not
-    if not os.path.exists(map_file):
-        console.print(f"Map file {file_name} not found. Downloading...")
-        download_map(region=region, data_dir=data_dir)
+    # Check if processed map already exists and not forcing reprocessing
+    osrm_file_name = f"{region}-latest.osrm"
+    processed_map = os.path.join(data_dir, osrm_file_name)
+    if os.path.exists(processed_map) and force == False:
+        console.print(f"[yellow]Processed map {os.path.basename(processed_map)} already exists. Skipping processing.[/yellow]")
+        return processed_map
 
-    # Docker container names
-    extract_container = f"antar-osrm-{region}-extract"
-    partition_container = f"antar-osrm-{region}-partition"
-    customize_container = f"antar-osrm-{region}-customize"
+    # Construct profile path
+    profile_path = f"/opt/{profile}.lua"
 
-    # OSRM processing steps
-    processing_steps = [
-        {
-            "name": "extract",
-            "container": extract_container,
-            "command": [
-                "docker", "run", "--rm", "-v", f"{os.path.abspath(data_dir)}:/data",
-                "osrm/osrm-backend", "osrm-extract", f"/data/{file_name}", 
-                f"--profile", f"/opt/osrm/profiles/{profile}.lua"
-            ]
-        },
-        {
-            "name": "partition",
-            "container": partition_container,
-            "command": [
-                "docker", "run", "--rm", "-v", f"{os.path.abspath(data_dir)}:/data",
-                "osrm/osrm-backend", "osrm-partition", 
-                f"/data/{os.path.splitext(file_name)[0]}.osrm"
-            ]
-        },
-        {
-            "name": "customize",
-            "container": customize_container,
-            "command": [
-                "docker", "run", "--rm", "-v", f"{os.path.abspath(data_dir)}:/data",
-                "osrm/osrm-backend", "osrm-customize", 
-                f"/data/{os.path.splitext(file_name)[0]}.osrm"
-            ]
-        }
-    ]
+    try:
+        # Extract map
+        extract_cmd = [
+            "docker", "run", "--rm", 
+            "-v", f"{data_dir}:/data", 
+            "ghcr.io/project-osrm/osrm-backend", 
+            "osrm-extract", 
+            f"/data/{osm_file_name}", 
+            "--profile", 
+            profile_path
+        ]
+        subprocess.run(extract_cmd, check=True)
 
-    # Run processing steps
-    for step in processing_steps:
-        with console.status(f"Running {step['name']} for {region}..."):
-            try:
-                subprocess.run(step['command'], check=True)
-                print_success(f"{step['name'].capitalize()} completed successfully")
-            except subprocess.CalledProcessError as e:
-                console.print(f"[red]Error in {step['name']} step: {e}[/red]")
-                raise typer.Abort()
+        # Partition map
+        partition_cmd = [
+            "docker", "run", "--rm", 
+            "-v", f"{data_dir}:/data", 
+            "ghcr.io/project-osrm/osrm-backend", 
+            "osrm-partition", 
+            f"/data/{osrm_file_name}"
+        ]
+        subprocess.run(partition_cmd, check=True)
 
-    # Optional cleanup
-    if cleanup:
-        for step in processing_steps:
-            try:
-                subprocess.run(["docker", "rm", "-f", step['container']], 
-                               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-            except Exception:
-                pass
+        # Customize map
+        customize_cmd = [
+            "docker", "run", "--rm", 
+            "-v", f"{data_dir}:/data", 
+            "ghcr.io/project-osrm/osrm-backend", 
+            "osrm-customize", 
+            f"/data/{osrm_file_name}"
+        ]
+        subprocess.run(customize_cmd, check=True)
+
+    except subprocess.CalledProcessError as e:
+        console.print(f"[red]Error processing map: {e}[/red]")
+        try:
+            # Clean up potentially corrupted files
+            os.remove(processed_map)
+        except Exception:
+            pass
+        raise typer.Abort()
 
     print_success(f"OSRM map processing for {region} completed!")
+    return processed_map
+
+def main():
+    typer.run(process_map)
+
+if __name__ == "__main__":
+    main()
