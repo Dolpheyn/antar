@@ -4,6 +4,7 @@ import subprocess
 import typer
 from scripts.core import console
 from .download_map import download_map
+from scripts.core.console import print_success
 
 def process_map(
     region: str = typer.Option("malaysia-singapore-brunei", help="Region to process"),

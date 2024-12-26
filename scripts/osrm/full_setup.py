@@ -4,6 +4,7 @@ from scripts.core import console
 from .download_map import download_map
 from .process_map import process_map
 from .start_server import start_server
+from scripts.core.console import print_success
 
 def full_setup(
     region: str = typer.Option("malaysia-singapore-brunei", help="Region to set up"),

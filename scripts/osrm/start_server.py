@@ -4,6 +4,7 @@ import subprocess
 import typer
 from scripts.core import console
 from .process_map import process_map
+from scripts.core.console import print_success
 
 def start_server(
     region: str = typer.Option("malaysia-singapore-brunei", help="Region to serve"),

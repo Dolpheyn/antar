@@ -2,6 +2,7 @@
 import subprocess
 import typer
 from scripts.core import console
+from scripts.core.console import print_success
 
 def stop_server(
     region: str = typer.Option("malaysia-singapore-brunei", help="Region to stop")

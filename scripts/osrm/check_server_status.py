@@ -3,7 +3,6 @@ import subprocess
 import requests
 import typer
 from scripts.core import console
-from scripts.core.console import print_success
 
 def check_server_status(
     region: str = typer.Option("malaysia-singapore-brunei", help="Region to check"),
