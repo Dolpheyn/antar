@@ -3,6 +3,7 @@ module github.com/dolpheyn/antar/route-optimizer
 go 1.23.4
 
 require (
+	github.com/dolpheyn/antar/backend/osrm-sdk v0.0.0-00010101000000-000000000000
 	github.com/gin-gonic/gin v1.10.0
 	github.com/go-playground/validator/v10 v10.23.0
 	github.com/google/uuid v1.6.0
@@ -56,3 +57,5 @@ require (
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace github.com/dolpheyn/antar/backend/osrm-sdk => ../osrm-sdk
