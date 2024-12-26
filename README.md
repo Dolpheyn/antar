@@ -2,7 +2,8 @@
 
 [![Docs Status](https://github.com/Dolpheyn/antar/actions/workflows/docs.yml/badge.svg)](https://dolpheyn.github.io/antar)
 [![Frontend Status](https://github.com/Dolpheyn/antar/actions/workflows/frontend.yml/badge.svg)](https://github.com/dolpheyn/antar/tree/main/frontend)
-[![Backend Status](https://github.com/Dolpheyn/antar/actions/workflows/backend.yml/badge.svg)](https://github.com/dolpheyn/antar/tree/main/backend)
+[![Route Optimizer Service Status](https://github.com/Dolpheyn/antar/actions/workflows/backend-route-optimizer.yml/badge.svg)](https://github.com/dolpheyn/antar/tree/main/backend/route-optimizer)
+[![OSM SDK Status](https://github.com/Dolpheyn/antar/actions/workflows/backend-osrm-sdk.yml/badge.svg)](https://github.com/dolpheyn/antar/tree/main/backend/osrm-sdk)
 
 > Delivering Southeast Asia, Intelligently
 
