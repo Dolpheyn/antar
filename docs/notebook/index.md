@@ -245,4 +245,71 @@ To contribute to this documentation:
 
 Remember: This notebook is a living document that evolves with our development. We continuously update it to reflect new learnings and decisions.
 
+## The Antar Journey: Reimagining Delivery Management 🚀
+
+## Our Human Story
+
+Imagine a world where merchants can effortlessly manage deliveries, where complexity transforms into simplicity, and where technology becomes a compassionate partner in business growth.
+
+### The Challenge
+Merchants face overwhelming logistics challenges:
+- Fragmented delivery processes
+- Complex route planning
+- Limited visibility
+- Scalability struggles
+
+### Our Vision
+Antar isn't just a software—it's a collaborative solution that understands the human behind the business.
+
+## The Emotional Architecture of Antar
+
+### Why We Build
+Our motivation goes beyond code:
+- Empowering small businesses
+- Reducing logistical stress
+- Creating human-centric technology
+
+### The Journey of Understanding
+```mermaid
+journey
+    title Merchant's Path to Efficient Delivery
+    section Challenges
+        Complexity: 5: Overwhelmed
+        Confusion: 3: Frustrated
+    section Discovery
+        Hope: 7: Excited
+        Possibility: 8: Inspired
+    section Transformation
+        Simplicity: 9: Relieved
+        Empowerment: 10: Triumphant
+```
+
+## Technical Compassion: Our Design Philosophy
+
+### Modular Humanity
+Our architecture isn't just technically sound—it's emotionally intelligent:
+
+```mermaid
+graph TD
+    A[Human Needs] --> B{Technological Empathy}
+    B --> |Frontend| C[Intuitive Interfaces]
+    B --> |Processing| D[Intelligent Optimization]
+    B --> |Integration| E[Seamless Connections]
+```
+
+## Development Roadmap
+
+```mermaid
+gantt
+    title 2024 Development Plan
+    dateFormat  YYYY-MM-DD
+    section Bulk Upload
+    CSV Processing     :done,    des1, 2024-12-01, 2024-12-10
+    Feature Development :active,  des2, 2024-12-11, 2024-12-31
+    Testing             :         des3, 2025-01-01, 2025-01-15
+```
+
+## Conclusion
+Our journey is about more than technology—it's about transforming how businesses approach delivery management, one intelligent solution at a time.
+
 *Last Updated: 2024-12-20T07:43:43+08:00*

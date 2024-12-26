@@ -1,7 +1,5 @@
 # Technical Specifications
 
-Hallo I am Ayoshh
-
 This section contains detailed technical specifications for the project. Each specification document outlines the technical requirements, architecture decisions, and implementation details for different components of the system.
 
 ## Contents
