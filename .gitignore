@@ -54,3 +54,6 @@ frontend/bun.lockb
 # Keep in frontend
 !frontend/package.json
 !frontend/package-lock.json
+
+# OSRM
+osrm-data

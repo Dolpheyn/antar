@@ -23,6 +23,7 @@ Examples:
 from scripts.core.cli import create_app
 from scripts.app.init import init_app
 from scripts.app.docs import docs_app
+from scripts.app.osrm import osrm_app
 import os
 import stat
 
@@ -56,6 +57,7 @@ app = create_app(
 )
 app.add_typer(docs_app)
 app.add_typer(init_app)
+app.add_typer(osrm_app)
 
 if __name__ == "__main__":
     give_tip_if_script_not_executable()

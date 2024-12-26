@@ -13,6 +13,10 @@ console = Console(
 
 # Optional: Add custom print methods if needed
 
+def highlight(message: str) -> str:
+    """Highlight a code block using Rich."""
+    console.print(f"[bold green]{message}")
+
 
 def print_success(message: str):
     """Print a success message."""
