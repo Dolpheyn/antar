@@ -60,3 +60,7 @@ osrm-data
 
 # Backend
 backend/route-optimizer/test-data/*
+
+# Experiment
+experiment/notebooks/.ipynb_checkpoints/
+.ipynb_checkpoints/

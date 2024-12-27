@@ -41,6 +41,17 @@ pandas = "^2.0.1"
 fiona = "1.9.6"
 polyline = "^2.0.2"
 
+[tool.poetry.group.experiment]
+optional = true
+
+[tool.poetry.group.experiment.dependencies]
+notebook = "^7.3.2"
+ipykernel = "^6.29.5"
+folium = "^0.19.2"
+scikit-learn = "^1.6.0"
+pillow = "^11.0.0"
+selenium = "^4.27.1"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
