@@ -241,7 +241,7 @@ def update_mkdocs_nav(
         print(f"Error updating navigation: {error}")
 
 
-def main(
+def generate_nav(
     docs_path: Path = Path("docs"),
     config_path: Path = Path("mkdocs.yml"),
     output_path: Optional[Path] = None,
@@ -262,4 +262,4 @@ def main(
 
 
 if __name__ == "__main__":
-    main()
+    generate_nav()

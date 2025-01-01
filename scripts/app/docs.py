@@ -55,3 +55,9 @@ def docs_visual():
     """Visualize documentation."""
     visual = safe_import('scripts.docs', 'visual')
     visual()
+
+@docs_app.command(name="generate-nav")
+def docs_generate_nav():
+    """Regenerate mkdocs.yml navigation structure."""
+    generate_nav = safe_import('scripts.docs', 'generate_nav')
+    generate_nav()
