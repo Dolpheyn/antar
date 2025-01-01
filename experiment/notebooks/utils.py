@@ -4,7 +4,7 @@ import io
 from PIL import Image
 
 def plot_route(route):
-    map_ = folium.Map(location=start_point, zoom_start=6)
+    map_ = folium.Map(zoom_start=6)
     plot_route_on_map(route, map_)
     return map_
 
