@@ -50,141 +50,130 @@ theme:
     - content.code.copy
 
 nav:
-    - Home: index.md
-    - Notebook:
-        - Overview: notebook/index.md
-        - AI Workspace:
-            - 2024-12-21:
-                - Pyright Analysis: notebook/ai-workspace/2024-12-21/pyright_analysis.md
-                - Visual Testing Refactoring: notebook/ai-workspace/2024-12-21/visual_testing_refactoring.md
-                - Visual Testing Strategy: notebook/ai-workspace/2024-12-21/visual_testing_strategy.md
-                - Floatrect Type Safety: notebook/ai-workspace/2024-12-21/floatrect_type_safety.md
-                - Console Investigation: notebook/ai-workspace/2024-12-21/console_investigation.md
-                - Type Safety Plan: notebook/ai-workspace/2024-12-21/type_safety_plan.md
-                - Visual Testing Diagnostic: notebook/ai-workspace/2024-12-21/visual_testing_diagnostic.md
-            - 2024-12-22:
-                - Refined Visual Testing Network Challenges: notebook/ai-workspace/2024-12-22/refined-visual-testing-network-challenges.md
-                - Pyright Visual Script Fixes: notebook/ai-workspace/2024-12-22/2024-12-22-pyright-visual-script-fixes.md
-                - Visual Testing Network Challenges: notebook/ai-workspace/2024-12-22/2024-12-22-visual-testing-network-challenges.md
-                - Flake8 Visual Script Fixes: notebook/ai-workspace/2024-12-22/2024-12-22-flake8-visual-script-fixes.md
-            - 2024-12-23:
-                - Bulk Upload and Route Optimization:
-                    - Project Overview: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/00-project-overview.md
-                    - Bulk Upload Route Optimization Spec: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/01-bulk-upload-route-optimization-spec.md
-                    - Route Optimization Complexity Levels: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/02-route-optimization-complexity-levels.md
-                    - Intelligent Clustering Reflection: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/03-intelligent-clustering-reflection.md
-                    - Technological Progression: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/04-technological-progression.md
-                    - Antar Route Optimization Reality Check: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/05-antar-route-optimization-reality-check.md
-                    - User Stories and Personas: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/06-user-stories-and-personas.md
-                    - Technical Design Workshop Agenda: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/07-technical-design-workshop-agenda.md
-                    - Workshop Minutes and Action Items: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/08-workshop-minutes-and-action-items.md
-                    - Route Optimization Strategy: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/09-route-optimization-strategy.md
-                    - Engineering Specification: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/10-engineering-specification.md
-                    - API Design: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/11-api-design.md
-                    - Technical Implementation Go: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/12-technical-implementation-go.md
-                    - Principal Engineer Implementation Strategy: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/13-principal-engineer-implementation-strategy.md
-                    - Dependency Vulnerability Scan CI Error: notebook/ai-workspace/2024-12-23/dependency vulnerability scan ci error.md
-                    - Docs CI Error: notebook/ai-workspace/2024-12-23/docs ci error.md
-                    - Frontend CI Error: notebook/ai-workspace/2024-12-23/frontend ci error.md
-            - 2024-12-25:
-                - Why We Exists: notebook/ai-workspace/2024-12-25/why-we-exists.md
-            - 2024-12-26:
-                - OSRM Self-Hosting: notebook/ai-workspace/2024-12-26-osrm-self-hosting.md
-        - Features:
-            - Bulk Upload:
-                - Overview: notebook/features/bulk-upload/README.md
-                - Business Context: notebook/features/bulk-upload/overview/business-context.md
-                - Technical:
-                    - Architecture: notebook/features/bulk-upload/technical/architecture.md
-                    - Performance: notebook/features/bulk-upload/technical/performance.md
-                    - Components:
-                        - File Upload: notebook/features/bulk-upload/technical/components/file-upload.md
-                        - Route Grouping: notebook/features/bulk-upload/technical/components/route-grouping.md
-                        - Map Visualization: notebook/features/bulk-upload/technical/components/map-visualization.md
-                - User Experience:
-                    - Index: notebook/features/bulk-upload/ux/index.md
-                    - Interface Guidelines: notebook/features/bulk-upload/ux/interface-guidelines.md
-                    - Error Handling: notebook/features/bulk-upload/ux/error-handling.md
-                    - Interactions: notebook/features/bulk-upload/ux/interactions.md
-                    - Flow: notebook/features/bulk-upload/ux/flow.md
-                    - Components: notebook/features/bulk-upload/ux/components.md
-                - Implementation:
-                    - Index: notebook/features/bulk-upload/implementation/index.md
-                    - Engineering Specifications: notebook/features/bulk-upload/implementation/engineering-specifications.md
-                - UI:
-                    - Index: notebook/features/bulk-upload/ui/index.md
-                    - Responsive: notebook/features/bulk-upload/ui/responsive.md
-                    - Animations: notebook/features/bulk-upload/ui/animations.md
-                    - Components: notebook/features/bulk-upload/ui/components.md
-                - Archive:
-                    - Index: notebook/features/bulk-upload/archive/index.md
-                    - Context: notebook/features/bulk-upload/archive/context.md
-                    - Technical: notebook/features/bulk-upload/archive/technical.md
-    - Process:
-        - Decisions: notebook/process/decisions.md
-        - Self Agency: notebook/process/self-agency.md
-    - Tech:
-        - Frontend:
-            - Overview: notebook/tech/frontend/README.md
-            - Development:
-                - Workflow: notebook/tech/frontend/development/workflow.md
-                - Technology Stack: notebook/tech/frontend/development/technology-stack.md
-            - Maintenance:
-                - Tasks: notebook/tech/frontend/maintenance/tasks.md
-            - Setup:
-                - Configuration: notebook/tech/frontend/setup/configuration.md
-                - Installation: notebook/tech/frontend/setup/installation.md
-                - Dependencies: notebook/tech/frontend/setup/dependencies.md
-            - Testing:
-                - Strategy: notebook/tech/frontend/testing/strategy.md
-                - Tools: notebook/tech/frontend/testing/tools.md
-                - Examples: notebook/tech/frontend/testing/examples.md
-            - Archive:
-                - Testing Strategy: notebook/tech/frontend/_archive/testing-strategy.md
-                - Frontend Development Journey: notebook/tech/frontend/_archive/frontend-development-journey.md
-            - Implementation:
-                - Client Processing: notebook/tech/implementation/client.md
-                - Route Optimization: notebook/tech/implementation/routes.md
-                - User Interface: notebook/tech/implementation/ui.md
-    - Product:
-        - Overview: product/README.md
-        - Features: product/features.md
-        - Success Stories: product/stories.md
-    - Roadmap:
-        - Overview: roadmap/index.md
-        - Phase 1 Foundation: roadmap/phase-1-foundation.md
-        - Initiatives:
-            - Documentation System: roadmap/initiatives/documentation-system.md
-            - Visual Testing: roadmap/initiatives/visual-testing.md
-        - Templates:
-            - Milestone Plan: roadmap/templates/milestone-plan.md
-    - Tech Overview:
-        - Overview: tech/index.md
-        - Architecture: tech/architecture.md
-        - CI/CD: tech/ci-cd.md
-        - Frontend Notes: tech/frontend-notes.md
-        - Integration Guidelines: tech/integration-guidelines.md
-        - Performance Requirements: tech/performance-requirements.md
-        - Roadmap:
-            - Overview: tech/roadmap/index.md
-            - Phase 1:
-                - Overview: tech/roadmap/phase-1/index.md
-                - Architecture: tech/roadmap/phase-1/architecture.md
-                - Integration: tech/roadmap/phase-1/integration.md
-        - Specs:
-            - API:
-                - Overview: tech/specs/api/index.md
-            - Data:
-                - Overview: tech/specs/data/index.md
-            - Security:
-                - Overview: tech/specs/security/index.md
-        - Story:
-            - Concepts: tech/story/concepts.md
-            - Vision: tech/story/vision.md
-        - System Architecture: tech/system-architecture.md
-        - Templates:
-            - API Spec: tech/templates/api-spec.md
-
+- Index: index.md
+- Notebook:
+  - AI Workspace:
+    - 2024 12 26 Osrm Self Hosting: notebook/ai-workspace/2024-12-26-osrm-self-hosting.md
+    - 2024-12-21:
+      - Console_Investigation: notebook/ai-workspace/2024-12-21/console_investigation.md
+      - Floatrect_Type_Safety: notebook/ai-workspace/2024-12-21/floatrect_type_safety.md
+      - Pyright_Analysis: notebook/ai-workspace/2024-12-21/pyright_analysis.md
+      - Type_Safety_Plan: notebook/ai-workspace/2024-12-21/type_safety_plan.md
+      - Visual_Testing_Diagnostic: notebook/ai-workspace/2024-12-21/visual_testing_diagnostic.md
+      - Visual_Testing_Refactoring: notebook/ai-workspace/2024-12-21/visual_testing_refactoring.md
+      - Visual_Testing_Strategy: notebook/ai-workspace/2024-12-21/visual_testing_strategy.md
+    - 2024-12-22:
+      - 2024 12 22 Flake8 Visual Script Fixes: notebook/ai-workspace/2024-12-22/2024-12-22-flake8-visual-script-fixes.md
+      - 2024 12 22 Pyright Visual Script Fixes: notebook/ai-workspace/2024-12-22/2024-12-22-pyright-visual-script-fixes.md
+      - 2024 12 22 Visual Testing Network Challenges: notebook/ai-workspace/2024-12-22/2024-12-22-visual-testing-network-challenges.md
+      - Refined Visual Testing Network Challenges: notebook/ai-workspace/2024-12-22/refined-visual-testing-network-challenges.md
+    - 2024-12-23:
+      - Dependency Vulnerability Scan Ci Error: notebook/ai-workspace/2024-12-23/dependency vulnerability scan ci error.md
+      - Docs Ci Error: notebook/ai-workspace/2024-12-23/docs ci error.md
+      - Frontend Ci Error: notebook/ai-workspace/2024-12-23/frontend ci error.md
+      - Bulk Upload And Route Optimization:
+        - 00 Project Overview: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/00-project-overview.md
+        - 01 Bulk Upload Route Optimization Spec: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/01-bulk-upload-route-optimization-spec.md
+        - 02 Route Optimization Complexity Levels: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/02-route-optimization-complexity-levels.md
+        - 03 Intelligent Clustering Reflection: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/03-intelligent-clustering-reflection.md
+        - 04 Technological Progression: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/04-technological-progression.md
+        - 05 Antar Route Optimization Reality Check: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/05-antar-route-optimization-reality-check.md
+        - 06 User Stories And Personas: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/06-user-stories-and-personas.md
+        - 07 Technical Design Workshop Agenda: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/07-technical-design-workshop-agenda.md
+        - 08 Workshop Minutes And Action Items: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/08-workshop-minutes-and-action-items.md
+        - 09 Route Optimization Strategy: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/09-route-optimization-strategy.md
+        - 10 Engineering Specification: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/10-engineering-specification.md
+        - 11 API Design: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/11-api-design.md
+        - 12 Technical Implementation Go: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/12-technical-implementation-go.md
+        - 13 Principal Engineer Implementation Strategy: notebook/ai-workspace/2024-12-23/bulk upload and route optimization/13-principal-engineer-implementation-strategy.md
+    - 2024-12-25:
+      - Why We Exists: notebook/ai-workspace/2024-12-25/why-we-exists.md
+    - 2024-12-31:
+      - Bulk Route Optimizer Full Engineering Spec: notebook/ai-workspace/2024-12-31/bulk-route-optimizer-full-engineering-spec.md
+      - Route Optimization Engineering Spec: notebook/ai-workspace/2024-12-31/route-optimization-engineering-spec.md
+      - Story To Manifest Into Reality: notebook/ai-workspace/2024-12-31/story-to-manifest-into-reality.md
+- Product:
+  - Readme: product/README.md
+  - Features: product/features.md
+  - Stories: product/stories.md
+  - Features:
+    - Bulk Upload:
+      - Readme: product/features/bulk-upload/README.md
+      - Archive:
+        - Context: product/features/bulk-upload/archive/context.md
+        - Index: product/features/bulk-upload/archive/index.md
+        - Technical: product/features/bulk-upload/archive/technical.md
+      - Implementation:
+        - Engineering Specifications: product/features/bulk-upload/implementation/engineering-specifications.md
+        - Index: product/features/bulk-upload/implementation/index.md
+      - Overview:
+        - Business Context: product/features/bulk-upload/overview/business-context.md
+      - Technical:
+        - Architecture: product/features/bulk-upload/technical/architecture.md
+        - Performance: product/features/bulk-upload/technical/performance.md
+        - Components:
+          - File Upload: product/features/bulk-upload/technical/components/file-upload.md
+          - Map Visualization: product/features/bulk-upload/technical/components/map-visualization.md
+          - Route Grouping: product/features/bulk-upload/technical/components/route-grouping.md
+      - Ui:
+        - Animations: product/features/bulk-upload/ui/animations.md
+        - Components: product/features/bulk-upload/ui/components.md
+        - Index: product/features/bulk-upload/ui/index.md
+        - Responsive: product/features/bulk-upload/ui/responsive.md
+      - Ux:
+        - Components: product/features/bulk-upload/ux/components.md
+        - Error Handling: product/features/bulk-upload/ux/error-handling.md
+        - Flow: product/features/bulk-upload/ux/flow.md
+        - Index: product/features/bulk-upload/ux/index.md
+        - Interactions: product/features/bulk-upload/ux/interactions.md
+        - Interface Guidelines: product/features/bulk-upload/ux/interface-guidelines.md
+- Roadmap:
+  - Index: roadmap/index.md
+  - Phase 1 Foundation: roadmap/phase-1-foundation.md
+- Tech:
+  - Architecture: tech/architecture.md
+  - Ci/Cd: tech/ci-cd.md
+  - Frontend Notes: tech/frontend-notes.md
+  - Index: tech/index.md
+  - Integration Guidelines: tech/integration-guidelines.md
+  - Performance Requirements: tech/performance-requirements.md
+  - System Architecture: tech/system-architecture.md
+  - Frontend:
+    - Readme: tech/frontend/README.md
+    - _Archive:
+      - Readme: tech/frontend/_archive/README.md
+      - Frontend Development Journey: tech/frontend/_archive/frontend-development-journey.md
+      - Project Setup: tech/frontend/_archive/project-setup.md
+      - Tasks: tech/frontend/_archive/tasks.md
+      - Testing Strategy: tech/frontend/_archive/testing-strategy.md
+    - Development:
+      - Technology Stack: tech/frontend/development/technology-stack.md
+    - Setup:
+      - Configuration: tech/frontend/setup/configuration.md
+      - Dependencies: tech/frontend/setup/dependencies.md
+      - Installation: tech/frontend/setup/installation.md
+    - Testing:
+      - Examples: tech/frontend/testing/examples.md
+      - Strategy: tech/frontend/testing/strategy.md
+      - Tools: tech/frontend/testing/tools.md
+  - Roadmap:
+    - Index: tech/roadmap/index.md
+    - Phase 1:
+      - Architecture: tech/roadmap/phase-1/architecture.md
+      - Index: tech/roadmap/phase-1/index.md
+      - Integration: tech/roadmap/phase-1/integration.md
+  - Specs:
+    - Api:
+      - Index: tech/specs/api/index.md
+    - Data:
+      - Index: tech/specs/data/index.md
+    - Security:
+      - Index: tech/specs/security/index.md
+  - Story:
+    - Concepts: tech/story/concepts.md
+    - Vision: tech/story/vision.md
+  - Templates:
+    - API Spec: tech/templates/api-spec.md
 plugins:
   - search
   - include-markdown
